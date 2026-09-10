@@ -1,0 +1,353 @@
+[
+{
+"pregunta": "Una empresa internacional utiliza los términos «calidad», «conformidad» y «excelencia» con significados diferentes entre sus filiales. ¿Qué problema pretendía resolver principalmente la ISO 8402 en un contexto como este?",
+"tema": "Estandarización de la terminología",
+"opciones": [
+"Reducir la ambigüedad mediante una terminología común para la gestión de la calidad",
+"Sustituir todos los procedimientos operativos de las empresas por un único procedimiento internacional",
+"Establecer criterios universales de rentabilidad para todas las organizaciones",
+"Determinar automáticamente si cada producto fabricado es técnicamente defectuoso"
+],
+"respuestaCorrecta": "Reducir la ambigüedad mediante una terminología común para la gestión de la calidad",
+"explicacionAcierto": "La ISO 8402 se presenta como un «diccionario normativo» destinado a definir los términos fundamentales de la calidad. Su función central era proporcionar un lenguaje común que evitara malentendidos en la gestión, el comercio y la industria internacional.",
+"explicacionFallo": "La primera opción es la única que aborda directamente el problema lingüístico que la norma buscaba resolver. La segunda confunde terminología con procedimientos: ISO 8402 no pretendía imponer un único método operativo. La tercera pertenece a una dimensión más amplia de la gestión y no define el propósito principal de la norma. La cuarta se refiere a la evaluación de productos, no a la estandarización conceptual."
+},
+{
+"pregunta": "Un producto posee numerosas características técnicas, pero algunas de ellas no permiten satisfacer las necesidades que motivaron su adquisición. Según la definición de calidad presentada, ¿qué conclusión es más adecuada?",
+"tema": "Concepto de calidad",
+"opciones": [
+"La cantidad de características garantiza por sí sola la calidad del producto",
+"La calidad depende de que las características confieran aptitud para satisfacer necesidades establecidas e implícitas",
+"La calidad se limita a cumplir las especificaciones documentadas por el fabricante",
+"La calidad depende exclusivamente de que el producto tenga una apariencia superior a la de sus competidores"
+],
+"respuestaCorrecta": "La calidad depende de que las características confieran aptitud para satisfacer necesidades establecidas e implícitas",
+"explicacionAcierto": "El documento define la calidad como la totalidad de características que confieren al producto o servicio la aptitud para satisfacer necesidades establecidas e implícitas. Por tanto, no basta con acumular características: estas deben contribuir a la capacidad funcional requerida.",
+"explicacionFallo": "La primera opción reduce la calidad a la cantidad de características, ignorando su utilidad. La tercera es demasiado limitada porque la definición incluye necesidades implícitas, no solo requisitos expresamente documentados. La cuarta confunde calidad con apariencia o comparación estética, aspectos que no constituyen la definición presentada."
+},
+{
+"pregunta": "Una empresa logra anticiparse a una necesidad que los clientes todavía no han expresado formalmente y adapta su servicio para satisfacerla. ¿Qué idea del documento explica mejor el posible efecto de esta decisión?",
+"tema": "Necesidades implícitas",
+"opciones": [
+"La anticipación de necesidades implícitas puede generar una ventaja competitiva",
+"Las necesidades implícitas carecen de importancia porque solo cuentan los requisitos escritos",
+"Anticiparse a las necesidades elimina la necesidad de controlar la calidad",
+"Una necesidad implícita se convierte automáticamente en una especificación técnica"
+],
+"respuestaCorrecta": "La anticipación de necesidades implícitas puede generar una ventaja competitiva",
+"explicacionAcierto": "El documento destaca explícitamente que anticiparse a las necesidades implícitas genera una ventaja competitiva. La calidad no se limita a reaccionar ante requisitos ya expresados; también considera la capacidad del producto o servicio para responder a expectativas que forman parte de su uso y aceptación.",
+"explicacionFallo": "La segunda opción contradice directamente el planteamiento del documento, que incluye las necesidades implícitas. La tercera exagera el alcance de anticiparse a necesidades: no elimina las actividades de control. La cuarta confunde una necesidad implícita con una especificación formal; pueden estar relacionadas, pero no son conceptualmente equivalentes."
+},
+{
+"pregunta": "La alta dirección redacta una política de calidad técnicamente correcta, pero utiliza términos que los empleados de distintas áreas no comprenden y que dificultan su aplicación. ¿Qué pilar de la política de calidad se está incumpliendo principalmente?",
+"tema": "Política de la calidad",
+"opciones": [
+"Pertinencia",
+"Coherencia",
+"Claridad",
+"Trazabilidad"
+],
+"respuestaCorrecta": "Claridad",
+"explicacionAcierto": "La claridad exige que la política sea entendible y comunicable sin dificultad en todos los niveles de la organización. Aunque una política pueda ser pertinente y coherente, si los miembros de la organización no pueden comprenderla, su función orientadora queda debilitada.",
+"explicacionFallo": "Pertinencia se refiere a que la política sea adecuada para la empresa y su estructura funcional. Coherencia implica alineación con las necesidades y expectativas de los clientes. Trazabilidad pertenece a la capacidad de reconstruir la historia, utilización o localización de un producto mediante identificaciones registradas, no a los pilares de la política."
+},
+{
+"pregunta": "Una organización diseña su política de calidad siguiendo las características de otra empresa, aunque su propia estructura funcional y circunstancias sean diferentes. ¿Qué principio debería cuestionarse primero?",
+"tema": "Política de la calidad",
+"opciones": [
+"Pertinencia",
+"Claridad",
+"Inspección",
+"Validación"
+],
+"respuestaCorrecta": "Pertinencia",
+"explicacionAcierto": "La pertinencia exige que la política sea adecuada a la propia empresa y a su estructura funcional. Copiar una política externa puede producir una formulación que, aunque esté bien redactada, no responda a las características reales de la organización.",
+"explicacionFallo": "Claridad se refiere a que la política sea comprensible y comunicable, algo que podría cumplirse incluso en una política poco pertinente. Inspección consiste en medir, examinar, ensayar o comparar características con requisitos. Validación confirma que requisitos particulares para un uso específico previsto han sido satisfechos. Ninguna de estas dos actividades sustituye al criterio de pertinencia."
+},
+{
+"pregunta": "Un proceso recibe requisitos y materiales, realiza una serie de actividades relacionadas y produce un resultado que posteriormente utilizará el cliente. ¿Qué interpretación representa mejor la arquitectura del proceso descrita?",
+"tema": "Proceso: entradas, actividades y salidas",
+"opciones": [
+"La entrada y la salida son equivalentes porque ambas son resultados del proceso",
+"El proceso transforma entradas mediante actividades relacionadas para generar una salida",
+"El proceso se limita a registrar las características del producto sin transformarlas",
+"La salida corresponde exclusivamente a los requisitos iniciales entregados por el proveedor"
+],
+"respuestaCorrecta": "El proceso transforma entradas mediante actividades relacionadas para generar una salida",
+"explicacionAcierto": "El documento representa el proceso como un conjunto de actividades relacionadas entre sí que transforma las entradas en salidas. La entrada incorpora requisitos o elementos que alimentan el proceso, mientras que la salida es el resultado generado por las actividades.",
+"explicacionFallo": "La primera opción elimina precisamente la transformación que caracteriza al proceso. La tercera reduce el proceso a documentación y medición, ignorando las actividades que generan el resultado. La cuarta confunde los requisitos de entrada con la salida: esta última es el resultado producido después de la transformación."
+},
+{
+"pregunta": "En una cadena proveedor-cliente, una actividad recibe requisitos de un proveedor y genera un resultado que debe responder a las necesidades del cliente. ¿Por qué es útil entender el proceso como una interfaz?",
+"tema": "Proceso y relación proveedor-cliente",
+"opciones": [
+"Porque conecta los requisitos recibidos con un resultado generado para responder a las necesidades del cliente",
+"Porque elimina la necesidad de especificar requisitos entre organizaciones",
+"Porque convierte automáticamente al proveedor en responsable de todas las actividades posteriores",
+"Porque permite considerar únicamente los recursos internos y excluir al cliente"
+],
+"respuestaCorrecta": "Porque conecta los requisitos recibidos con un resultado generado para responder a las necesidades del cliente",
+"explicacionAcierto": "El documento sitúa el proceso en la interfaz entre proveedor y cliente: recibe entradas y requisitos y produce un resultado. Esta perspectiva permite comprender cómo las necesidades y requisitos atraviesan la cadena hasta convertirse en una salida destinada al cliente.",
+"explicacionFallo": "La segunda opción contradice la importancia que el documento concede a requisitos y especificaciones. La tercera atribuye al proveedor responsabilidades que no se derivan del concepto de proceso. La cuarta ignora precisamente la relación con el cliente que caracteriza al proceso como interfaz."
+},
+{
+"pregunta": "Una organización comienza aplicando controles operativos sobre productos y posteriormente incorpora actividades preventivas, responsabilidades directivas y finalmente una cultura integral de calidad. ¿Qué principio de evolución de los niveles de calidad representa esta situación?",
+"tema": "Niveles de la calidad",
+"opciones": [
+"Cada nivel absorbe y amplía las responsabilidades del nivel anterior",
+"Cada nivel sustituye por completo al anterior y elimina sus actividades",
+"La gestión total de la calidad se limita exclusivamente a la inspección final",
+"El control de calidad tiene un alcance superior al de la gestión de la calidad total"
+],
+"respuestaCorrecta": "Cada nivel absorbe y amplía las responsabilidades del nivel anterior",
+"explicacionAcierto": "El esquema muestra una expansión progresiva: el control de calidad es operativo; el aseguramiento añade un enfoque preventivo; la gestión incorpora una dimensión estratégica; y la TQM amplía el enfoque hacia una dimensión cultural y holística. El documento resume esta evolución indicando que cada nivel absorbe y expande las responsabilidades del anterior.",
+"explicacionFallo": "La segunda opción es incorrecta porque la evolución no implica borrar las funciones anteriores. La tercera reduce la TQM a una actividad operativa, cuando el documento la sitúa en el nivel cultural y holístico. La cuarta invierte la jerarquía: el control de calidad es el nivel más operativo, no el de mayor alcance."
+},
+{
+"pregunta": "Una empresa pasa de comprobar productos terminados a establecer acciones planificadas y sistemáticas destinadas a generar confianza en que los requisitos serán cumplidos. ¿Qué cambio conceptual se ha producido?",
+"tema": "Control y aseguramiento de la calidad",
+"opciones": [
+"Ha pasado del aseguramiento de la calidad al control de calidad",
+"Ha pasado del control de calidad al aseguramiento de la calidad",
+"Ha pasado directamente del control de calidad a la gestión de la calidad total",
+"Ha sustituido la calidad por criterios exclusivamente financieros"
+],
+"respuestaCorrecta": "Ha pasado del control de calidad al aseguramiento de la calidad",
+"explicacionAcierto": "El control de calidad se caracteriza por técnicas y actividades operativas destinadas a verificar y satisfacer requisitos del producto o servicio. El aseguramiento añade acciones planificadas, preestablecidas y sistemáticas destinadas a proporcionar confianza en que los requisitos serán cumplidos.",
+"explicacionFallo": "La primera opción invierte la dirección de la evolución. La tercera salta por encima del nivel intermedio que el documento identifica como aseguramiento. La cuarta es incorrecta porque el aseguramiento no reemplaza la calidad por criterios financieros; la rentabilidad aparece vinculada a la dimensión directiva de la gestión de la calidad."
+},
+{
+"pregunta": "Una dirección decide que la calidad debe incluir la definición de política, objetivos y responsabilidades y que debe involucrar a los distintos niveles ejecutivos, considerando además criterios de rentabilidad. ¿Qué nivel de enfoque refleja mejor esta decisión?",
+"tema": "Gestión de la calidad",
+"opciones": [
+"Control de calidad",
+"Aseguramiento de la calidad",
+"Gestión de la calidad",
+"Inspección"
+],
+"respuestaCorrecta": "Gestión de la calidad",
+"explicacionAcierto": "El documento caracteriza la gestión de la calidad como una función directiva y administrativa que determina y aplica política, objetivos y responsabilidades. Además, involucra a los niveles ejecutivos e incluye criterios de rentabilidad, lo que la diferencia del enfoque puramente operativo.",
+"explicacionFallo": "El control de calidad se centra en técnicas y actividades operativas. El aseguramiento se orienta a acciones planificadas y sistemáticas para generar confianza en el cumplimiento. La inspección es una actividad operativa concreta de medir, examinar, ensayar o comparar características, por lo que tiene un alcance mucho menor."
+},
+{
+"pregunta": "Un responsable necesita saber dónde encontrar la descripción global del sistema de calidad y, por separado, las prácticas previstas para un proyecto concreto. ¿Qué combinación documental es la adecuada?",
+"tema": "Jerarquía documental",
+"opciones": [
+"Manual de la Calidad para el sistema global y Plan de la Calidad para el proyecto concreto",
+"Registro para el sistema global y Especificación para el proyecto concreto",
+"Especificación para describir todo el sistema y Registro para planificar el proyecto",
+"Plan de la Calidad para describir todo el sistema y Manual de la Calidad para registrar resultados"
+],
+"respuestaCorrecta": "Manual de la Calidad para el sistema global y Plan de la Calidad para el proyecto concreto",
+"explicacionAcierto": "El Manual de la Calidad enuncia la política y describe todo el sistema de calidad del organismo. El Plan de la Calidad, en cambio, establece prácticas, medios y secuencia de actividades ligadas a un producto, proyecto o contrato particular.",
+"explicacionFallo": "El Registro proporciona evidencias de actividades realizadas o resultados obtenidos, por lo que es histórico y no describe globalmente el sistema. La Especificación establece requisitos exactos que debe cumplir el producto o servicio. Las dos últimas opciones intercambian las funciones de los documentos y, por tanto, alteran la jerarquía presentada."
+},
+{
+"pregunta": "Después de terminar un proyecto, una organización necesita demostrar qué actividades se realizaron y qué resultados se obtuvieron. ¿Qué nivel documental responde directamente a esa necesidad?",
+"tema": "Registros de calidad",
+"opciones": [
+"Manual de la Calidad",
+"Plan de la Calidad",
+"Especificación",
+"Registro"
+],
+"respuestaCorrecta": "Registro",
+"explicacionAcierto": "El registro es el documento que proporciona evidencias objetivas de las actividades efectuadas o de los resultados obtenidos. Por eso funciona como la «historia» documental del sistema y resulta especialmente adecuado para demostrar qué ocurrió.",
+"explicacionFallo": "El Manual describe el sistema y enuncia la política, pero no tiene como función principal documentar históricamente cada actividad realizada. El Plan establece prácticas y secuencias para un producto, proyecto o contrato. La Especificación fija los requisitos que deben cumplirse; no constituye por sí misma la evidencia de que se cumplieron."
+},
+{
+"pregunta": "Un equipo necesita un documento que establezca exactamente qué requisitos debe cumplir un producto antes de evaluar su conformidad. ¿Qué documento de la jerarquía debería consultar primero?",
+"tema": "Especificaciones",
+"opciones": [
+"Manual de la Calidad",
+"Plan de la Calidad",
+"Especificación",
+"Registro"
+],
+"respuestaCorrecta": "Especificación",
+"explicacionAcierto": "La especificación establece los requisitos exactos que el producto o servicio debe cumplir. Por ello constituye una referencia directa para determinar posteriormente si las características observadas son conformes con los requisitos establecidos.",
+"explicacionFallo": "El Manual describe el sistema completo, no los requisitos exactos de un producto concreto. El Plan organiza prácticas, medios y secuencias para un producto, proyecto o contrato, pero su función no equivale a establecer cada requisito exacto. El Registro aporta evidencia histórica de actividades o resultados y, por tanto, se utiliza después de que ocurran."
+},
+{
+"pregunta": "En un contrato internacional aparecen términos diferentes para referirse a las organizaciones que suministran productos y a quienes los reciben. ¿Qué aporta la clasificación de subcontratista, proveedor, cliente y organismo presentada en el documento?",
+"tema": "Relaciones entre organizaciones",
+"opciones": [
+"Una terminología común para reducir ambigüedades en las relaciones contractuales",
+"Un método para determinar automáticamente el precio de cada producto",
+"Una clasificación destinada exclusivamente a identificar fallos técnicos",
+"Un sistema que elimina la necesidad de requisitos y especificaciones contractuales"
+],
+"respuestaCorrecta": "Una terminología común para reducir ambigüedades en las relaciones contractuales",
+"explicacionAcierto": "El documento define las posiciones de subcontratista, proveedor, cliente y organismo dentro del ecosistema y señala que la ISO 8402 estandariza «quién es quién» para evitar ambigüedades legales en contratos internacionales.",
+"explicacionFallo": "La clasificación no determina precios, por lo que la segunda opción introduce una función ajena al contenido. La tercera reduce excesivamente el alcance de las definiciones, que organizan relaciones entre actores. La cuarta contradice el esquema, que precisamente muestra la importancia de requisitos y especificaciones entre las partes."
+},
+{
+"pregunta": "Durante una inspección se mide una característica del producto y se compara con el requisito especificado para determinar si existe conformidad. ¿Qué actividad se está realizando?",
+"tema": "Inspección",
+"opciones": [
+"Inspección",
+"Validación",
+"Trazabilidad",
+"Acción preventiva"
+],
+"respuestaCorrecta": "Inspección",
+"explicacionAcierto": "El documento define la inspección como una actividad operativa que incluye medir, examinar, ensayar o comparar características con requisitos especificados para determinar la conformidad. La situación descrita coincide directamente con esa función.",
+"explicacionFallo": "La validación se centra en confirmar que requisitos particulares para un uso específico previsto han sido satisfechos. La trazabilidad permite reconstruir la historia, utilización o localización de un producto mediante identificaciones registradas. La acción preventiva busca eliminar causas de una no conformidad potencial y, por tanto, actúa antes de que ocurra la falla."
+},
+{
+"pregunta": "Un producto cumple las especificaciones establecidas, pero todavía debe demostrarse que satisface los requisitos particulares del uso específico para el que fue diseñado. ¿Qué evaluación resulta más pertinente?",
+"tema": "Validación",
+"opciones": [
+"Inspección",
+"Verificación",
+"Validación",
+"Trazabilidad"
+],
+"respuestaCorrecta": "Validación",
+"explicacionAcierto": "La validación confirma que los requisitos particulares para un uso específico previsto han sido satisfechos, es decir, que se ha demostrado la funcionalidad real para ese propósito. Esto la distingue de una simple comprobación de características frente a especificaciones.",
+"explicacionFallo": "La inspección permite medir, examinar, ensayar o comparar características con requisitos para determinar conformidad. La verificación es la confirmación mediante examen y evidencia objetiva de que los requisitos especificados han sido satisfechos. La trazabilidad, por su parte, permite reconstruir la historia o localización del producto y no demuestra por sí misma su aptitud para un uso específico."
+},
+{
+"pregunta": "Una organización puede demostrar mediante documentos, mediciones y ensayos que un requisito especificado ha sido satisfecho, pero no está intentando determinar si el producto resulta adecuado para un uso específico distinto. ¿Qué concepto describe mejor esta situación?",
+"tema": "Verificación",
+"opciones": [
+"Validación",
+"Verificación",
+"Trazabilidad",
+"No conformidad"
+],
+"respuestaCorrecta": "Verificación",
+"explicacionAcierto": "La verificación se define como la confirmación, mediante examen y aporte de evidencias objetivas, de que los requisitos especificados han sido satisfechos. La clave del caso es la demostración objetiva del cumplimiento de requisitos especificados, sin introducir necesariamente la cuestión del uso específico.",
+"explicacionFallo": "La validación añade la dimensión del uso específico previsto y la funcionalidad real. La trazabilidad se refiere a reconstruir historia, utilización o localización mediante identificaciones registradas. La no conformidad es la no satisfacción de un requisito especificado, mientras que el caso descrito demuestra precisamente su satisfacción."
+},
+{
+"pregunta": "Un fabricante conserva identificaciones registradas que permiten reconstruir la historia y localizar un producto concreto a lo largo de su recorrido. ¿Qué capacidad está aplicando?",
+"tema": "Trazabilidad",
+"opciones": [
+"Trazabilidad",
+"Validación",
+"Inspección",
+"Retrabajo"
+],
+"respuestaCorrecta": "Trazabilidad",
+"explicacionAcierto": "La trazabilidad es la aptitud para reconstruir la historia, utilización o localización de un producto por medio de identificaciones registradas. El elemento decisivo del caso es precisamente la posibilidad de reconstrucción mediante registros identificativos.",
+"explicacionFallo": "La validación comprueba la satisfacción de requisitos para un uso específico. La inspección consiste en actividades como medir, examinar, ensayar o comparar características con requisitos. El retrabajo implica actuar físicamente sobre un producto no conforme para lograr que satisfaga los requisitos especificados; no consiste en seguir su historial."
+},
+{
+"pregunta": "Una auditoría de calidad concluye que una actividad cumple formalmente una disposición, pero además analiza si dicha actividad es efectiva para alcanzar los objetivos establecidos. ¿Qué característica de la auditoría explica esta evaluación?",
+"tema": "Auditoría de la calidad",
+"opciones": [
+"Es un examen sistemático e independiente que evalúa tanto el cumplimiento como la efectividad",
+"Es una inspección exclusivamente visual realizada por cualquier trabajador",
+"Es un registro histórico que demuestra automáticamente la conformidad",
+"Es una acción correctiva destinada a eliminar las causas de una falla existente"
+],
+"respuestaCorrecta": "Es un examen sistemático e independiente que evalúa tanto el cumplimiento como la efectividad",
+"explicacionAcierto": "El documento define la auditoría de calidad como un examen sistemático e independiente que determina si las actividades satisfacen las disposiciones y si son efectivas para alcanzar objetivos. Por ello no se limita a verificar la existencia formal de procedimientos.",
+"explicacionFallo": "La segunda opción confunde auditoría con inspección y elimina su carácter sistemático e independiente. La tercera describe incorrectamente un registro, que solo aporta evidencia. La cuarta define una acción correctiva, cuyo objetivo es eliminar las causas de una falla existente, no examinar independientemente el sistema."
+},
+{
+"pregunta": "Durante una auditoría, el evaluador basa una conclusión únicamente en opiniones personales sobre la conveniencia de un procedimiento. ¿Qué principio de evidencia de auditoría se está incumpliendo?",
+"tema": "Evidencia objetiva",
+"opciones": [
+"La evidencia debe basarse en hechos comprobables mediante observación, medición o ensayo",
+"La evidencia debe depender principalmente de la autoridad jerárquica del auditor",
+"La evidencia puede sustituirse por la experiencia subjetiva del equipo directivo",
+"La evidencia solo es válida cuando demuestra que no existe ningún riesgo"
+],
+"respuestaCorrecta": "La evidencia debe basarse en hechos comprobables mediante observación, medición o ensayo",
+"explicacionAcierto": "El documento caracteriza la evidencia objetiva como información cuya veracidad puede demostrarse y que se basa en hechos comprobables mediante observación, medición o ensayo. Por eso una opinión personal, aunque proceda de una persona experimentada, no equivale a evidencia objetiva.",
+"explicacionFallo": "La autoridad del auditor no convierte una opinión en evidencia. La experiencia directiva tampoco sustituye la comprobabilidad de los hechos. Finalmente, la evidencia objetiva no exige demostrar que no existe ningún riesgo; exige que la información utilizada como evidencia pueda comprobarse objetivamente."
+},
+{
+"pregunta": "Un auditor debe evaluar un sistema sin asumir responsabilidad directa por las actividades que está examinando. ¿Qué característica del actor de auditoría es especialmente relevante?",
+"tema": "Auditor de calidad",
+"opciones": [
+"Debe ser una persona calificada e independiente para efectuar el examen",
+"Debe ser necesariamente la persona que ejecutó todas las actividades auditadas",
+"Debe limitarse a recopilar opiniones de los empleados sin comprobar hechos",
+"Debe sustituir a la dirección en la toma de decisiones operativas"
+],
+"respuestaCorrecta": "Debe ser una persona calificada e independiente para efectuar el examen",
+"explicacionAcierto": "El documento identifica al auditor como una persona calificada e independiente para efectuar el examen. La independencia es especialmente importante porque permite evaluar las actividades sin que el auditor sea simplemente quien juzga su propio trabajo.",
+"explicacionFallo": "La segunda opción contradice la independencia requerida. La tercera contradice el énfasis del documento en evidencia objetiva y hechos comprobables. La cuarta transforma al auditor en gestor operativo, cuando su función es examinar y determinar si las actividades cumplen las disposiciones y son efectivas."
+},
+{
+"pregunta": "Un producto no cumple un requisito especificado en su documentación técnica, aunque todavía puede ser funcional y seguro para el uso previsto. ¿Cómo debería clasificarse principalmente esta situación según las definiciones del documento?",
+"tema": "No conformidad y defecto",
+"opciones": [
+"No conformidad",
+"Defecto",
+"Validación",
+"Acción preventiva"
+],
+"respuestaCorrecta": "No conformidad",
+"explicacionAcierto": "La no conformidad se define como la no satisfacción de un requisito especificado. El caso plantea precisamente el incumplimiento de un requisito documentado, sin afirmar que exista necesariamente una falla funcional grave relacionada con el uso previsto.",
+"explicacionFallo": "El defecto se define en el documento como el incumplimiento de una expectativa razonable ligada a un uso previsto, incluyendo las relativas a la seguridad, y se contextualiza como una falla funcional grave. La validación es una confirmación de aptitud para un uso específico, no una clasificación de incumplimiento. La acción preventiva busca evitar una no conformidad potencial antes de que ocurra."
+},
+{
+"pregunta": "Un producto cumple los requisitos documentados, pero presenta una falla funcional grave que lo hace inutilizable o peligroso para el usuario. ¿Qué concepto del documento describe mejor la situación?",
+"tema": "Defecto",
+"opciones": [
+"No conformidad",
+"Defecto",
+"Verificación",
+"Registro"
+],
+"respuestaCorrecta": "Defecto",
+"explicacionAcierto": "El documento diferencia el defecto de la no conformidad al asociarlo con el incumplimiento de una expectativa razonable ligada a un uso previsto, incluidas las relativas a seguridad. En su contexto, lo presenta como una falla funcional grave que puede hacer que el producto sea inútil o peligroso.",
+"explicacionFallo": "La no conformidad se centra en la no satisfacción de un requisito especificado, mientras que el caso destaca una expectativa razonable vinculada al uso y una falla funcional grave. La verificación confirma mediante evidencia objetiva que se han satisfecho requisitos especificados. El registro documenta evidencias de actividades o resultados, pero no es la clasificación de la falla."
+},
+{
+"pregunta": "Una organización detecta que una falla ya ocurrió y quiere evitar que vuelva a producirse eliminando las causas que la originaron. ¿Qué respuesta es la más coherente con el esquema de acciones del documento?",
+"tema": "Acción correctiva",
+"opciones": [
+"Acción preventiva",
+"Acción correctiva",
+"Inspección",
+"Trazabilidad"
+],
+"respuestaCorrecta": "Acción correctiva",
+"explicacionAcierto": "La acción correctiva se toma para eliminar las causas de una falla existente y tiene como objetivo evitar su repetición en el futuro. La característica decisiva es que el problema ya se ha producido y la organización actúa sobre sus causas.",
+"explicacionFallo": "La acción preventiva es proactiva: elimina las causas de una no conformidad potencial para evitar que llegue a producirse. La inspección sirve para medir, examinar, ensayar o comparar características con requisitos. La trazabilidad permite reconstruir historia, utilización o localización mediante identificaciones registradas; ninguna de estas dos últimas tiene como objetivo eliminar las causas de una falla existente."
+},
+{
+"pregunta": "Una empresa identifica una causa que podría producir una no conformidad, aunque todavía no se ha producido ninguna falla, y actúa sobre ella. ¿Qué diferencia conceptual respecto de una acción correctiva justifica la clasificación?",
+"tema": "Acción preventiva",
+"opciones": [
+"Es preventiva porque actúa sobre una causa potencial antes de que aparezca la no conformidad",
+"Es correctiva porque toda acción relacionada con causas debe realizarse después de una falla",
+"Es una actividad de inspección porque cualquier prevención implica medir un producto terminado",
+"Es retrabajo porque modifica físicamente un producto que todavía no cumple requisitos"
+],
+"respuestaCorrecta": "Es preventiva porque actúa sobre una causa potencial antes de que aparezca la no conformidad",
+"explicacionAcierto": "La acción preventiva tiene carácter proactivo y se toma para eliminar las causas de una no conformidad potencial. Su diferencia fundamental frente a la acción correctiva es temporal y causal: busca impedir que ocurra la falla, en lugar de evitar su repetición.",
+"explicacionFallo": "La segunda opción describe precisamente la lógica de la acción correctiva, que responde a una falla existente. La tercera confunde prevención con inspección, que es una actividad de evaluación de características frente a requisitos. La cuarta define el retrabajo, que implica una acción física sobre un producto no conforme ya existente."
+},
+{
+"pregunta": "Un producto no conforme puede ser modificado físicamente para que finalmente satisfaga los requisitos especificados. ¿Qué acción corresponde específicamente a esta situación?",
+"tema": "Retrabajo",
+"opciones": [
+"Retrabajo",
+"Acción preventiva",
+"Auditoría",
+"Trazabilidad"
+],
+"respuestaCorrecta": "Retrabajo",
+"explicacionAcierto": "El retrabajo consiste en una acción física sobre un producto no conforme para que logre satisfacer los requisitos especificados. La clave es que existe un producto no conforme y se interviene directamente sobre él para alcanzar los requisitos.",
+"explicacionFallo": "La acción preventiva actúa sobre causas de una no conformidad potencial antes de que ocurra. La auditoría es un examen sistemático e independiente del sistema o actividades. La trazabilidad permite reconstruir la historia, utilización o localización del producto. Ninguna de estas actividades equivale a modificar físicamente un producto no conforme."
+},
+{
+"pregunta": "Una organización pretende implantar un enfoque en el que todos sus miembros participen activamente, se mejore continuamente la calidad y la eficiencia y la gestión esté centrada integralmente en la calidad. ¿Qué concepto sintetiza mejor este enfoque?",
+"tema": "Gestión de la Calidad Total",
+"opciones": [
+"Control de calidad",
+"Aseguramiento de la calidad",
+"Gestión de la Calidad Total (TQM)",
+"Inspección"
+],
+"respuestaCorrecta": "Gestión de la Calidad Total (TQM)",
+"explicacionAcierto": "La TQM aparece como el objetivo supremo del esquema y se define como una forma de gestión integral centrada absolutamente en la calidad. Incluye la participación activa de todos los miembros de la organización y el mejoramiento continuo de la calidad y la eficiencia.",
+"explicacionFallo": "El control de calidad se concentra en técnicas y actividades operativas. El aseguramiento se centra en acciones planificadas y sistemáticas que generan confianza en el cumplimiento. La inspección es todavía más específica y operativa. Ninguno de estos conceptos alcanza el enfoque cultural, integral y participativo atribuido a la TQM."
+}
+]

@@ -1,27 +1,63 @@
 [
   {
-    "id": "q1",
-    "archivo": "data/ejemplo.json",
-    "nombre": "Lectura crítica: ideas principales"
+    "materia": "Lectura crítica",
+    "cuestionarios": [
+      {
+        "id": "q1",
+        "archivo": "data/ejemplo.json",
+        "nombre": "Lectura crítica: ideas principales"
+      }
+    ]
   },
   {
-    "id": "q2",
-    "archivo": "data/QUIZ1.json",
-    "nombre": "Cuestionario: Capítulo 1"
+    "materia": "Sistemas Operativos",
+    "cuestionarios": [
+      {
+        "id": "q2",
+        "archivo": "data/QUIZ1.json",
+        "nombre": "Cuestionario: Capítulo 1"
+      },
+      {
+        "id": "q3",
+        "archivo": "data/QUIZ1y2.json",
+        "nombre": "Cuestionario: Capítulos 1 y 2"
+      },
+      {
+        "id": "q4",
+        "archivo": "data/QUIZ2.json",
+        "nombre": "Cuestionario: Capítulo 2"
+      },
+      {
+        "id": "q5",
+        "archivo": "data/QUIZ3.json",
+        "nombre": "Cuestionario: Capítulo 3"
+      }
+    ]
   },
   {
-    "id": "q3",
-    "archivo": "data/QUIZ1y2.json",
-    "nombre": "Cuestionario: Capítulos 1 y 2"
-  },
-  {
-    "id": "q4",
-    "archivo": "data/QUIZ2.json",
-    "nombre": "Cuestionario: Capítulo 2"
-  },
-  {
-    "id": "q5",
-    "archivo": "data/QUIZ3.json",
-    "nombre": "Cuestionario: Capítulo 3"
+    "materia": "Ingeniería de Software III",
+    "icono": "bx-code-block",
+    "cuestionarios": [
+      {
+        "id": "q6",
+        "archivo": "data/SoftwareIIITheInvisibleGlobalBluePrint.json",
+        "nombre": "[The invisible global Blue Print]"
+      },
+      {
+        "id": "q7",
+        "archivo": "data/SOFIIIISO8403.json",
+        "nombre": "[ISO8403]"
+      },
+      {
+        "id": "q8",
+        "archivo": "data/QuizTheQualityPrism.json",
+        "nombre": "[THE QUALITY PRIMS]"
+      },
+      {
+        "id": "q9",
+        "archivo": "data/SOFIIIISO9000.json",
+        "nombre": "[ISO 9000: Gestión de la Calidad]"
+      }
+    ]
   }
 ]

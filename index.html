@@ -3,51 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#090d1a">
+  <meta name="theme-color" content="#0b1120">
   <title>ICFES Lab | Entrenamiento interactivo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="app-shell">
-    <header class="brand"><div class="brand-mark">IL</div><h1>ICFES Lab</h1></header>
-
+    <header class="app-header"><a class="brand" href="#" aria-label="Ir al inicio"><span class="brand-mark">IL</span><span>ICFES Lab</span></a></header>
     <section id="menu" class="view">
-      <div class="panel hero">
-        <p class="eyebrow">Entrenamiento inteligente</p>
-        <h2>Elige tu próximo reto.</h2>
-        <p>Resuelve preguntas, entiende tus errores y descubre qué temas necesitan más práctica.</p>
-        <div id="quiz-list" class="quiz-list" aria-live="polite"></div>
-        <p id="menu-status" class="status">Cargando cuestionarios...</p>
-      </div>
+      <div id="menu-materias"><div class="menu-intro"><p class="eyebrow">Entrenamiento inteligente</p><h1>Elige tu próximo desafío</h1><p>Selecciona una materia y fortalece tus conocimientos pregunta a pregunta.</p></div><div id="materia-list" class="materia-grid" aria-live="polite"></div><p id="menu-status" class="status">Cargando materias...</p></div>
+      <div id="menu-cuestionarios" hidden><button id="materias-button" class="back-button" type="button"><i class="bx bx-arrow-back"></i> Materias</button><p class="eyebrow">Materia seleccionada</p><h1 id="materia-name">Cuestionarios</h1><div id="quiz-list" class="quiz-list" aria-live="polite"></div><p id="quiz-status" class="status">Selecciona un cuestionario para comenzar.</p></div>
     </section>
-
-    <section id="juego" class="view" hidden>
-      <div class="panel">
-        <div class="quiz-top"><span id="quiz-name">Cuestionario</span><span id="question-counter">1 / 1</span></div>
-        <div class="progress-track"><div id="progress-bar" class="progress-bar" style="width: 0%"></div></div>
-        <p id="question-topic" class="eyebrow"></p>
-        <h2 id="question-text" class="question">Pregunta</h2>
-        <div id="options" class="options"></div>
-        <div id="feedback" class="feedback" hidden aria-live="polite"></div>
-        <div class="next-row"><button id="next-button" class="primary-button" type="button" hidden>Siguiente</button></div>
-      </div>
-    </section>
-
-    <section id="resultados" class="view" hidden>
-      <div class="panel">
-        <p class="eyebrow">Sesión terminada</p>
-        <h2>Así estuvo tu práctica.</h2>
-        <div class="results-grid">
-          <div class="stat"><small>Total</small><strong id="result-total">0</strong></div>
-          <div class="stat"><small>Aciertos</small><strong id="result-correct">0</strong></div>
-          <div class="stat"><small>Fallos</small><strong id="result-wrong">0</strong></div>
-          <div class="stat"><small>Precisión</small><strong id="result-percent">0%</strong></div>
-        </div>
-        <h3 class="difficulty-title">Temas para reforzar</h3>
-        <div id="topic-results"></div>
-        <button id="menu-button" class="secondary-button" type="button">Volver al menú</button>
-      </div>
-    </section>
+    <section id="juego" class="view" hidden><div class="game-head"><div><span id="quiz-name">Cuestionario</span><div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div></div><span id="question-counter">1 / 1</span></div><article class="question-card"><p id="question-topic" class="eyebrow"></p><h1 id="question-text" class="question">Pregunta</h1><div id="options" class="options"></div><aside id="feedback" class="feedback" hidden aria-live="polite"><i class="bx bx-bulb" aria-hidden="true"></i><div><strong>Explicación</strong><p id="feedback-text"></p></div></aside><div class="next-row"><button id="next-button" class="next-button" type="button" hidden>Siguiente <i class="bx bx-right-arrow-alt"></i></button></div></article></section>
+    <section id="resultados" class="view" hidden><div class="result-card"><p class="eyebrow">Sesión terminada</p><h1>Así estuvo tu práctica</h1><div class="results-grid"><div class="stat"><small>Total</small><strong id="result-total">0</strong></div><div class="stat"><small>Aciertos</small><strong id="result-correct">0</strong></div><div class="stat"><small>Fallos</small><strong id="result-wrong">0</strong></div><div class="stat"><small>Precisión</small><strong id="result-percent">0%</strong></div></div><h2>Temas para reforzar</h2><div id="topic-results"></div><button id="menu-button" class="back-button" type="button"><i class="bx bx-grid-alt"></i> Volver a materias</button></div></section>
   </main>
   <script src="app.js"></script>
 </body>

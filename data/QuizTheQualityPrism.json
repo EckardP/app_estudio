@@ -1,0 +1,340 @@
+[
+{
+"pregunta": "Una empresa afirma que un producto es de alta calidad porque cumple exactamente sus especificaciones técnicas. Sin embargo, los clientes lo valoran negativamente porque no responde a su necesidad principal. ¿Qué concepto del documento explica mejor esta aparente contradicción?",
+"tema": "Calidad objetiva y subjetiva",
+"opciones": [
+"La coexistencia de una calidad objetiva medible y una calidad subjetiva dependiente de la percepción del usuario",
+"La superioridad de la calidad objetiva sobre cualquier valoración del cliente",
+"La dimensión económica como único criterio para determinar la calidad",
+"La estandarización elimina necesariamente las diferencias entre las expectativas de los usuarios"
+],
+"respuestaCorrecta": "La coexistencia de una calidad objetiva medible y una calidad subjetiva dependiente de la percepción del usuario",
+"explicacionAcierto": "La situación refleja directamente la dualidad de la percepción presentada en el documento. La calidad objetiva se relaciona con especificaciones, rendimiento y pruebas estandarizadas, mientras que la subjetiva depende de las expectativas, experiencias y prioridades del usuario. Por eso un producto puede demostrar técnicamente un buen rendimiento y, al mismo tiempo, ser percibido como de baja calidad por un cliente cuyas necesidades son diferentes.",
+"explicacionFallo": "La segunda opción es falsa porque el documento no establece que la medición técnica tenga prioridad absoluta sobre la percepción del usuario. La tercera reduce indebidamente la calidad a factores financieros, cuando el documento distingue dimensiones científica-técnica, económica y humana. La cuarta también es incorrecta: la estandarización busca uniformidad y precisión, pero no hace desaparecer las diferentes expectativas subjetivas."
+},
+{
+"pregunta": "Un fabricante modifica un producto para reducir fallas y, al mismo tiempo, analiza si esas modificaciones realmente responden a las necesidades del consumidor. ¿Qué combinación de enfoques representa mejor esta estrategia?",
+"tema": "Dimensiones de la calidad",
+"opciones": [
+"Dimensión científica-técnica y dimensión humana",
+"Dimensión económica exclusivamente",
+"Calidad de vida y calidad de servicio exclusivamente",
+"Estandarización y linaje"
+],
+"respuestaCorrecta": "Dimensión científica-técnica y dimensión humana",
+"explicacionAcierto": "La dimensión científica-técnica se ocupa del conocimiento aplicado al proceso productivo y de aquello que hace que el producto funcione. La dimensión humana incorpora la relación con los consumidores, la atención y la mejora orientada a sus necesidades. La estrategia descrita combina precisamente el funcionamiento técnico con la respuesta al usuario.",
+"explicacionFallo": "La dimensión económica se centra en factores financieros de producción y gestión, por lo que no explica por sí sola la reducción de fallas y la atención al consumidor. Calidad de vida y calidad de servicio son ámbitos de aplicación, no las dos dimensiones que estructuran esta estrategia. 'Linaje' aparece en el documento como uno de los sentidos generales de la palabra calidad, pero no como una dimensión de gestión de la calidad."
+},
+{
+"pregunta": "Un teléfono tiene una cámara técnicamente sobresaliente, pero un usuario que prioriza la autonomía de la batería lo califica como malo. ¿Qué conclusión es más coherente con el documento?",
+"tema": "Calidad subjetiva",
+"opciones": [
+"La valoración de calidad depende de la relación entre las características del producto y las expectativas o prioridades del usuario",
+"La cámara determina objetivamente la calidad total del teléfono para todos los consumidores",
+"Una valoración negativa demuestra que las especificaciones técnicas son incorrectas",
+"La percepción subjetiva solo aparece cuando no existen pruebas estandarizadas"
+],
+"respuestaCorrecta": "La valoración de calidad depende de la relación entre las características del producto y las expectativas o prioridades del usuario",
+"explicacionAcierto": "El ejemplo del teléfono del documento muestra que una característica objetivamente destacada no garantiza una valoración subjetiva positiva. El usuario interpreta la calidad a partir de sus expectativas y experiencias previas. Así, la misma característica puede ser muy valiosa para una persona y poco relevante para otra.",
+"explicacionFallo": "La segunda opción confunde calidad objetiva con calidad percibida: una cámara excelente no determina automáticamente la valoración global de todos los usuarios. La tercera tampoco se deduce, porque una valoración negativa puede surgir de prioridades distintas sin que las especificaciones sean erróneas. La cuarta es falsa porque la percepción subjetiva puede coexistir precisamente con pruebas y mediciones estandarizadas."
+},
+{
+"pregunta": "Una organización quiere mejorar la calidad sin limitarse a hacer que sus productos funcionen correctamente. También pretende establecer precios justos y mejorar el trato al consumidor. ¿Por qué este planteamiento es más completo?",
+"tema": "Tres dimensiones fundamentales",
+"opciones": [
+"Porque integra las dimensiones científica-técnica, económica y humana",
+"Porque sustituye la calidad objetiva por una valoración exclusivamente emocional",
+"Porque considera únicamente los factores financieros y de atención",
+"Porque convierte todas las expectativas individuales en requisitos técnicos idénticos"
+],
+"respuestaCorrecta": "Porque integra las dimensiones científica-técnica, económica y humana",
+"explicacionAcierto": "El documento presenta tres dimensiones fundamentales. La científica-técnica explica el funcionamiento; la económica aborda producción, gestión y precios; y la humana contempla la relación entre consumidores y empresas. Una estrategia que incorpora las tres obtiene una visión más amplia de la calidad que aquella centrada exclusivamente en el funcionamiento del producto.",
+"explicacionFallo": "La segunda opción es incorrecta porque el enfoque no elimina la calidad objetiva, sino que la complementa con otros aspectos. La tercera omite precisamente la dimensión científica-técnica. La cuarta tampoco representa el modelo: las expectativas humanas no se convierten automáticamente en requisitos técnicos idénticos para todos."
+},
+{
+"pregunta": "Si una empresa adopta la filosofía de Deming según la síntesis del documento, ¿qué decisión sería más coherente?",
+"tema": "Gurús de la calidad: Deming",
+"opciones": [
+"Priorizar la mejora continua buscando satisfacción mediante fiabilidad y uniformidad a bajo costo",
+"Concentrarse exclusivamente en eliminar defectos una vez finalizado el producto",
+"Medir únicamente las pérdidas monetarias provocadas por la variación",
+"Definir la calidad solo según la adecuación individual de cada producto a un cliente"
+],
+"respuestaCorrecta": "Priorizar la mejora continua buscando satisfacción mediante fiabilidad y uniformidad a bajo costo",
+"explicacionAcierto": "El documento asocia a William Edwards Deming con la satisfacción mediante la fiabilidad y la uniformidad, dentro de una filosofía de mejora continua. Por ello, una empresa que adopta este enfoque no debería tratar la calidad como una actividad puntual, sino como un proceso sistemático de perfeccionamiento.",
+"explicacionFallo": "La segunda opción se aproxima más a la idea de 'cero defectos' asociada a Crosby. La tercera corresponde al enfoque de Taguchi, centrado en la medición monetaria de las pérdidas derivadas de la variación. La cuarta se relaciona con la adecuación para el uso del cliente asociada a Juran, aunque tampoco agota su planteamiento."
+},
+{
+"pregunta": "Una compañía rediseña un producto preguntándose primero para qué lo utilizará el consumidor y qué necesidades debe satisfacer. ¿Qué enfoque de los gurús citados se refleja mejor?",
+"tema": "Gurús de la calidad: Juran",
+"opciones": [
+"La adecuación para el uso del cliente",
+"La medición monetaria de la variación",
+"Hacerlo bien a la primera",
+"La integración sistémica de los esfuerzos organizacionales"
+],
+"respuestaCorrecta": "La adecuación para el uso del cliente",
+"explicacionAcierto": "El documento vincula a Joseph M. Juran con la 'adecuación para el uso del cliente'. La pregunta sitúa precisamente al consumidor y el uso que hará del producto como referencia para orientar el diseño, por lo que este enfoque es el que mejor explica la decisión.",
+"explicacionFallo": "La medición monetaria de la variación corresponde al enfoque de Taguchi. 'Hacerlo bien a la primera' se asocia con Crosby y pone el énfasis en cero defectos y entregas a tiempo. La integración sistémica corresponde a Feigenbaum y Cuatrecasas, cuyo planteamiento considera la coordinación de esfuerzos en toda la organización."
+},
+{
+"pregunta": "Un equipo de diseño evalúa continuamente si su producto es útil, económico y satisfactorio para el consumidor. ¿Qué pensador citado en el documento representa mejor esta orientación?",
+"tema": "Gurús de la calidad: Ishikawa",
+"opciones": [
+"Kaoru Ishikawa",
+"William Edwards Deming",
+"Philip Crosby",
+"Genichi Taguchi"
+],
+"respuestaCorrecta": "Kaoru Ishikawa",
+"explicacionAcierto": "El documento vincula a Kaoru Ishikawa con el desarrollo y diseño para el consumidor, destacando que el resultado debe ser útil, económico y siempre satisfactorio. Por tanto, una orientación que evalúa simultáneamente esas características encaja directamente con su planteamiento.",
+"explicacionFallo": "Deming aparece asociado a la mejora continua mediante fiabilidad y uniformidad. Crosby enfatiza cero defectos y hacerlo bien a la primera. Taguchi se centra en el diseño robusto y en medir monetariamente las pérdidas causadas por la variación. Ninguno de estos tres coincide tan directamente con la formulación descrita."
+},
+{
+"pregunta": "Una fábrica descubre que pequeñas variaciones respecto al comportamiento ideal generan pérdidas económicas crecientes. ¿Qué enfoque del documento permitiría interpretar mejor este fenómeno?",
+"tema": "Gurús de la calidad: Taguchi",
+"opciones": [
+"El enfoque de diseño robusto y medición monetaria de la pérdida asociado a Taguchi",
+"El enfoque de cero defectos y entregas a tiempo de Crosby",
+"El enfoque de mejora continua y uniformidad de Deming",
+"El enfoque de trato personalizado de la dimensión humana"
+],
+"respuestaCorrecta": "El enfoque de diseño robusto y medición monetaria de la pérdida asociado a Taguchi",
+"explicacionAcierto": "El documento presenta a Taguchi mediante el diseño robusto y la función de pérdida, indicando que a mayor variación corresponde una mayor pérdida. Esto permite comprender la calidad no solo como cumplimiento de un límite, sino como reducción de las consecuencias económicas asociadas a la variación.",
+"explicacionFallo": "Crosby se centra en cero defectos y entregas a tiempo, no en la función monetaria de pérdida por variación. Deming está asociado a mejora continua, fiabilidad y uniformidad, pero la formulación específica de la pérdida monetaria corresponde a Taguchi. La dimensión humana aborda relaciones con consumidores y empresas, no la cuantificación de pérdidas derivadas de variaciones productivas."
+},
+{
+"pregunta": "Una empresa decide que el objetivo de calidad debe ser entregar los productos correctamente desde el primer intento y cumplir los plazos. ¿Qué filosofía se ajusta mejor al documento?",
+"tema": "Gurús de la calidad: Crosby",
+"opciones": [
+"Cero defectos y hacerlo bien a la primera",
+"Diseño robusto y función de pérdida",
+"Adecuación para el uso del cliente",
+"Satisfacción mediante fiabilidad y uniformidad a bajo costo"
+],
+"respuestaCorrecta": "Cero defectos y hacerlo bien a la primera",
+"explicacionAcierto": "El documento asocia a Philip Crosby con 'cero defectos' y con la idea de 'hacerlo bien a la primera', además de señalar las entregas a tiempo. La estrategia descrita reproduce exactamente ese enfoque preventivo y orientado a evitar errores.",
+"explicacionFallo": "El diseño robusto y la función de pérdida corresponden a Taguchi. La adecuación para el uso corresponde a Juran. La satisfacción mediante fiabilidad y uniformidad a bajo costo está asociada a Deming. Aunque estos enfoques pueden complementar una política de cero defectos, no son el concepto específico que identifica la pregunta."
+},
+{
+"pregunta": "Una organización deja de considerar la calidad como responsabilidad exclusiva del departamento de producción y coordina esfuerzos entre diferentes áreas. ¿Qué planteamiento de los gurús explica mejor esta decisión?",
+"tema": "Gurús de la calidad: Feigenbaum y Cuatrecasas",
+"opciones": [
+"La integración sistémica de los esfuerzos de toda la organización",
+"La evaluación individual de la calidad según el linaje",
+"La función de pérdida exclusivamente monetaria",
+"La percepción subjetiva como único criterio de calidad"
+],
+"respuestaCorrecta": "La integración sistémica de los esfuerzos de toda la organización",
+"explicacionAcierto": "El documento asocia a Feigenbaum y Cuatrecasas con una integración sistémica, descrita como un sistema eficaz para integrar esfuerzos en toda la organización. Por ello, extender la responsabilidad de calidad más allá de producción representa directamente ese enfoque.",
+"explicacionFallo": "El linaje es uno de los sentidos generales de la palabra calidad, pero no constituye un modelo de gestión organizacional. La función de pérdida se relaciona con Taguchi. La percepción subjetiva es una dimensión de cómo se valora la calidad, pero convertirla en el único criterio contradice la dualidad objetiva-subjetiva presentada en el documento."
+},
+{
+"pregunta": "Una empresa quiere evaluar la calidad de un servicio. Descubre que dos clientes reciben el mismo procedimiento, pero uno queda muy satisfecho y otro no, debido a expectativas diferentes. ¿Qué ámbito del espectro de aplicación explica mejor el fenómeno?",
+"tema": "Calidad de servicio",
+"opciones": [
+"Calidad de servicio, porque incorpora percepción, confianza y comodidad del cliente",
+"Calidad de producto, porque todo servicio debe evaluarse únicamente mediante durabilidad",
+"Calidad de vida, porque cualquier satisfacción del consumidor equivale a bienestar general",
+"Calidad objetiva exclusivamente, porque todos recibieron el mismo procedimiento"
+],
+"respuestaCorrecta": "Calidad de servicio, porque incorpora percepción, confianza y comodidad del cliente",
+"explicacionAcierto": "El documento caracteriza la calidad de servicio mediante elementos como percepción, confianza y comodidad, y destaca que el cliente debe sentirse valioso y parte de la marca. Por eso, aunque el procedimiento sea idéntico, las diferencias en la experiencia y percepción pueden producir valoraciones distintas.",
+"explicacionFallo": "La calidad de producto se centra en rasgos, funcionalidad, durabilidad y cumplimiento de promesas, no específicamente en la experiencia del servicio. La calidad de vida se refiere a condiciones que permiten una vida digna, no a cualquier satisfacción comercial. La calidad objetiva no basta para explicar diferencias subjetivas entre usuarios."
+},
+{
+"pregunta": "Un producto presenta buena funcionalidad y durabilidad, pero además la empresa había generado expectativas que finalmente no cumple. Según el documento, ¿por qué podría considerarse de calidad insuficiente?",
+"tema": "Calidad de producto",
+"opciones": [
+"Porque la calidad de producto incluye el cumplimiento de las promesas y expectativas generadas, además de sus características funcionales",
+"Porque la durabilidad no forma parte de la calidad de producto",
+"Porque todo producto técnicamente funcional carece necesariamente de calidad",
+"Porque las expectativas del cliente nunca deben considerarse al evaluar productos"
+],
+"respuestaCorrecta": "Porque la calidad de producto incluye el cumplimiento de las promesas y expectativas generadas, además de sus características funcionales",
+"explicacionAcierto": "El documento define la calidad de producto mediante rasgos, funcionalidad, durabilidad y cumplimiento total de las promesas y expectativas generadas. Por tanto, tener buenas características técnicas no compensa necesariamente una discrepancia entre lo prometido y lo experimentado por el cliente.",
+"explicacionFallo": "La segunda opción es falsa porque la durabilidad aparece expresamente entre los componentes de la calidad de producto. La tercera es demasiado extrema: el documento no afirma que el funcionamiento técnico sea irrelevante, sino que lo integra con otros elementos. La cuarta contradice directamente la inclusión de las expectativas dentro de la calidad de producto."
+},
+{
+"pregunta": "Dos personas tienen concepciones diferentes de lo que significa llevar una vida de calidad. Una prioriza independencia y otra acceso a determinados bienes esenciales. ¿Qué idea del documento permite explicar esta diferencia?",
+"tema": "Calidad de vida",
+"opciones": [
+"La calidad de vida combina factores objetivos y subjetivos y puede variar según los valores del individuo",
+"La calidad de vida se determina únicamente mediante especificaciones técnicas universales",
+"La calidad de vida depende exclusivamente del precio de los bienes disponibles",
+"La calidad de vida es idéntica para todos si tienen acceso al mismo producto"
+],
+"respuestaCorrecta": "La calidad de vida combina factores objetivos y subjetivos y puede variar según los valores del individuo",
+"explicacionAcierto": "El documento señala que la calidad de vida comprende factores objetivos y subjetivos relacionados con una vida digna, salud, independencia y acceso a bienes esenciales, y que puede variar según los valores del individuo. Por ello, la diferencia de prioridades descrita es compatible con su definición.",
+"explicacionFallo": "La segunda opción contradice la presencia de componentes subjetivos. La tercera reduce el concepto a factores financieros, ignorando salud e independencia. La cuarta supone que disponer de los mismos productos produce necesariamente la misma calidad de vida, cuando el documento destaca precisamente la influencia de los valores individuales."
+},
+{
+"pregunta": "Una marca cumple todas sus especificaciones habituales, pero introduce una atención inesperada que supera lo que el cliente esperaba y convierte la experiencia en algo memorable. ¿Qué concepto del documento describe mejor esta estrategia?",
+"tema": "Marketing y curva de sorpresa",
+"opciones": [
+"Superar las expectativas y producir una sorpresa positiva para el cliente",
+"Limitarse estrictamente al cumplimiento de especificaciones",
+"Reducir la calidad percibida para disminuir costos",
+"Sustituir la experiencia del cliente por mediciones técnicas"
+],
+"respuestaCorrecta": "Superar las expectativas y producir una sorpresa positiva para el cliente",
+"explicacionAcierto": "El documento explica que en el marketing moderno la calidad no consiste únicamente en cumplir especificaciones, sino en superar expectativas. La 'sorpresa del cliente' aparece cuando se entrega algo que el consumidor no sabía que deseaba, generando una experiencia memorable y potencialmente recomendable.",
+"explicacionFallo": "La segunda opción representa un nivel básico de cumplimiento, pero no la superación de expectativas. La tercera no aparece como objetivo de la curva de sorpresa. La cuarta vuelve a confundir calidad técnica con experiencia percibida: el documento plantea que ambas dimensiones pueden coexistir."
+},
+{
+"pregunta": "Un hotel ofrece exactamente los servicios anunciados y obtiene valoraciones aceptables, pero otro hotel añade detalles no anticipados que generan entusiasmo y recomendaciones. ¿Qué diferencia conceptual explica mejor el segundo resultado?",
+"tema": "Valor percibido",
+"opciones": [
+"El segundo hotel aumenta el valor percibido al superar las expectativas del cliente",
+"El segundo hotel demuestra únicamente una mayor calidad objetiva",
+"El primer hotel necesariamente tiene peor estandarización",
+"Las recomendaciones solo dependen de las especificaciones técnicas del servicio"
+],
+"respuestaCorrecta": "El segundo hotel aumenta el valor percibido al superar las expectativas del cliente",
+"explicacionAcierto": "La curva de sorpresa del documento relaciona el valor percibido con la capacidad de superar las expectativas. Cumplir lo prometido puede satisfacer al cliente, pero ofrecer algo inesperado puede transformar la experiencia y hacerla memorable, aumentando la probabilidad de recomendación.",
+"explicacionFallo": "El segundo hotel podría tener también buena calidad objetiva, pero la situación descrita enfatiza la experiencia y la sorpresa, no una medición técnica. Que el primer hotel esté peor estandarizado no se desprende de la información. Finalmente, las recomendaciones no dependen exclusivamente de especificaciones técnicas, porque el documento destaca la percepción y la experiencia."
+},
+{
+"pregunta": "Una organización toma opiniones subjetivas de sus clientes y las transforma en requisitos, terminología precisa y directrices que pueden aplicarse de manera uniforme. ¿Qué función de la normalización se está utilizando?",
+"tema": "Normalización y estandarización",
+"opciones": [
+"Procesar la subjetividad mediante terminologías precisas y directrices tecnológicas para establecer un orden estructurado",
+"Eliminar toda participación del cliente en la definición de calidad",
+"Convertir automáticamente cualquier opinión individual en una norma universal sin procesamiento",
+"Sustituir la mejora continua por criterios exclusivamente económicos"
+],
+"respuestaCorrecta": "Procesar la subjetividad mediante terminologías precisas y directrices tecnológicas para establecer un orden estructurado",
+"explicacionAcierto": "El 'embudo de la normalización' del documento describe precisamente el paso desde la subjetividad hacia terminologías precisas, pautas, requisitos y normas. La estandarización permite estructurar aquello que inicialmente puede ser variable o difícil de expresar de manera uniforme.",
+"explicacionFallo": "La segunda opción es incorrecta porque la normalización no implica ignorar al cliente; busca estructurar requisitos. La tercera simplifica en exceso el proceso: el documento habla de procesar la subjetividad mediante terminologías y directrices, no de convertir automáticamente cualquier opinión en norma. La cuarta tampoco corresponde al propósito central de la normalización."
+},
+{
+"pregunta": "Una empresa adopta normas comunes para que diferentes áreas trabajen con criterios uniformes y reduzcan variaciones en sus procesos. ¿Cuál es una consecuencia esperada de la estandarización según el documento?",
+"tema": "Beneficios de la estandarización",
+"opciones": [
+"Mayor fiabilidad y uniformidad",
+"Eliminación completa de las expectativas subjetivas",
+"Sustitución de los procesos productivos por criterios personales",
+"Reducción de la necesidad de cumplir regulaciones"
+],
+"respuestaCorrecta": "Mayor fiabilidad y uniformidad",
+"explicacionAcierto": "Entre los resultados de la estandarización enumerados en el documento aparecen un marco único, prácticas más eficientes, cumplimiento de regulaciones y metas ambientales, y fiabilidad y uniformidad garantizada. Por ello, reducir variaciones mediante criterios comunes es una consecuencia coherente.",
+"explicacionFallo": "La estandarización no elimina las expectativas subjetivas de los clientes, porque estas pertenecen a la dimensión perceptiva de la calidad. Tampoco sustituye los procesos productivos por criterios personales. Finalmente, no reduce la necesidad de cumplir regulaciones; al contrario, el documento señala el cumplimiento de regulaciones como uno de sus beneficios."
+},
+{
+"pregunta": "Una organización busca aumentar la productividad, disminuir costos y mantener la mejora continua orientada a la satisfacción del cliente. ¿Qué propósito de los Sistemas de Gestión de la Calidad del documento se refleja?",
+"tema": "Sistemas de Gestión de la Calidad",
+"opciones": [
+"Unificar criterios para mejorar la productividad, reducir costos y asegurar la mejora continua y satisfacción del cliente",
+"Priorizar únicamente la satisfacción interna de los empleados",
+"Eliminar la necesidad de establecer criterios comunes entre áreas",
+"Concentrarse exclusivamente en la calidad subjetiva del consumidor"
+],
+"respuestaCorrecta": "Unificar criterios para mejorar la productividad, reducir costos y asegurar la mejora continua y satisfacción del cliente",
+"explicacionAcierto": "El documento atribuye a los Sistemas de Gestión de la Calidad la función de unificar criterios mundiales con el propósito de aumentar productividad, disminuir costos y asegurar la mejora continua para la satisfacción del cliente. La opción reproduce la relación entre estandarización, eficiencia y orientación al cliente.",
+"explicacionFallo": "La primera no limita el sistema a la satisfacción interna, sino que el documento destaca al cliente. La segunda es justamente lo contrario: unificar criterios es una finalidad central. La tercera también es incorrecta porque la satisfacción del cliente es uno de los objetivos expresos, pero no se persigue únicamente mediante una valoración subjetiva aislada."
+},
+{
+"pregunta": "Una empresa quiere demostrar que sus procesos son eficientes sin ignorar el impacto que generan sobre el entorno. ¿Qué combinación del marco normativo descrito resulta más coherente?",
+"tema": "Marcos normativos globales",
+"opciones": [
+"Buscar un rendimiento productivo sostenible asumiendo responsabilidad por el impacto en el entorno",
+"Maximizar exclusivamente la producción sin considerar consecuencias ambientales",
+"Sustituir todos los criterios productivos por percepciones individuales",
+"Considerar que la sostenibilidad pertenece exclusivamente a la calidad subjetiva"
+],
+"respuestaCorrecta": "Buscar un rendimiento productivo sostenible asumiendo responsabilidad por el impacto en el entorno",
+"explicacionAcierto": "El documento indica que los marcos normativos globales buscan asegurar que el rendimiento productivo se logre de manera sostenible, asumiendo responsabilidad sobre el impacto en el entorno. Por tanto, la eficiencia productiva se presenta vinculada a la sostenibilidad y la responsabilidad ambiental.",
+"explicacionFallo": "La segunda opción contradice explícitamente la idea de sostenibilidad. La tercera elimina injustificadamente los criterios técnicos y productivos. La cuarta es incorrecta porque el documento no presenta la sostenibilidad como un fenómeno exclusivamente subjetivo, sino como parte de un marco de gestión y responsabilidad."
+},
+{
+"pregunta": "Según la síntesis ISO 9000:2015 presentada, una empresa evalúa un nuevo servicio considerando tanto métricas auditables como la satisfacción de las partes interesadas. ¿Por qué esta evaluación representa mejor la definición de calidad?",
+"tema": "ISO 9000:2015 y síntesis de la calidad",
+"opciones": [
+"Porque combina características medibles del objeto con el grado en que esas características cumplen las necesidades de las partes interesadas",
+"Porque la satisfacción subjetiva hace innecesarias las mediciones objetivas",
+"Porque ISO 9000:2015 define calidad exclusivamente como ausencia de defectos",
+"Porque solo los productos físicos pueden ser objetos de calidad"
+],
+"respuestaCorrecta": "Porque combina características medibles del objeto con el grado en que esas características cumplen las necesidades de las partes interesadas",
+"explicacionAcierto": "La síntesis del documento presenta la definición de ISO 9000:2015 como el grado en que un conjunto de características de un objeto cumple con las necesidades de las partes interesadas. Además, conecta esta formulación con calidad objetiva, percepción y dimensiones científica-técnica, humana y económica. Por ello, integrar medición y satisfacción ofrece una interpretación coherente de la fórmula maestra.",
+"explicacionFallo": "La segunda opción es falsa porque el documento mantiene explícitamente la importancia de la medición auditable. La tercera reduce la calidad a una sola filosofía, mientras que la síntesis integra distintos enfoques. La cuarta contradice el documento, que señala que el objeto puede ser un producto, servicio, proceso o persona."
+},
+{
+"pregunta": "Una universidad evalúa la calidad de un proceso administrativo. No se trata de un producto físico, pero se analizan sus características y si satisface las necesidades de las partes interesadas. ¿Qué elemento de la síntesis ISO 9000:2015 permite justificar esta evaluación?",
+"tema": "Objeto de la calidad",
+"opciones": [
+"El concepto de objeto puede abarcar un producto, servicio, proceso o persona",
+"La calidad solo puede aplicarse a bienes físicos fabricados industrialmente",
+"La calidad de un proceso solo puede determinarse mediante su precio",
+"La calidad de una organización depende únicamente de la opinión de sus empleados"
+],
+"respuestaCorrecta": "El concepto de objeto puede abarcar un producto, servicio, proceso o persona",
+"explicacionAcierto": "En la síntesis ISO 9000:2015 del documento se aclara que el objeto al que se aplican las características puede ser un producto, servicio, proceso o persona. Por ello, un proceso administrativo puede ser evaluado en términos de calidad sin necesidad de ser un objeto físico.",
+"explicacionFallo": "La segunda opción contradice directamente la amplitud del concepto de objeto presentada en el documento. La tercera reduce la calidad a la dimensión económica, ignorando características y necesidades. La cuarta también es demasiado restrictiva: las partes interesadas pueden ser más amplias que los empleados."
+},
+{
+"pregunta": "Una empresa posee excelentes especificaciones técnicas, pero sus clientes consideran que el producto no satisface sus necesidades. A partir de la 'fórmula maestra' del documento, ¿cuál sería la interpretación más adecuada?",
+"tema": "Síntesis de los enfoques de calidad",
+"opciones": [
+"La calidad requiere relacionar las características del objeto con las necesidades de las partes interesadas, no solo demostrar rendimiento técnico",
+"La calidad queda demostrada completamente por las métricas técnicas, aunque no satisfaga necesidades",
+"La percepción del cliente invalida automáticamente cualquier medición objetiva",
+"La dimensión económica determina por sí sola si el producto tiene calidad"
+],
+"respuestaCorrecta": "La calidad requiere relacionar las características del objeto con las necesidades de las partes interesadas, no solo demostrar rendimiento técnico",
+"explicacionAcierto": "La definición sintetizada en el documento no se limita a medir características, sino que pregunta en qué grado esas características cumplen las necesidades de las partes interesadas. De este modo, las métricas técnicas aportan evidencia objetiva, pero la calidad se comprende en relación con las necesidades que el objeto debe satisfacer.",
+"explicacionFallo": "La segunda opción confunde calidad objetiva con la definición completa de calidad. La tercera cae en el error contrario: la percepción no elimina el valor de las mediciones objetivas. La cuarta tampoco es suficiente, porque la dimensión económica es solo una de las dimensiones fundamentales."
+},
+{
+"pregunta": "Un directivo sostiene que mejorar la calidad consiste exclusivamente en perfeccionar la ingeniería del producto. Otro afirma que basta con lograr que los clientes estén satisfechos. ¿Qué postura sintetiza mejor el documento?",
+"tema": "La verdadera calidad",
+"opciones": [
+"La calidad funciona como un puente entre la precisión diseñada por la ingeniería y la satisfacción experimentada por las personas",
+"La calidad pertenece exclusivamente al área de ingeniería porque solo puede medirse objetivamente",
+"La calidad depende exclusivamente de la percepción y hace irrelevante el diseño técnico",
+"La calidad se determina únicamente por los costos y precios del producto"
+],
+"respuestaCorrecta": "La calidad funciona como un puente entre la precisión diseñada por la ingeniería y la satisfacción experimentada por las personas",
+"explicacionAcierto": "La conclusión del documento presenta la calidad como un puente entre la precisión de la ingeniería y la satisfacción humana. Esta formulación integra la dualidad objetiva-subjetiva y evita reducir la calidad a un único punto de vista. La calidad técnica y la experiencia del cliente se necesitan para comprender el concepto de forma completa.",
+"explicacionFallo": "La segunda opción elimina la dimensión humana y contradice la idea de que el cliente y las partes interesadas participan en la experiencia de calidad. La tercera comete el error inverso al ignorar la precisión técnica. La cuarta reduce todo el concepto a la dimensión económica, que el documento presenta como una parte, no como el criterio único."
+},
+{
+"pregunta": "Una organización desea pasar de una concepción vaga de 'hacer las cosas bien' a un sistema que permita comparar procesos, establecer requisitos y mantener resultados uniformes. ¿Qué secuencia conceptual del documento describe mejor este cambio?",
+"tema": "Estandarización y normalización",
+"opciones": [
+"Procesar la subjetividad mediante terminología precisa, pautas, requisitos y normas para establecer un marco estructurado",
+"Eliminar toda medición y confiar exclusivamente en la experiencia personal",
+"Sustituir los requisitos por decisiones diferentes en cada área",
+"Aumentar la variabilidad para permitir que cada proceso defina su propia calidad"
+],
+"respuestaCorrecta": "Procesar la subjetividad mediante terminología precisa, pautas, requisitos y normas para establecer un marco estructurado",
+"explicacionAcierto": "El documento describe la normalización como un 'embudo' que toma la subjetividad y la procesa mediante terminologías precisas y directrices tecnológicas. De ese proceso surgen pautas, requisitos y normas que permiten un marco único, prácticas eficientes, cumplimiento de regulaciones y mayor uniformidad.",
+"explicacionFallo": "La segunda opción es contraria al propósito de la normalización, que busca precisamente estructurar y precisar. La tercera impediría la uniformidad que pretende la estandarización. La cuarta también contradice sus objetivos, ya que el documento destaca fiabilidad y uniformidad, no aumento deliberado de la variabilidad."
+},
+{
+"pregunta": "Un producto recibe una valoración excelente de un consumidor que prioriza su cámara, mientras otro consumidor lo considera deficiente porque esperaba una batería de mayor duración. ¿Qué inferencia pedagógicamente más precisa puede hacerse a partir del documento?",
+"tema": "Percepción y expectativas",
+"opciones": [
+"La calidad subjetiva surge de la interacción entre las características percibidas del objeto y las expectativas o experiencias previas del usuario",
+"Las diferencias de valoración demuestran que ninguno de los dos consumidores puede evaluar la calidad",
+"La calidad objetiva cambia automáticamente según quién observe el producto",
+"La existencia de opiniones diferentes demuestra que las especificaciones técnicas carecen de utilidad"
+],
+"respuestaCorrecta": "La calidad subjetiva surge de la interacción entre las características percibidas del objeto y las expectativas o experiencias previas del usuario",
+"explicacionAcierto": "El documento explica que la calidad subjetiva se mide cualitativamente y depende de la percepción, las expectativas y las experiencias previas. Por eso, un mismo producto puede recibir valoraciones distintas sin que necesariamente exista una contradicción en sus características objetivas.",
+"explicacionFallo": "La segunda opción es demasiado extrema: los consumidores sí pueden realizar valoraciones subjetivas de calidad. La tercera confunde calidad objetiva con subjetiva; las características técnicas no cambian simplemente porque cambie el observador. La cuarta tampoco es correcta: las especificaciones siguen siendo relevantes para la calidad objetiva, aunque no determinen por sí solas la experiencia."
+},
+{
+"pregunta": "Una empresa quiere diseñar una estrategia de calidad que sea técnicamente sólida, económicamente viable y centrada en la relación con los consumidores. ¿Cuál de las siguientes propuestas refleja de manera más completa las tres dimensiones del documento?",
+"tema": "Integración de las dimensiones de calidad",
+"opciones": [
+"Optimizar el funcionamiento técnico, establecer una gestión económicamente sostenible y mejorar el trato y la respuesta al consumidor",
+"Maximizar únicamente las especificaciones técnicas aunque aumenten indefinidamente los costos",
+"Reducir costos como objetivo exclusivo y considerar secundaria la experiencia del consumidor",
+"Concentrarse en la satisfacción del cliente sin analizar el funcionamiento ni la viabilidad económica"
+],
+"respuestaCorrecta": "Optimizar el funcionamiento técnico, establecer una gestión económicamente sostenible y mejorar el trato y la respuesta al consumidor",
+"explicacionAcierto": "La propuesta integra las tres dimensiones fundamentales: la científica-técnica se ocupa del funcionamiento; la económica, de producción, gestión y precios; y la humana, de la relación entre consumidores y empresas. La calidad, según el documento, se entiende mejor cuando estas dimensiones se consideran conjuntamente.",
+"explicacionFallo": "La segunda opción prioriza solo la dimensión científica-técnica y además ignora la sostenibilidad económica. La tercera se limita a lo económico. La cuarta elimina tanto la dimensión técnica como la económica. En los tres casos se pierde la visión multidimensional que propone el documento."
+}
+]

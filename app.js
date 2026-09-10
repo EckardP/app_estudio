@@ -1,5 +1,6 @@
 const state = {
-  quizzes: [],
+  materias: [],
+  selectedMateria: null,
   questions: [],
   currentIndex: 0,
   correct: 0,
@@ -16,8 +17,13 @@ const views = {
 };
 
 const elements = {
+  materiasMenu: document.querySelector('#menu-materias'),
+  cuestionariosMenu: document.querySelector('#menu-cuestionarios'),
+  materiaList: document.querySelector('#materia-list'),
+  materiaName: document.querySelector('#materia-name'),
   quizList: document.querySelector('#quiz-list'),
   menuStatus: document.querySelector('#menu-status'),
+  quizStatus: document.querySelector('#quiz-status'),
   quizName: document.querySelector('#quiz-name'),
   counter: document.querySelector('#question-counter'),
   progress: document.querySelector('#progress-bar'),
@@ -25,6 +31,7 @@ const elements = {
   question: document.querySelector('#question-text'),
   options: document.querySelector('#options'),
   feedback: document.querySelector('#feedback'),
+  feedbackText: document.querySelector('#feedback-text'),
   next: document.querySelector('#next-button'),
   total: document.querySelector('#result-total'),
   correct: document.querySelector('#result-correct'),
@@ -33,6 +40,8 @@ const elements = {
   topicResults: document.querySelector('#topic-results'),
   menuButton: document.querySelector('#menu-button')
 };
+
+const materiasButton = document.querySelector('#materias-button');
 
 function shuffle(items) {
   const copy = [...items];
@@ -57,6 +66,13 @@ function secureRandomIndex(maximum) {
 
 function isValidQuizEntry(quiz) {
   return quiz && typeof quiz.nombre === 'string' && typeof quiz.archivo === 'string';
+}
+
+function isValidMateria(materia) {
+  return materia
+    && typeof materia.materia === 'string'
+    && Array.isArray(materia.cuestionarios)
+    && materia.cuestionarios.every(isValidQuizEntry);
 }
 
 function isValidQuestion(question) {
@@ -85,26 +101,74 @@ function showView(viewName) {
 
 async function initializeApp() {
   try {
-    const quizzes = await fetchJson('indice.json');
-    if (!Array.isArray(quizzes) || !quizzes.every(isValidQuizEntry)) {
+    const materias = await fetchJson('indice.json');
+    if (!Array.isArray(materias) || !materias.every(isValidMateria)) {
       throw new Error('El índice no tiene el formato esperado.');
     }
-    state.quizzes = quizzes;
-    renderQuizList();
-    elements.menuStatus.textContent = state.quizzes.length
-      ? 'Selecciona un cuestionario para comenzar.'
-      : 'No hay cuestionarios disponibles.';
+    state.materias = materias;
+    renderMaterias();
+    elements.menuStatus.textContent = state.materias.length
+      ? 'Selecciona una materia para ver sus cuestionarios.'
+      : 'No hay materias disponibles.';
   } catch (error) {
-    state.quizzes = [];
+    state.materias = [];
+    elements.materiaList.replaceChildren();
     elements.quizList.replaceChildren();
     elements.menuStatus.textContent = 'No fue posible cargar el índice. Ejecuta la app con Live Server.';
     console.error(error);
   }
 }
 
-function renderQuizList() {
+function renderMaterias() {
+  elements.materiaList.replaceChildren();
+  state.materias.forEach((materia, index) => {
+    const button = document.createElement('button');
+    const accent = getSubjectStyle(materia.materia, index, materia.icono);
+    const icon = document.createElement('i');
+    const title = document.createElement('h2');
+    const meta = document.createElement('div');
+    const count = document.createElement('span');
+    const detail = document.createElement('span');
+    const action = document.createElement('span');
+    button.className = 'materia-card';
+    button.type = 'button';
+    button.style.setProperty('--accent', accent.color);
+    icon.className = `subject-icon bx ${accent.icon}`;
+    icon.setAttribute('aria-hidden', 'true');
+    title.textContent = materia.materia;
+    meta.className = 'card-meta';
+    count.textContent = `${materia.cuestionarios.length} ${materia.cuestionarios.length === 1 ? 'cuestionario' : 'cuestionarios'}`;
+    detail.textContent = 'Practica a tu ritmo';
+    meta.append(count, detail);
+    action.className = 'card-action';
+    action.innerHTML = 'Empezar <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>';
+    button.append(icon, title, meta, action);
+    button.addEventListener('click', () => seleccionarMateria(index));
+    elements.materiaList.append(button);
+  });
+}
+
+function getSubjectStyle(name, index, customIcon) {
+  const normalized = name.toLocaleLowerCase('es');
+  if (customIcon) return { icon: customIcon, color: '#a68cff' };
+  if (normalized.includes('sistema') || normalized.includes('inform')) return { icon: 'bx-chip', color: '#3ce3d2' };
+  if (normalized.includes('lectura') || normalized.includes('lengua')) return { icon: 'bx-book-open', color: '#f36a9b' };
+  if (normalized.includes('matem')) return { icon: 'bx-math', color: '#69e58d' };
+  if (normalized.includes('ciencia')) return { icon: 'bx-atom', color: '#65a8ff' };
+  if (normalized.includes('ingl')) return { icon: 'bx-world', color: '#ff6e78' };
+  if (normalized.includes('arte')) return { icon: 'bx-palette', color: '#ffd166' };
+  const fallback = [{ icon: 'bx-book-open', color: '#f36a9b' }, { icon: 'bx-atom', color: '#65a8ff' }, { icon: 'bx-brain', color: '#ffd166' }];
+  return fallback[index % fallback.length];
+}
+
+function seleccionarMateria(indiceMateria) {
+  const materia = state.materias[indiceMateria];
+  if (!materia) return;
+
+  state.selectedMateria = materia;
+  elements.materiaName.textContent = materia.materia;
   elements.quizList.replaceChildren();
-  state.quizzes.forEach((quiz) => {
+  materia.cuestionarios.forEach((quiz) => {
     const button = document.createElement('button');
     const label = document.createElement('span');
     const arrow = document.createElement('span');
@@ -117,10 +181,15 @@ function renderQuizList() {
     button.addEventListener('click', () => startQuiz(quiz));
     elements.quizList.append(button);
   });
+  elements.quizStatus.textContent = materia.cuestionarios.length
+    ? 'Selecciona un cuestionario para comenzar.'
+    : 'No hay cuestionarios disponibles para esta materia.';
+  elements.materiasMenu.hidden = true;
+  elements.cuestionariosMenu.hidden = false;
 }
 
 async function startQuiz(quiz) {
-  elements.menuStatus.textContent = `Cargando ${quiz.nombre}...`;
+  elements.quizStatus.textContent = `Cargando ${quiz.nombre}...`;
   try {
     const questions = await fetchJson(quiz.archivo);
     if (!Array.isArray(questions) || !questions.length || !questions.every(isValidQuestion)) {
@@ -139,7 +208,7 @@ async function startQuiz(quiz) {
     showView('game');
     renderQuestion();
   } catch (error) {
-    elements.menuStatus.textContent = 'No fue posible cargar este cuestionario.';
+    elements.quizStatus.textContent = 'No fue posible cargar este cuestionario.';
     console.error(error);
   }
 }
@@ -176,17 +245,19 @@ function answerQuestion(selectedOption, selectedButton) {
     state.correct += 1;
     topic.correct += 1;
     selectedButton.classList.add('correct');
-    elements.feedback.textContent = question.explicacionAcierto;
+    elements.feedbackText.textContent = question.explicacionAcierto;
   } else {
     selectedButton.classList.add('incorrect');
-    elements.feedback.textContent = question.explicacionFallo;
+    elements.feedbackText.textContent = question.explicacionFallo;
     [...elements.options.children].find((button) => button.textContent === question.respuestaCorrecta)?.classList.add('correct');
   }
   state.topicStats[question.tema] = topic;
   [...elements.options.children].forEach((button) => { button.disabled = true; });
   elements.feedback.hidden = false;
   elements.next.hidden = false;
-  elements.next.textContent = state.currentIndex === state.questions.length - 1 ? 'Ver resultados' : 'Siguiente';
+  elements.next.innerHTML = state.currentIndex === state.questions.length - 1
+    ? 'Ver resultados <i class="bx bx-bar-chart-alt-2" aria-hidden="true"></i>'
+    : 'Siguiente <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>';
 }
 
 function showNextQuestion() {
@@ -242,12 +313,16 @@ function renderTopicResult(topic) {
 
 function returnToMenu() {
   showView('menu');
-  elements.menuStatus.textContent = state.quizzes.length
-    ? 'Selecciona un cuestionario para comenzar.'
-    : 'No hay cuestionarios disponibles.';
+  state.selectedMateria = null;
+  elements.cuestionariosMenu.hidden = true;
+  elements.materiasMenu.hidden = false;
+  elements.menuStatus.textContent = state.materias.length
+    ? 'Selecciona una materia para ver sus cuestionarios.'
+    : 'No hay materias disponibles.';
 }
 
 elements.next.addEventListener('click', showNextQuestion);
 elements.menuButton.addEventListener('click', returnToMenu);
+materiasButton.addEventListener('click', returnToMenu);
 
 document.addEventListener('DOMContentLoaded', initializeApp);

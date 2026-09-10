@@ -1,0 +1,314 @@
+[
+{
+"pregunta": "Si dos sistemas digitales necesitan intercambiar información sobre países sin depender de nombres escritos en distintos idiomas, ¿qué norma del ecosistema presentado proporciona la base más adecuada para resolver ese problema?",
+"tema": "Identificadores globales",
+"opciones": [
+"ISO 3166, porque clasifica y codifica entidades territoriales y países",
+"ISO 8601, porque elimina la ambigüedad de las fechas y zonas horarias",
+"ISO 8859, porque codifica alfabetos y conjuntos de caracteres",
+"ISO 7816, porque define las funciones de las tarjetas inteligentes"
+],
+"respuestaCorrecta": "ISO 3166, porque clasifica y codifica entidades territoriales y países",
+"explicacionAcierto": "La clave es distinguir qué tipo de entidad se quiere identificar. El documento presenta ISO 3166 como el sistema utilizado para países, relacionado con soberanía, fronteras y aduanas digitales. Por tanto, permite que los sistemas manejen una referencia normalizada a un país sin depender de variaciones lingüísticas o de escritura.",
+"explicacionFallo": "ISO 3166 es la única opción directamente relacionada con la clasificación de países. ISO 8601 se ocupa de representar fechas y horas de manera no ambigua; ISO 8859 aborda la codificación de caracteres y alfabetos; e ISO 7816 estructura aspectos físicos, eléctricos, de datos y seguridad de las tarjetas inteligentes. Esas normas pueden participar en sistemas digitales, pero resuelven problemas diferentes."
+},
+{
+"pregunta": "Una empresa internacional almacena una fecha como 03/04/2026 y descubre que distintos sistemas la interpretan de manera diferente. ¿Qué principio del documento explica mejor por qué ISO 8601 resulta pertinente?",
+"tema": "Tiempo universal",
+"opciones": [
+"Una representación estructurada de fecha y hora reduce la ambigüedad entre convenciones regionales",
+"La norma convierte automáticamente cualquier moneda al país de origen",
+"La norma determina la distribución física de los contactos de una tarjeta",
+"La norma asigna códigos únicos a las publicaciones periódicas"
+],
+"respuestaCorrecta": "Una representación estructurada de fecha y hora reduce la ambigüedad entre convenciones regionales",
+"explicacionAcierto": "El documento destaca que ISO 8601 organiza la fecha y hora mediante una estructura como YYYY-MM-DDThh:mm:ssZ. Esta formalización evita interpretaciones distintas de componentes como mes y día y, al incorporar UTC mediante la zona Z, proporciona además un punto de referencia temporal común.",
+"explicacionFallo": "La representación normalizada de fecha y hora es precisamente el problema que ISO 8601 aborda. La conversión de monedas pertenece al ámbito de ISO 4217; la distribución de contactos corresponde a ISO 7816; y la identificación de publicaciones periódicas corresponde a ISO 3297. Las tres alternativas confunden dominios distintos de estandarización."
+},
+{
+"pregunta": "¿Por qué la inclusión de la letra Z al final de una marca temporal como 2024-10-26T14:30:00Z es especialmente relevante para sistemas distribuidos internacionalmente?",
+"tema": "ISO 8601 y UTC",
+"opciones": [
+"Porque ancla la marca temporal a UTC y evita depender de la zona horaria local",
+"Porque indica que la fecha pertenece obligatoriamente al continente europeo",
+"Porque convierte la fecha en un identificador único de un país",
+"Porque especifica que el dato fue generado mediante una tarjeta inteligente"
+],
+"respuestaCorrecta": "Porque ancla la marca temporal a UTC y evita depender de la zona horaria local",
+"explicacionAcierto": "El documento identifica Z como la zona cero o Zulu y la relaciona con UTC. Esto permite que dos sistemas ubicados en zonas horarias diferentes interpreten el mismo instante temporal de forma coherente, algo fundamental cuando una transacción o evento debe registrarse con precisión internacional.",
+"explicacionFallo": "La Z no identifica un continente, un país ni el dispositivo que generó el dato. Su función es temporal: señalar que la hora está expresada respecto de UTC. ISO 3166 trata países, mientras ISO 7816 aborda tarjetas inteligentes; ninguna de esas funciones explica la Z."
+},
+{
+"pregunta": "Si un sistema necesita identificar un libro, una revista científica y un país dentro de una operación internacional, ¿qué combinación refleja correctamente la taxonomía presentada?",
+"tema": "Ecosistema de identificación global",
+"opciones": [
+"ISBN/ISO 2108 para libros, ISSN/ISO 3297 para publicaciones seriadas e ISO 3166 para países",
+"ISO 8601 para libros, ISO 8859 para revistas e ISO 7816 para países",
+"ISO 4217 para libros, ISO 9362 para revistas e ISO 9001 para países",
+"ISO 2110 para libros, ISO 4902 para revistas e ISO 5775 para países"
+],
+"respuestaCorrecta": "ISBN/ISO 2108 para libros, ISSN/ISO 3297 para publicaciones seriadas e ISO 3166 para países",
+"explicacionAcierto": "La clasificación correcta depende de la entidad que se quiere identificar. El documento relaciona ISO 2108 con libros mediante ISBN, ISO 3297 con publicaciones seriadas mediante ISSN e ISO 3166 con países. La combinación muestra cómo distintas normas construyen un sistema de identificación especializado para objetos y entidades diferentes.",
+"explicacionFallo": "ISO 8601 se refiere al tiempo; ISO 8859 a codificación de caracteres; e ISO 7816 a tarjetas inteligentes. ISO 4217 corresponde a códigos de divisas, ISO 9362 al ámbito BIC/SWIFT y ISO 9001 a requisitos de gestión de calidad. Las normas ISO 2110, 4902 y 5775 aparecen asociadas respectivamente a interfaces físicas y tamaños normalizados, no a la identificación de libros, revistas y países."
+},
+{
+"pregunta": "Una transferencia bancaria internacional necesita identificar la moneda utilizada y enrutar el capital hacia una institución financiera concreta. ¿Qué pareja de normas del documento resulta conceptualmente más apropiada?",
+"tema": "Identificación financiera",
+"opciones": [
+"ISO 4217 para códigos de divisas e ISO 9362 para BIC/SWIFT",
+"ISO 3166 para divisas e ISO 3297 para BIC/SWIFT",
+"ISO 8601 para divisas e ISO 8859 para BIC/SWIFT",
+"ISO 7816 para divisas e ISO 5775 para BIC/SWIFT"
+],
+"respuestaCorrecta": "ISO 4217 para códigos de divisas e ISO 9362 para BIC/SWIFT",
+"explicacionAcierto": "El documento separa dos problemas que una transacción financiera debe resolver: identificar correctamente la moneda y proporcionar un mecanismo de identificación bancaria. ISO 4217 aparece vinculada a códigos de divisas, mientras ISO 9362 se relaciona con BIC/SWIFT y el enrutamiento internacional del capital.",
+"explicacionFallo": "ISO 3166 identifica países, no monedas, aunque ambos conceptos pueden relacionarse en una transacción. ISO 3297 identifica publicaciones seriadas; ISO 8601 normaliza fechas y horas; ISO 8859 codifica caracteres; ISO 7816 trata tarjetas inteligentes; y ISO 5775 estandariza tamaños de ruedas de bicicleta. Ninguna de esas alternativas proporciona la pareja financiera indicada."
+},
+{
+"pregunta": "El documento presenta las normas como una forma de transformar un escenario inicial de datos aparentemente caóticos en una taxonomía organizada. ¿Cuál es la principal consecuencia de esa transformación?",
+"tema": "Estandarización universal",
+"opciones": [
+"Permite que sistemas diferentes compartan referencias y reglas comunes sin tener que negociar cada interpretación desde cero",
+"Hace innecesarias todas las tecnologías de comunicación porque las normas sustituyen al hardware",
+"Elimina la necesidad de distinguir entre países, monedas, fechas y lenguajes",
+"Garantiza que todas las aplicaciones utilicen exactamente el mismo software"
+],
+"respuestaCorrecta": "Permite que sistemas diferentes compartan referencias y reglas comunes sin tener que negociar cada interpretación desde cero",
+"explicacionAcierto": "La idea central del documento es que la fluidez del comercio global y de la tecnología no es accidental: depende de acuerdos normalizados que operan en segundo plano. La taxonomía convierte entidades, formatos y procedimientos heterogéneos en referencias comprensibles entre sistemas.",
+"explicacionFallo": "La estandarización no elimina las diferencias entre dominios ni sustituye físicamente al hardware o al software. Tampoco obliga a todas las aplicaciones a ser idénticas. Su función es establecer reglas y representaciones compatibles, de modo que tecnologías distintas puedan interoperar."
+},
+{
+"pregunta": "Si una aplicación debe interpretar correctamente caracteres procedentes de alfabetos árabe, hebreo y griego, ¿qué concepto del documento es más directamente relevante?",
+"tema": "Codificación de caracteres",
+"opciones": [
+"La familia ISO 8859, que organiza diferentes conjuntos de caracteres para alfabetos y lenguas",
+"La familia ISO 9000, que establece un modelo para la gestión de calidad",
+"ISO 8601, que normaliza la representación temporal",
+"ISO 9362, que identifica instituciones bancarias mediante BIC/SWIFT"
+],
+"respuestaCorrecta": "La familia ISO 8859, que organiza diferentes conjuntos de caracteres para alfabetos y lenguas",
+"explicacionAcierto": "El documento presenta ISO 8859 como una forma de codificar la Torre de Babel digital. Muestra variantes destinadas a lenguas y alfabetos diferentes, entre ellos griego, cirílico, hebreo y árabe. La idea pedagógica central es que la comunicación digital requiere una representación codificada de los caracteres.",
+"explicacionFallo": "ISO 9000 pertenece a la gestión de calidad, no a la representación de caracteres. ISO 8601 aborda fechas y horas, mientras ISO 9362 se ocupa de identificación bancaria. Por eso solo ISO 8859 responde directamente al problema de representar alfabetos en sistemas digitales."
+},
+{
+"pregunta": "¿Qué inferencia sobre la estandarización puede extraerse del hecho de que ISO 8859 incluya distintas partes para Europa occidental, Europa central, cirílico, griego, hebreo, árabe y tailandés?",
+"tema": "Diversidad lingüística y estandarización",
+"opciones": [
+"La estandarización puede conservar diferencias lingüísticas mientras establece reglas técnicas comunes para representarlas digitalmente",
+"La estandarización requiere que todos los idiomas adopten un único alfabeto",
+"Las normas ISO eliminan las diferencias culturales para facilitar el intercambio de datos",
+"La existencia de varias codificaciones demuestra que la normalización no tiene ninguna utilidad para la interoperabilidad"
+],
+"respuestaCorrecta": "La estandarización puede conservar diferencias lingüísticas mientras establece reglas técnicas comunes para representarlas digitalmente",
+"explicacionAcierto": "El ejemplo de ISO 8859 muestra que normalizar no significa hacer idénticos todos los sistemas lingüísticos. La función es proporcionar reglas técnicas previsibles para representar distintos alfabetos, permitiendo que la diversidad del contenido conviva con una estructura informática normalizada.",
+"explicacionFallo": "El documento no sostiene que todos los idiomas deban adoptar un único alfabeto ni que la normalización elimine la diversidad cultural. Tampoco concluye que varias codificaciones hagan inútil la estandarización; precisamente muestran cómo puede organizarse técnicamente la diversidad."
+},
+{
+"pregunta": "Un ingeniero quiere describir una tarjeta inteligente no solo por su tamaño, sino también por sus contactos, señales eléctricas, comandos, mecanismos de seguridad y biometría. ¿Qué estructura conceptual de ISO 7816 debería aplicar?",
+"tema": "Tarjetas inteligentes",
+"opciones": [
+"Una estructura por capas que abarque aspectos físicos, eléctricos, de datos y seguridad, y biométricos",
+"Un único nivel dedicado exclusivamente a las dimensiones físicas",
+"Una estructura basada únicamente en códigos de países y monedas",
+"Un modelo que considere solamente la calidad del software de la tarjeta"
+],
+"respuestaCorrecta": "Una estructura por capas que abarque aspectos físicos, eléctricos, de datos y seguridad, y biométricos",
+"explicacionAcierto": "El documento descompone ISO 7816 en varias capas funcionales. La capa física aborda dimensiones y contactos; la eléctrica trata señales e interfaces; la de datos y seguridad cubre comandos y operaciones criptográficas; y ISO 7816-11 contempla verificación biométrica. La norma, por tanto, integra múltiples dimensiones del funcionamiento de una tarjeta.",
+"explicacionFallo": "Reducir ISO 7816 a dimensiones físicas ignora las demás capas descritas. Los códigos de países y monedas pertenecen a otros sistemas de identificación, y la calidad del software corresponde a otro ecosistema normativo. La característica distintiva de ISO 7816 en el documento es precisamente su cobertura multicapa."
+},
+{
+"pregunta": "Una organización quiere utilizar una tarjeta inteligente para autorizar una operación y necesita que tanto el dispositivo físico como la información criptográfica funcionen de manera interoperable. ¿Qué relación entre capas explica mejor esta necesidad?",
+"tema": "Interoperabilidad de tarjetas inteligentes",
+"opciones": [
+"La interoperabilidad depende de combinar especificaciones físicas y eléctricas con reglas de datos, seguridad y criptografía",
+"Solo las dimensiones físicas determinan si una operación puede autorizarse",
+"La biometría sustituye necesariamente a todos los mecanismos de datos y seguridad",
+"Los códigos ISBN determinan cómo debe comunicarse una tarjeta inteligente"
+],
+"respuestaCorrecta": "La interoperabilidad depende de combinar especificaciones físicas y eléctricas con reglas de datos, seguridad y criptografía",
+"explicacionAcierto": "El documento presenta ISO 7816 como un conjunto de capas complementarias. Una tarjeta debe ajustarse físicamente, comunicarse mediante características eléctricas definidas y manejar comandos, seguridad y criptografía de forma compatible. Por ello, una operación interoperable no puede explicarse mediante una sola dimensión.",
+"explicacionFallo": "Las dimensiones físicas son necesarias, pero no bastan para autorizar una operación. La biometría aparece como una capa específica, no como sustituto universal de los demás mecanismos. ISBN se relaciona con libros y no determina la comunicación de tarjetas inteligentes."
+},
+{
+"pregunta": "¿Qué conclusión se desprende de que ISO 2110, ISO 4902 e ISO 4903 especifiquen asignaciones de pines para diferentes conectores de interfaz?",
+"tema": "Interfaces físicas",
+"opciones": [
+"La estandarización también puede actuar sobre detalles físicos para permitir conexiones previsibles entre equipos",
+"Las normas ISO solo se ocupan de conceptos abstractos y nunca de componentes físicos",
+"La asignación de pines sirve principalmente para normalizar fechas y horas",
+"La asignación de pines determina los códigos internacionales de las monedas"
+],
+"respuestaCorrecta": "La estandarización también puede actuar sobre detalles físicos para permitir conexiones previsibles entre equipos",
+"explicacionAcierto": "El documento utiliza los conectores DB-25, DB-37 y otros ejemplos para mostrar que incluso la infraestructura física puede estar normalizada. Una asignación definida de pines reduce la incertidumbre sobre cómo deben conectarse los dispositivos y complementa la estandarización de protocolos y datos.",
+"explicacionFallo": "El documento afirma explícitamente que incluso el entorno físico está normado. ISO 8601 se ocupa de tiempo, mientras ISO 4217 se ocupa de divisas; por tanto, ninguna de esas funciones explica una asignación de pines. La primera opción es la única que conecta el detalle físico con la interoperabilidad."
+},
+{
+"pregunta": "Una señal de evacuación debe ser reconocible por personas que no comparten idioma. ¿Qué conjunto de normas presentado en el documento aborda directamente este problema de comunicación?",
+"tema": "Simbología universal y seguridad",
+"opciones": [
+"ISO 3864, ISO 7010 e ISO 7001, relacionadas con colores, señales de seguridad y símbolos de información pública",
+"ISO 2108, ISO 3297 e ISO 4217, relacionadas con publicaciones y divisas",
+"ISO 9899, ISO 8652 e ISO 1539-1, relacionadas con lenguajes de programación",
+"ISO 8601, ISO 3166 e ISO 9362, relacionadas con tiempo, países y banca"
+],
+"respuestaCorrecta": "ISO 3864, ISO 7010 e ISO 7001, relacionadas con colores, señales de seguridad y símbolos de información pública",
+"explicacionAcierto": "El documento denomina esta función un 'idioma sin palabras para la seguridad humana'. ISO 3864 se presenta en relación con colores y señales de seguridad, ISO 7010 con señales de seguridad registradas e ISO 7001 con símbolos de información pública. Juntas muestran cómo la normalización puede facilitar comunicación visual más allá del lenguaje escrito.",
+"explicacionFallo": "Las otras combinaciones agrupan normas reales del documento, pero sus dominios son diferentes. ISO 2108 e ISO 3297 identifican publicaciones y ISO 4217 divisas; ISO 9899, ISO 8652 e ISO/IEC 1539-1 corresponden a lenguajes de programación; e ISO 8601, ISO 3166 e ISO 9362 tratan tiempo, países y banca. Ninguna responde directamente a la señalización de seguridad."
+},
+{
+"pregunta": "Un equipo desarrolla un sistema crítico en tiempo real y debe escoger entre varios lenguajes mencionados en el documento. ¿Qué correspondencia justifica mejor la elección de Ada?",
+"tema": "Lenguajes de programación",
+"opciones": [
+"ISO/IEC 8652:1995, asociada con Ada y su uso en sistemas críticos en tiempo real",
+"ISO/IEC 1539-1, asociada con Fortran y su uso en sistemas críticos en tiempo real",
+"ISO 9899, asociada con C y destinada exclusivamente a la representación de fechas",
+"ISO 6093, asociada con Ada para clasificar países"
+],
+"respuestaCorrecta": "ISO/IEC 8652:1995, asociada con Ada y su uso en sistemas críticos en tiempo real",
+"explicacionAcierto": "El documento presenta ISO/IEC 8652:1995 como la norma correspondiente al lenguaje Ada y señala su uso en sistemas críticos en tiempo real. La elección es coherente con el contexto descrito, porque no basta con identificar un lenguaje: hay que relacionarlo con el uso específico indicado por la fuente.",
+"explicacionFallo": "ISO/IEC 1539-1 corresponde a Fortran, cuyo uso señalado es el cálculo numérico y científico. ISO 9899 corresponde a C y el documento lo vincula con la base de los sistemas operativos modernos. ISO 6093 trata la representación de valores numéricos en cadenas, no Ada ni países."
+},
+{
+"pregunta": "Si un sistema necesita representar valores numéricos dentro de cadenas de caracteres para intercambiar información, ¿qué norma del documento responde de forma más directa a esa necesidad?",
+"tema": "Representación de información",
+"opciones": [
+"ISO 6093, porque aborda la representación de valores numéricos en cadenas de caracteres",
+"ISO 7010, porque registra señales de seguridad",
+"ISO 9362, porque identifica bancos mediante BIC/SWIFT",
+"ISO 5775, porque estandariza tamaños de ruedas de bicicleta"
+],
+"respuestaCorrecta": "ISO 6093, porque aborda la representación de valores numéricos en cadenas de caracteres",
+"explicacionAcierto": "El documento sitúa ISO 6093 dentro de la sintaxis de las máquinas y la describe como una norma para representar valores numéricos en cadenas de caracteres. Esto la relaciona directamente con el intercambio de información numérica entre sistemas.",
+"explicacionFallo": "ISO 7010 pertenece a señalización de seguridad; ISO 9362 al ámbito BIC/SWIFT; e ISO 5775 a tamaños de ruedas de bicicleta. Aunque todas son normas, no solucionan el problema concreto de representar números como cadenas de caracteres."
+},
+{
+"pregunta": "¿Qué cambio conceptual representa la evolución desde la familia ISO 9000 hacia el ecosistema de calidad de software ISO/IEC 9126 presentado en el documento?",
+"tema": "Evolución de la calidad",
+"opciones": [
+"La calidad se extiende desde la gestión de procesos organizacionales hacia modelos y métricas aplicadas específicamente al software",
+"La calidad deja de ser medible y pasa a depender exclusivamente de opiniones de los usuarios",
+"ISO/IEC 9126 sustituye toda forma de gestión de procesos por normas sobre conectores físicos",
+"ISO 9000 y ISO/IEC 9126 son presentadas como normas idénticas con exactamente el mismo objeto"
+],
+"respuestaCorrecta": "La calidad se extiende desde la gestión de procesos organizacionales hacia modelos y métricas aplicadas específicamente al software",
+"explicacionAcierto": "El documento presenta una evolución 'de procesos a software'. ISO 8402 aparece como fundamento conceptual y vocabulario de gestión de calidad, mientras ISO 9000, ISO 9001 e ISO 9004 forman el ecosistema de gestión de calidad. Posteriormente, ISO/IEC 9126 introduce un modelo de calidad de software y distintas categorías de métricas.",
+"explicacionFallo": "El documento no afirma que la calidad deje de ser medible; al contrario, destaca métricas externas, internas y de calidad en uso. Tampoco presenta ISO/IEC 9126 como una norma de conectores físicos. Finalmente, las dos familias no son idénticas: representan ámbitos de aplicación relacionados pero diferenciados."
+},
+{
+"pregunta": "Una organización quiere evaluar la calidad de un producto de software utilizando las categorías que aparecen en el documento. ¿Qué conjunto representa mejor el enfoque de ISO/IEC 9126?",
+"tema": "Métricas de calidad de software",
+"opciones": [
+"Modelo de calidad junto con métricas externas, internas y de calidad en uso",
+"Códigos de países junto con códigos de monedas y códigos ISBN",
+"Asignación de pines junto con dimensiones físicas y señales eléctricas",
+"Colores de seguridad junto con símbolos de información pública y formatos fotográficos"
+],
+"respuestaCorrecta": "Modelo de calidad junto con métricas externas, internas y de calidad en uso",
+"explicacionAcierto": "La fuente divide ISO/IEC 9126 en un modelo de calidad y distintos enfoques de medición: 9126-1 para el modelo, 9126-2 para métricas externas, 9126-3 para métricas internas y 9126-4 para métricas de calidad en uso. Esto permite analizar el software desde diferentes perspectivas en lugar de reducir la calidad a una sola medida.",
+"explicacionFallo": "Los códigos de países, monedas e ISBN pertenecen al ecosistema de identificación. Las asignaciones de pines y características eléctricas se relacionan con interfaces y tarjetas. Los colores y símbolos corresponden a señalización, mientras los formatos fotográficos aparecen en otra parte del documento. Ninguna de esas combinaciones representa la estructura de ISO/IEC 9126."
+},
+{
+"pregunta": "Una transacción internacional activa simultáneamente un registro temporal, una jurisdicción, una identificación bancaria y una tarjeta inteligente. ¿Qué interpretación refleja mejor el ejemplo de la página sobre la infraestructura invisible en acción?",
+"tema": "Interoperabilidad de sistemas",
+"opciones": [
+"Una sola operación puede depender simultáneamente de múltiples estándares especializados que coordinan diferentes dimensiones del proceso",
+"La transacción solo necesita una norma porque todas las normas ISO cumplen exactamente la misma función",
+"La existencia de varias normas significa que los sistemas no pueden interoperar",
+"La tarjeta inteligente hace innecesarias las normas de tiempo, jurisdicción e identificación bancaria"
+],
+"respuestaCorrecta": "Una sola operación puede depender simultáneamente de múltiples estándares especializados que coordinan diferentes dimensiones del proceso",
+"explicacionAcierto": "La página final de aplicación conecta ISO/IEC 9126 con la calidad del entorno de software, ISO 8601 con el instante temporal, ISO 3166 con el origen o jurisdicción, ISO 7816 con la tarjeta inteligente y su criptografía, e ISO 9362 con el enrutamiento internacional del capital. La idea central es que la interoperabilidad surge de la combinación de estándares especializados.",
+"explicacionFallo": "Las normas no cumplen todas la misma función: precisamente se complementan. Tampoco la multiplicidad de normas implica falta de interoperabilidad; el documento la presenta como parte de la infraestructura que hace posible la operación. Finalmente, una tarjeta inteligente no reemplaza las funciones de tiempo, jurisdicción o identificación bancaria."
+},
+{
+"pregunta": "¿Por qué resulta apropiado que el documento describa las normas ISO como un 'lenguaje silencioso' de la civilización tecnológica?",
+"tema": "Concepto global de estandarización",
+"opciones": [
+"Porque permiten que personas y sistemas con tecnologías y contextos distintos interpreten estructuras técnicas mediante reglas compartidas",
+"Porque las normas sustituyen completamente los lenguajes humanos por códigos ISO",
+"Porque todos los estándares ISO son protocolos de comunicación electrónica",
+"Porque las normas funcionan únicamente cuando los usuarios conocen explícitamente cada número ISO"
+],
+"respuestaCorrecta": "Porque permiten que personas y sistemas con tecnologías y contextos distintos interpreten estructuras técnicas mediante reglas compartidas",
+"explicacionAcierto": "La metáfora del lenguaje silencioso resume la tesis del documento: los estándares normalmente operan en segundo plano, pero hacen posible que sistemas diferentes compartan identificadores, formatos, interfaces, señales y criterios de calidad. Su valor está precisamente en coordinar sin exigir que cada participante negocie individualmente las reglas.",
+"explicacionFallo": "Las normas no sustituyen los lenguajes humanos ni son todas protocolos electrónicos. El documento incluye normas sobre publicaciones, países, bicicletas, señalización, calidad, lenguajes de programación y tarjetas, entre otros ámbitos. Además, su utilidad no depende de que cada usuario conozca conscientemente el número de la norma."
+},
+{
+"pregunta": "Un analista observa que ISO 5775 aparece relacionada con tamaños de ruedas de bicicleta dentro de un documento centrado principalmente en tecnología digital. ¿Qué conclusión permite extraer este ejemplo?",
+"tema": "Alcance de la normalización",
+"opciones": [
+"La estandarización puede extenderse al mundo físico, no solo a datos, software y telecomunicaciones",
+"ISO 5775 demuestra que las normas sobre bicicletas son en realidad normas de codificación de caracteres",
+"Los estándares físicos no tienen relación con la interoperabilidad porque solo afectan a objetos analógicos",
+"El ejemplo contradice la idea de una infraestructura normativa global porque pertenece a un sector diferente"
+],
+"respuestaCorrecta": "La estandarización puede extenderse al mundo físico, no solo a datos, software y telecomunicaciones",
+"explicacionAcierto": "El documento utiliza ISO 5775 como ejemplo explícito de que incluso el entorno físico está normalizado. La estandarización puede fijar dimensiones y características que permiten compatibilidad y previsibilidad en objetos materiales, ampliando la idea de infraestructura más allá del software y las comunicaciones.",
+"explicacionFallo": "ISO 5775 no se presenta como una norma de caracteres. Tampoco el carácter físico de un estándar elimina su posible importancia para la compatibilidad. Finalmente, que existan estándares en sectores distintos refuerza la idea de una infraestructura normativa amplia en lugar de contradecirla."
+},
+{
+"pregunta": "Un sistema global necesita comunicar información mediante protocolos de red, pero también identificar países, fechas y criterios de calidad. ¿Qué lección general del documento permite comprender por qué ninguna de estas necesidades se resuelve con una sola norma?",
+"tema": "Taxonomía del sistema global",
+"opciones": [
+"Los estándares están especializados por dominio y se combinan para cubrir diferentes capas y funciones de un sistema complejo",
+"Una única norma universal debería reemplazar todos los estándares especializados",
+"Los protocolos de red son suficientes para representar cualquier entidad del mundo real",
+"La identificación de países y fechas pertenece al mismo dominio técnico que la calidad del software"
+],
+"respuestaCorrecta": "Los estándares están especializados por dominio y se combinan para cubrir diferentes capas y funciones de un sistema complejo",
+"explicacionAcierto": "La taxonomía inicial organiza el ecosistema en identificadores globales, lenguaje digital, hardware y telecomunicaciones, y sistemas de calidad. Después, los ejemplos concretos muestran normas especializadas para tiempo, países, divisas, caracteres, tarjetas, interfaces y software. La complejidad global se gestiona mediante la composición de estándares, no mediante una única regla.",
+"explicacionFallo": "El documento precisamente desmonta la idea de que una sola norma pueda resolver todos los problemas. Los protocolos de red no identifican por sí mismos países o fechas, y la calidad del software constituye un dominio distinto de la representación temporal o territorial. La especialización es lo que permite que las normas sean útiles y combinables."
+},
+{
+"pregunta": "Si se compara el inicio del documento, donde aparece el 'caos de datos', con su conclusión sobre el 'código fuente de la civilización', ¿qué relación conceptual resume mejor todo el recorrido?",
+"tema": "Síntesis del documento",
+"opciones": [
+"La normalización transforma diversidad y complejidad técnica en estructuras compartidas que permiten operar e innovar de forma coordinada",
+"La tecnología moderna funciona mejor cuando cada sistema utiliza convenciones completamente independientes",
+"La principal función de ISO es reemplazar el desarrollo tecnológico por reglamentos administrativos",
+"La estandarización solo resulta relevante para especialistas y no afecta las operaciones cotidianas"
+],
+"respuestaCorrecta": "La normalización transforma diversidad y complejidad técnica en estructuras compartidas que permiten operar e innovar de forma coordinada",
+"explicacionAcierto": "El documento construye una narrativa que parte de datos aparentemente caóticos y los reorganiza mediante una taxonomía de normas. El cierre amplía esa idea: desde códigos de países y alfabetos digitales hasta pines de hardware y calidad del software, los estándares constituyen una infraestructura que permite que diferentes componentes del mundo tecnológico funcionen conjuntamente.",
+"explicacionFallo": "La independencia absoluta de convenciones produciría precisamente el problema de fricción y ambigüedad que el documento intenta explicar. Las normas no sustituyen el desarrollo tecnológico, sino que proporcionan reglas compartidas para que este pueda desplegarse. Finalmente, aunque muchas normas operen de forma invisible para los usuarios, el documento sostiene que afectan directamente al funcionamiento cotidiano del mundo global."
+},
+{
+"pregunta": "Una plataforma internacional registra el momento exacto de una operación, identifica el país de origen, procesa una tarjeta y enruta un pago bancario. Si el objetivo es reconstruir la lógica del sistema a partir del documento, ¿cuál secuencia de estándares es la más coherente?",
+"tema": "Integración de estándares",
+"opciones": [
+"ISO 8601 para el tiempo, ISO 3166 para la jurisdicción, ISO 7816 para la tarjeta e ISO 9362 para el enrutamiento bancario",
+"ISO 8859 para el tiempo, ISO 5775 para la jurisdicción, ISO 3297 para la tarjeta e ISO 7010 para el enrutamiento bancario",
+"ISO 4217 para el tiempo, ISO 9001 para la jurisdicción, ISO 2108 para la tarjeta e ISO 3864 para el enrutamiento bancario",
+"ISO 6093 para el tiempo, ISO 4902 para la jurisdicción, ISO 1539-1 para la tarjeta e ISO 7001 para el enrutamiento bancario"
+],
+"respuestaCorrecta": "ISO 8601 para el tiempo, ISO 3166 para la jurisdicción, ISO 7816 para la tarjeta e ISO 9362 para el enrutamiento bancario",
+"explicacionAcierto": "Esta secuencia integra los ejemplos que el documento reúne en su representación de la infraestructura invisible. ISO 8601 proporciona la referencia temporal; ISO 3166 identifica el país o jurisdicción; ISO 7816 estructura la tarjeta inteligente y aspectos de seguridad; e ISO 9362 se relaciona con BIC/SWIFT y el enrutamiento internacional del capital.",
+"explicacionFallo": "Las demás secuencias mezclan normas pertenecientes a dominios incompatibles con cada función. ISO 8859 trata caracteres, ISO 5775 ruedas de bicicleta, ISO 3297 publicaciones seriadas, ISO 7010 señalización, ISO 4217 divisas, ISO 9001 gestión de calidad, ISO 2108 libros e ISO 3864 seguridad. Las últimas alternativas también asignan incorrectamente normas de lenguajes, interfaces o representación numérica."
+},
+{
+"pregunta": "¿Qué característica distingue mejor la función de las normas de identificación global frente a las normas de calidad descritas en el documento?",
+"tema": "Identificación frente a calidad",
+"opciones": [
+"Las primeras buscan proporcionar referencias normalizadas para entidades; las segundas proporcionan modelos, requisitos o métricas para evaluar y gestionar la calidad",
+"Las primeras se ocupan exclusivamente de software, mientras las segundas se ocupan exclusivamente de países",
+"Ambas familias tienen como única finalidad asignar códigos numéricos a objetos",
+"Las normas de calidad solo describen conectores físicos, mientras las de identificación solo describen colores de seguridad"
+],
+"respuestaCorrecta": "Las primeras buscan proporcionar referencias normalizadas para entidades; las segundas proporcionan modelos, requisitos o métricas para evaluar y gestionar la calidad",
+"explicacionAcierto": "El documento diferencia claramente funciones. ISO 2108, ISO 3297, ISO 3166, ISO 4217 e ISO 9362 identifican objetos o entidades relevantes para el intercambio global. En cambio, ISO 8402, ISO 9000, ISO 9001, ISO 9004 e ISO/IEC 9126 aparecen dentro de la evolución de la gestión y medición de la calidad.",
+"explicacionFallo": "La identificación global no se limita al software ni la calidad a los países. Tampoco ambas familias tienen como única finalidad asignar códigos. Los conectores físicos y los colores de seguridad pertenecen a otros grupos de estándares mostrados en el documento, por lo que las otras opciones confunden categorías."
+},
+{
+"pregunta": "Un estudiante afirma: 'Como las normas ISO aparecen como números independientes, cada una funciona de manera aislada y no tiene sentido analizarlas como un sistema'. ¿Cuál respuesta contradice mejor esa afirmación según el documento?",
+"tema": "Interrelación de estándares",
+"opciones": [
+"El documento las presenta como una taxonomía cuyos componentes se especializan en funciones distintas pero pueden actuar conjuntamente dentro de una misma operación",
+"El documento sostiene que todas las normas ISO son equivalentes y pueden sustituirse unas por otras",
+"El documento limita las normas a la identificación de países y monedas",
+"El documento afirma que los estándares solo importan cuando un usuario los consulta manualmente"
+],
+"respuestaCorrecta": "El documento las presenta como una taxonomía cuyos componentes se especializan en funciones distintas pero pueden actuar conjuntamente dentro de una misma operación",
+"explicacionAcierto": "Desde la primera taxonomía hasta el ejemplo final de una transacción, el documento muestra que los estándares forman un ecosistema. Cada norma resuelve un problema específico, pero una operación real puede activar varias: tiempo, jurisdicción, tarjeta, banca y calidad del entorno de software. Por eso el valor está tanto en la especialización como en la coordinación.",
+"explicacionFallo": "El documento no afirma que las normas sean equivalentes ni intercambiables; al contrario, distingue cuidadosamente sus funciones. Tampoco limita el sistema a países y monedas, pues incluye lenguajes, caracteres, hardware, seguridad y calidad. Finalmente, la metáfora de infraestructura invisible subraya que los estándares pueden operar precisamente sin que el usuario los consulte conscientemente."
+}
+] 
