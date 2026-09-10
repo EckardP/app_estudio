@@ -1,0 +1,27 @@
+[
+  {
+    "id": "q1",
+    "archivo": "data/ejemplo.json",
+    "nombre": "Lectura crítica: ideas principales"
+  },
+  {
+    "id": "q2",
+    "archivo": "data/QUIZ1.json",
+    "nombre": "Cuestionario: Capítulo 1"
+  },
+  {
+    "id": "q3",
+    "archivo": "data/QUIZ1y2.json",
+    "nombre": "Cuestionario: Capítulos 1 y 2"
+  },
+  {
+    "id": "q4",
+    "archivo": "data/QUIZ2.json",
+    "nombre": "Cuestionario: Capítulo 2"
+  },
+  {
+    "id": "q5",
+    "archivo": "data/QUIZ3.json",
+    "nombre": "Cuestionario: Capítulo 3"
+  }
+]

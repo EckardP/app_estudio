@@ -1,0 +1,535 @@
+[
+{
+"pregunta": "¿Cuál es uno de los principales objetivos de la administración de memoria en un sistema multiprogramado?",
+"tema": "Administración de memoria",
+"opciones": [
+"Permitir que varios procesos utilicen la memoria de manera eficiente y segura",
+"Eliminar la necesidad de utilizar almacenamiento secundario",
+"Impedir que los procesos compartan cualquier recurso",
+"Hacer que todos los procesos tengan exactamente el mismo tamaño"
+],
+"respuestaCorrecta": "Permitir que varios procesos utilicen la memoria de manera eficiente y segura",
+"explicacionAcierto": "Correcto. La administración de memoria busca controlar el uso de la memoria para que los procesos puedan ejecutarse de manera eficiente y sin interferirse indebidamente.",
+"explicacionFallo": "La administración de memoria tiene como objetivo gestionar la memoria disponible y proporcionar a los procesos un espacio de direcciones adecuado y protegido."
+},
+{
+"pregunta": "En un sistema sin memoria virtual, un programa genera una dirección de memoria que se utiliza directamente para acceder a la memoria física. ¿Qué ocurre con esa dirección?",
+"tema": "Memoria sin memoria virtual",
+"opciones": [
+"Se utiliza directamente como dirección física",
+"Siempre se convierte primero en un número de página",
+"Se almacena obligatoriamente en el disco",
+"Se convierte en una dirección de segmento mediante un TLB"
+],
+"respuestaCorrecta": "Se utiliza directamente como dirección física",
+"explicacionAcierto": "Correcto. En una computadora sin memoria virtual, la dirección generada por el programa puede utilizarse directamente como dirección de memoria física.",
+"explicacionFallo": "La traducción de direcciones virtuales a físicas es característica de los sistemas que utilizan memoria virtual."
+},
+{
+"pregunta": "Un sistema quiere evitar que un proceso acceda a las posiciones de memoria pertenecientes a otro proceso. ¿Qué mecanismo clásico puede utilizar para establecer los límites de su espacio de direcciones?",
+"tema": "Registros base y límite",
+"opciones": [
+"Registros base y límite",
+"Mapa de bits únicamente",
+"Algoritmo FIFO",
+"Tabla de segmentos solamente"
+],
+"respuestaCorrecta": "Registros base y límite",
+"explicacionAcierto": "Correcto. Los registros base y límite pueden utilizarse para proporcionar a cada proceso un espacio de direcciones separado y comprobar que sus referencias estén dentro del rango permitido.",
+"explicacionFallo": "Los registros base y límite permiten realizar reubicación y protección mediante una dirección base y un límite para el espacio permitido."
+},
+{
+"pregunta": "Si el registro base de un proceso contiene 10 000 y el programa genera la dirección 500, ¿qué dirección física se obtiene mediante reubicación basada en el registro base?",
+"tema": "Reubicación de direcciones",
+"opciones": [
+"10 500",
+"9 500",
+"10 000",
+"500"
+],
+"respuestaCorrecta": "10 500",
+"explicacionAcierto": "Correcto. La dirección física se obtiene sumando la dirección generada por el programa al contenido del registro base: 500 + 10 000 = 10 500.",
+"explicacionFallo": "En este mecanismo, la dirección física se calcula sumando el valor del registro base a la dirección lógica generada por el proceso."
+},
+{
+"pregunta": "¿Qué problema puede aparecer cuando se utilizan registros base y límite para realizar la reubicación en cada referencia a memoria?",
+"tema": "Registros base y límite",
+"opciones": [
+"Debe realizarse una suma y una comparación para cada referencia a memoria",
+"Todos los procesos deben compartir una misma dirección física",
+"La memoria debe dividirse obligatoriamente en páginas de igual tamaño",
+"El disco deja de ser necesario"
+],
+"respuestaCorrecta": "Debe realizarse una suma y una comparación para cada referencia a memoria",
+"explicacionAcierto": "Correcto. El mecanismo requiere operaciones adicionales en cada referencia para realizar la reubicación y comprobar los límites.",
+"explicacionFallo": "Una desventaja de este método es la sobrecarga asociada con la suma de la base y la comparación con el límite en las referencias a memoria."
+},
+{
+"pregunta": "Un proceso se mueve de una zona de memoria a otra durante el intercambio. ¿Qué característica permite que sus direcciones sigan funcionando correctamente?",
+"tema": "Reubicación",
+"opciones": [
+"La reubicación de las direcciones",
+"La eliminación del espacio de direcciones",
+"El aumento de la prioridad del proceso",
+"La reducción automática de sus datos"
+],
+"respuestaCorrecta": "La reubicación de las direcciones",
+"explicacionAcierto": "Correcto. Cuando un proceso cambia de ubicación física, sus referencias deben interpretarse de manera que sigan apuntando a las posiciones correctas.",
+"explicacionFallo": "La reubicación permite que un proceso pueda ejecutarse correctamente aunque su ubicación física cambie."
+},
+{
+"pregunta": "¿Qué caracteriza principalmente al intercambio de procesos?",
+"tema": "Intercambio",
+"opciones": [
+"El proceso completo se lleva a memoria y posteriormente puede regresarse al disco",
+"Sólo se intercambian instrucciones individuales de la CPU",
+"Los procesos nunca abandonan la memoria principal",
+"El proceso se divide obligatoriamente en segmentos de tamaño fijo"
+],
+"respuestaCorrecta": "El proceso completo se lleva a memoria y posteriormente puede regresarse al disco",
+"explicacionAcierto": "Correcto. El intercambio consiste en llevar procesos completos a memoria para ejecutarlos y devolverlos al disco cuando es necesario liberar espacio.",
+"explicacionFallo": "En el intercambio tradicional se mueve el proceso completo entre memoria principal y disco."
+},
+{
+"pregunta": "Después de intercambiar varios procesos hacia dentro y fuera de la memoria quedan numerosos espacios pequeños libres entre procesos. ¿Cómo se denomina este problema?",
+"tema": "Fragmentación",
+"opciones": [
+"Fragmentación externa",
+"Fragmentación interna exclusivamente",
+"Fallo de página",
+"Thrashing"
+],
+"respuestaCorrecta": "Fragmentación externa",
+"explicacionAcierto": "Correcto. La fragmentación externa aparece cuando existen múltiples huecos separados que pueden dificultar la asignación de bloques grandes.",
+"explicacionFallo": "La fragmentación externa consiste en memoria libre distribuida en varios huecos separados."
+},
+{
+"pregunta": "Un sistema desplaza los procesos de la memoria para juntar todos los huecos pequeños en una única zona grande. ¿Cómo se llama esta técnica?",
+"tema": "Compactación",
+"opciones": [
+"Compactación de memoria",
+"Paginación",
+"Segmentación",
+"Reemplazo FIFO"
+],
+"respuestaCorrecta": "Compactación de memoria",
+"explicacionAcierto": "Correcto. La compactación mueve los procesos para combinar los huecos y formar una zona libre más grande.",
+"explicacionFallo": "La compactación consiste en reorganizar la memoria ocupada para combinar los espacios libres dispersos."
+},
+{
+"pregunta": "¿Por qué la compactación de memoria no suele realizarse constantemente?",
+"tema": "Compactación",
+"opciones": [
+"Porque requiere una cantidad considerable de tiempo de CPU",
+"Porque elimina automáticamente los procesos",
+"Porque impide utilizar memoria virtual",
+"Porque sólo funciona con memoria ROM"
+],
+"respuestaCorrecta": "Porque requiere una cantidad considerable de tiempo de CPU",
+"explicacionAcierto": "Correcto. Mover grandes cantidades de memoria para compactarla puede consumir bastante tiempo de procesamiento.",
+"explicacionFallo": "La compactación puede solucionar la fragmentación externa, pero tiene el costo de mover los procesos y consumir tiempo de CPU."
+},
+{
+"pregunta": "Un sistema divide la memoria en unidades de asignación y utiliza un bit para indicar si cada unidad está libre u ocupada. ¿Qué método está utilizando?",
+"tema": "Administración de memoria libre",
+"opciones": [
+"Mapa de bits",
+"Lista enlazada de huecos",
+"Segmentación",
+"Tabla de páginas"
+],
+"respuestaCorrecta": "Mapa de bits",
+"explicacionAcierto": "Correcto. En un mapa de bits se utiliza un bit asociado con cada unidad de asignación para representar su estado.",
+"explicacionFallo": "El mapa de bits registra el uso de la memoria mediante bits asociados a unidades de asignación."
+},
+{
+"pregunta": "En un mapa de bits, ¿qué efecto tiene reducir el tamaño de cada unidad de asignación?",
+"tema": "Mapas de bits",
+"opciones": [
+"El mapa de bits necesita más bits",
+"El mapa de bits desaparece",
+"La memoria física aumenta automáticamente",
+"La memoria deja de necesitar administración"
+],
+"respuestaCorrecta": "El mapa de bits necesita más bits",
+"explicacionAcierto": "Correcto. Cuanto menor sea la unidad de asignación, mayor será el número de unidades y, por tanto, mayor el mapa de bits.",
+"explicacionFallo": "Unidades de asignación más pequeñas permiten administrar la memoria con mayor precisión, pero requieren más bits para representar todas las unidades."
+},
+{
+"pregunta": "¿Qué información puede representar una lista de huecos utilizada para administrar memoria libre?",
+"tema": "Listas de huecos",
+"opciones": [
+"La ubicación y el tamaño de los espacios libres",
+"Únicamente el nombre de los procesos",
+"Sólo el número de instrucciones ejecutadas",
+"La frecuencia de reloj de la CPU"
+],
+"respuestaCorrecta": "La ubicación y el tamaño de los espacios libres",
+"explicacionAcierto": "Correcto. Una lista de huecos permite registrar dónde se encuentran las áreas libres y cuánto espacio tiene cada una.",
+"explicacionFallo": "La lista de huecos se utiliza para mantener información sobre las regiones libres de memoria."
+},
+{
+"pregunta": "Un proceso necesita 12 KB y el administrador de memoria selecciona el primer hueco encontrado que sea suficientemente grande. ¿Qué algoritmo está aplicando?",
+"tema": "Asignación de memoria",
+"opciones": [
+"Primer ajuste",
+"Mejor ajuste",
+"Peor ajuste",
+"Siguiente ajuste"
+],
+"respuestaCorrecta": "Primer ajuste",
+"explicacionAcierto": "Correcto. El primer ajuste recorre los huecos y utiliza el primero que tenga suficiente espacio para la solicitud.",
+"explicacionFallo": "El primer ajuste selecciona el primer hueco adecuado que encuentra, sin buscar necesariamente el más pequeño o el más grande."
+},
+{
+"pregunta": "Un administrador de memoria examina todos los huecos disponibles y selecciona el hueco más pequeño que sea suficientemente grande para una solicitud. ¿Qué estrategia utiliza?",
+"tema": "Asignación de memoria",
+"opciones": [
+"Mejor ajuste",
+"Primer ajuste",
+"Peor ajuste",
+"Siguiente ajuste"
+],
+"respuestaCorrecta": "Mejor ajuste",
+"explicacionAcierto": "Correcto. El mejor ajuste busca el hueco más pequeño que pueda satisfacer la solicitud.",
+"explicacionFallo": "El mejor ajuste intenta aprovechar el hueco que deje la menor cantidad de espacio sobrante."
+},
+{
+"pregunta": "Un algoritmo de asignación selecciona para una solicitud el hueco libre más grande disponible. ¿Cuál es su nombre?",
+"tema": "Asignación de memoria",
+"opciones": [
+"Peor ajuste",
+"Primer ajuste",
+"Mejor ajuste",
+"Ajuste exacto"
+],
+"respuestaCorrecta": "Peor ajuste",
+"explicacionAcierto": "Correcto. El peor ajuste utiliza el hueco más grande disponible para realizar la asignación.",
+"explicacionFallo": "El peor ajuste se diferencia del mejor ajuste porque selecciona el hueco más grande, no el más pequeño que pueda contener la solicitud."
+},
+{
+"pregunta": "¿Cuál es la diferencia fundamental entre primer ajuste y siguiente ajuste?",
+"tema": "Asignación de memoria",
+"opciones": [
+"El siguiente ajuste continúa la búsqueda desde donde terminó la búsqueda anterior",
+"El siguiente ajuste siempre utiliza el hueco más grande",
+"El primer ajuste sólo funciona con páginas",
+"El siguiente ajuste siempre selecciona el hueco más pequeño"
+],
+"respuestaCorrecta": "El siguiente ajuste continúa la búsqueda desde donde terminó la búsqueda anterior",
+"explicacionAcierto": "Correcto. El siguiente ajuste mantiene la posición de búsqueda y comienza desde ese punto en la siguiente solicitud.",
+"explicacionFallo": "La diferencia principal es el punto desde el cual se inicia la búsqueda de un hueco adecuado."
+},
+{
+"pregunta": "Un proceso necesita más memoria porque su segmento de datos crece durante la ejecución. ¿Qué problema puede surgir si inmediatamente después de él ya existe otro proceso?",
+"tema": "Crecimiento de procesos",
+"opciones": [
+"Puede no existir espacio contiguo suficiente para que el proceso crezca",
+"La CPU deja automáticamente de ejecutar procesos",
+"El proceso se convierte en un hilo",
+"La tabla de páginas se elimina"
+],
+"respuestaCorrecta": "Puede no existir espacio contiguo suficiente para que el proceso crezca",
+"explicacionAcierto": "Correcto. Si el proceso necesita crecer y el espacio contiguo siguiente está ocupado, el sistema debe buscar otra solución.",
+"explicacionFallo": "El crecimiento dinámico de un proceso puede requerir espacio adicional contiguo, lo cual puede ser difícil de proporcionar si la memoria circundante está ocupada."
+},
+{
+"pregunta": "¿Qué ventaja fundamental proporciona la memoria virtual?",
+"tema": "Memoria virtual",
+"opciones": [
+"Permite ejecutar programas cuyo espacio de direcciones es mayor que la memoria física disponible",
+"Elimina completamente la memoria física",
+"Hace innecesario el sistema operativo",
+"Obliga a cargar todo el programa en RAM antes de ejecutarlo"
+],
+"respuestaCorrecta": "Permite ejecutar programas cuyo espacio de direcciones es mayor que la memoria física disponible",
+"explicacionAcierto": "Correcto. La memoria virtual permite que un programa se ejecute aunque sólo una parte de su espacio de direcciones esté presente en memoria física.",
+"explicacionFallo": "La memoria virtual permite mantener sólo las partes necesarias del programa en memoria física y el resto puede permanecer temporalmente en almacenamiento secundario."
+},
+{
+"pregunta": "En un sistema de memoria virtual, ¿cómo se denomina una dirección generada por el programa antes de ser traducida a una dirección física?",
+"tema": "Direcciones virtuales",
+"opciones": [
+"Dirección virtual",
+"Dirección física",
+"Dirección de disco",
+"Dirección absoluta de RAM"
+],
+"respuestaCorrecta": "Dirección virtual",
+"explicacionAcierto": "Correcto. Las direcciones generadas por los programas en un sistema con memoria virtual forman el espacio de direcciones virtuales.",
+"explicacionFallo": "Una dirección virtual es la dirección que utiliza el programa y que posteriormente debe asociarse con una dirección física."
+},
+{
+"pregunta": "¿Qué componente realiza la asociación entre direcciones virtuales y direcciones físicas?",
+"tema": "MMU",
+"opciones": [
+"La MMU",
+"El planificador",
+"El sistema de archivos",
+"El shell"
+],
+"respuestaCorrecta": "La MMU",
+"explicacionAcierto": "Correcto. La Unidad de Administración de Memoria (MMU) realiza la traducción de las direcciones virtuales a direcciones físicas.",
+"explicacionFallo": "La MMU es el componente encargado de realizar la asociación entre direcciones virtuales y físicas."
+},
+{
+"pregunta": "Un espacio de direcciones virtuales se divide en bloques de tamaño fijo y la memoria física también se divide en bloques del mismo tamaño. ¿Cómo se llaman estos bloques respectivamente?",
+"tema": "Paginación",
+"opciones": [
+"Páginas y marcos de página",
+"Segmentos y huecos",
+"Procesos y bloques",
+"Tablas y entradas"
+],
+"respuestaCorrecta": "Páginas y marcos de página",
+"explicacionAcierto": "Correcto. En paginación, el espacio virtual se divide en páginas y la memoria física en marcos de página del mismo tamaño.",
+"explicacionFallo": "Las páginas pertenecen al espacio virtual y los marcos de página corresponden a las unidades equivalentes de la memoria física."
+},
+{
+"pregunta": "Una computadora tiene páginas de 4 KB. ¿Qué ocurre con las transferencias entre la memoria y el disco en un sistema de paginación?",
+"tema": "Paginación",
+"opciones": [
+"Se realizan en páginas completas",
+"Siempre se realizan byte por byte",
+"Sólo se transfieren instrucciones",
+"Se realizan únicamente cuando termina un proceso"
+],
+"respuestaCorrecta": "Se realizan en páginas completas",
+"explicacionAcierto": "Correcto. La paginación trabaja con unidades de tamaño fijo, por lo que las transferencias entre RAM y disco se realizan mediante páginas completas.",
+"explicacionFallo": "La unidad básica de transferencia en este esquema es la página completa."
+},
+{
+"pregunta": "Una dirección virtual tiene dos partes principales en un sistema paginado. ¿Cuáles son?",
+"tema": "Direcciones virtuales y paginación",
+"opciones": [
+"Número de página y desplazamiento",
+"Número de proceso y prioridad",
+"Segmento y archivo",
+"Base y límite únicamente"
+],
+"respuestaCorrecta": "Número de página y desplazamiento",
+"explicacionAcierto": "Correcto. Una dirección virtual paginada se interpreta mediante un número de página y un desplazamiento dentro de esa página.",
+"explicacionFallo": "El número de página identifica la página virtual y el desplazamiento identifica la posición dentro de ella."
+},
+{
+"pregunta": "Una dirección virtual apunta a una página que no está actualmente en memoria física. ¿Qué sucede normalmente?",
+"tema": "Fallos de página",
+"opciones": [
+"Se produce un fallo de página y el sistema operativo debe traer la página desde el almacenamiento secundario",
+"El proceso termina siempre inmediatamente",
+"La dirección se ignora",
+"La CPU convierte automáticamente la página en un segmento"
+],
+"respuestaCorrecta": "Se produce un fallo de página y el sistema operativo debe traer la página desde el almacenamiento secundario",
+"explicacionAcierto": "Correcto. Cuando se referencia una página que no está en memoria, se genera un fallo que permite al sistema operativo localizarla y cargarla.",
+"explicacionFallo": "Un fallo de página indica que la página requerida no está presente en memoria física y debe recuperarse del almacenamiento secundario."
+},
+{
+"pregunta": "Un proceso tiene un espacio virtual de 64 KB y utiliza páginas de 4 KB. ¿Cuántas páginas virtuales contiene su espacio de direcciones?",
+"tema": "Paginación",
+"opciones": [
+"16",
+"8",
+"32",
+"64"
+],
+"respuestaCorrecta": "16",
+"explicacionAcierto": "Correcto. 64 KB divididos entre páginas de 4 KB producen 16 páginas virtuales.",
+"explicacionFallo": "El número de páginas se obtiene dividiendo el tamaño total del espacio virtual entre el tamaño de cada página: 64 / 4 = 16."
+},
+{
+"pregunta": "Una computadora tiene 32 KB de memoria física y utiliza marcos de página de 4 KB. ¿Cuántos marcos de página posee la memoria física?",
+"tema": "Marcos de página",
+"opciones": [
+"8",
+"4",
+"16",
+"32"
+],
+"respuestaCorrecta": "8",
+"explicacionAcierto": "Correcto. 32 KB de memoria física divididos entre marcos de 4 KB producen 8 marcos.",
+"explicacionFallo": "El número de marcos se calcula dividiendo la memoria física disponible entre el tamaño de cada marco."
+},
+{
+"pregunta": "Un sistema necesita traducir una dirección virtual en cada referencia a memoria, pero consultar siempre la tabla de páginas en RAM sería lento. ¿Qué estructura puede acelerar esta traducción?",
+"tema": "TLB",
+"opciones": [
+"TLB",
+"Mapa de bits",
+"Lista de huecos",
+"Tabla de segmentos únicamente"
+],
+"respuestaCorrecta": "TLB",
+"explicacionAcierto": "Correcto. La TLB es una memoria caché especializada que permite acelerar las traducciones recientes de páginas virtuales a marcos físicos.",
+"explicacionFallo": "La TLB se utiliza precisamente para acelerar la asociación entre números de página virtual y marcos de página físicos."
+},
+{
+"pregunta": "Una traducción de dirección virtual se encuentra en la TLB. ¿Qué ventaja obtiene el sistema?",
+"tema": "TLB",
+"opciones": [
+"Puede evitar una consulta adicional a la tabla de páginas en memoria",
+"Puede eliminar el almacenamiento secundario",
+"Puede ejecutar dos procesos en la misma CPU simultáneamente",
+"Puede cambiar el tamaño de las páginas automáticamente"
+],
+"respuestaCorrecta": "Puede evitar una consulta adicional a la tabla de páginas en memoria",
+"explicacionAcierto": "Correcto. Cuando la traducción está en la TLB, la MMU puede obtenerla rápidamente sin tener que consultar nuevamente la tabla de páginas en memoria.",
+"explicacionFallo": "La principal función de la TLB es acelerar las traducciones almacenando asociaciones utilizadas recientemente."
+},
+{
+"pregunta": "Una entrada de la tabla de páginas indica que la página correspondiente no está actualmente en memoria. ¿Qué información resulta especialmente relevante en este caso?",
+"tema": "Tablas de páginas",
+"opciones": [
+"El bit que indica si la página está presente en memoria",
+"El nombre del usuario",
+"La prioridad del proceso",
+"El tamaño del monitor"
+],
+"respuestaCorrecta": "El bit que indica si la página está presente en memoria",
+"explicacionAcierto": "Correcto. Las entradas de la tabla de páginas incluyen información que permite determinar si una página está presente en memoria física.",
+"explicacionFallo": "El estado de presencia de la página permite determinar si una referencia puede resolverse directamente o si es necesario manejar un fallo de página."
+},
+{
+"pregunta": "Un sistema necesita decidir qué página debe expulsar de memoria cuando ocurre un fallo de página y no existen marcos libres. ¿Qué tipo de algoritmo debe utilizar?",
+"tema": "Reemplazo de páginas",
+"opciones": [
+"Un algoritmo de reemplazo de páginas",
+"Un algoritmo de asignación de procesos",
+"Un algoritmo de compactación",
+"Un algoritmo de creación de hilos"
+],
+"respuestaCorrecta": "Un algoritmo de reemplazo de páginas",
+"explicacionAcierto": "Correcto. Cuando no hay marcos libres, el sistema debe seleccionar una página existente para reemplazarla por la página solicitada.",
+"explicacionFallo": "Los algoritmos de reemplazo de páginas determinan qué página debe retirarse cuando es necesario cargar otra."
+},
+{
+"pregunta": "Un algoritmo de reemplazo intenta elegir la página que no será utilizada durante el periodo más largo en el futuro. ¿Qué algoritmo ideal representa esta descripción?",
+"tema": "Algoritmos de reemplazo",
+"opciones": [
+"Algoritmo óptimo",
+"FIFO",
+"Segunda oportunidad",
+"Envejecimiento"
+],
+"respuestaCorrecta": "Algoritmo óptimo",
+"explicacionAcierto": "Correcto. El algoritmo óptimo reemplaza la página cuyo próximo uso ocurrirá más tarde en el futuro.",
+"explicacionFallo": "El algoritmo óptimo sirve como referencia teórica porque requiere conocer las referencias futuras, algo que normalmente no puede conocerse exactamente durante la ejecución."
+},
+{
+"pregunta": "Un algoritmo siempre reemplaza la página que lleva más tiempo en memoria, sin considerar cuándo fue utilizada recientemente. ¿Qué algoritmo corresponde?",
+"tema": "FIFO",
+"opciones": [
+"FIFO",
+"LRU",
+"Óptimo",
+"WSClock"
+],
+"respuestaCorrecta": "FIFO",
+"explicacionAcierto": "Correcto. FIFO reemplaza la página que entró primero en memoria.",
+"explicacionFallo": "FIFO se basa en el orden de llegada de las páginas a memoria, no en la frecuencia o recencia de uso."
+},
+{
+"pregunta": "Un algoritmo intenta aproximar el comportamiento del algoritmo óptimo utilizando información sobre los accesos recientes a las páginas. ¿Qué principio aprovecha?",
+"tema": "Localidad de referencia",
+"opciones": [
+"La localidad de referencia",
+"La fragmentación externa",
+"La compactación",
+"La creación de procesos"
+],
+"respuestaCorrecta": "La localidad de referencia",
+"explicacionAcierto": "Correcto. La localidad de referencia indica que los programas tienden a acceder repetidamente a determinadas regiones de memoria durante periodos de tiempo.",
+"explicacionFallo": "La localidad de referencia es fundamental para diseñar sistemas de memoria virtual eficientes y algoritmos de reemplazo."
+},
+{
+"pregunta": "Un algoritmo mantiene información sobre qué páginas han sido utilizadas recientemente para decidir cuál reemplazar. ¿Qué algoritmo clásico se aproxima a este comportamiento?",
+"tema": "LRU",
+"opciones": [
+"LRU",
+"FIFO",
+"Peor ajuste",
+"Primer ajuste"
+],
+"respuestaCorrecta": "LRU",
+"explicacionAcierto": "Correcto. LRU reemplaza la página que lleva más tiempo sin ser utilizada.",
+"explicacionFallo": "LRU se basa en la recencia de uso de las páginas, mientras que FIFO utiliza el orden en que fueron cargadas."
+},
+{
+"pregunta": "¿Qué problema aparece cuando un sistema pasa la mayor parte de su tiempo intercambiando páginas en lugar de ejecutar instrucciones útiles?",
+"tema": "Rendimiento de memoria virtual",
+"opciones": [
+"Thrashing",
+"Compactación",
+"Fragmentación externa",
+"Intercambio de procesos normal"
+],
+"respuestaCorrecta": "Thrashing",
+"explicacionAcierto": "Correcto. El thrashing ocurre cuando la actividad de paginación es tan intensa que el rendimiento del sistema se deteriora considerablemente.",
+"explicacionFallo": "El thrashing describe una situación en la que el sistema dedica demasiado tiempo a mover páginas y muy poco a ejecutar los procesos."
+},
+{
+"pregunta": "Un sistema intenta mantener en memoria las páginas que forman el conjunto de trabajo activo de un proceso. ¿Qué objetivo busca?",
+"tema": "Conjunto de trabajo",
+"opciones": [
+"Reducir los fallos de página y evitar una paginación excesiva",
+"Aumentar la fragmentación externa",
+"Eliminar todos los marcos de página",
+"Hacer que todos los procesos tengan el mismo tamaño"
+],
+"respuestaCorrecta": "Reducir los fallos de página y evitar una paginación excesiva",
+"explicacionAcierto": "Correcto. Mantener las páginas del conjunto de trabajo ayuda a que el proceso tenga disponibles las páginas que utiliza activamente.",
+"explicacionFallo": "El concepto de conjunto de trabajo permite administrar qué páginas necesita activamente un proceso y ayudar a controlar la frecuencia de los fallos de página."
+},
+{
+"pregunta": "¿Cuál es una diferencia fundamental entre paginación y segmentación?",
+"tema": "Paginación y segmentación",
+"opciones": [
+"Las páginas tienen tamaño fijo, mientras que los segmentos pueden tener tamaños variables",
+"Los segmentos siempre tienen tamaño fijo y las páginas variable",
+"La paginación no utiliza memoria física",
+"La segmentación sólo puede utilizarse sin memoria virtual"
+],
+"respuestaCorrecta": "Las páginas tienen tamaño fijo, mientras que los segmentos pueden tener tamaños variables",
+"explicacionAcierto": "Correcto. La paginación divide la memoria en unidades de tamaño fijo, mientras que los segmentos representan unidades lógicas cuyo tamaño puede variar.",
+"explicacionFallo": "La diferencia esencial es que las páginas tienen un tamaño uniforme y los segmentos no necesariamente."
+},
+{
+"pregunta": "Un programador quiere representar por separado un procedimiento, una pila y un arreglo dentro del espacio de direcciones. ¿Qué técnica facilita esta organización lógica?",
+"tema": "Segmentación",
+"opciones": [
+"Segmentación",
+"Paginación pura",
+"FIFO",
+"Mapa de bits"
+],
+"respuestaCorrecta": "Segmentación",
+"explicacionAcierto": "Correcto. La segmentación permite dividir el espacio de direcciones en unidades lógicas como procedimientos, arreglos o pilas.",
+"explicacionFallo": "La segmentación se diseñó, entre otras razones, para permitir espacios de direcciones lógicamente independientes."
+},
+{
+"pregunta": "Una biblioteca gráfica es utilizada por varios procesos. ¿Qué ventaja puede proporcionar la segmentación en este caso?",
+"tema": "Segmentación y compartición",
+"opciones": [
+"Permitir que varios procesos compartan un segmento que contiene la biblioteca",
+"Obligar a cada proceso a mantener una copia privada completa",
+"Eliminar la biblioteca después de cada uso",
+"Convertir automáticamente la biblioteca en memoria física"
+],
+"respuestaCorrecta": "Permitir que varios procesos compartan un segmento que contiene la biblioteca",
+"explicacionAcierto": "Correcto. La segmentación facilita compartir procedimientos y datos colocando el objeto compartido en un segmento accesible por varios procesos.",
+"explicacionFallo": "Una de las ventajas de la segmentación es facilitar la compartición de procedimientos y datos entre procesos."
+},
+{
+"pregunta": "Un sistema quiere impedir que un programa escriba sobre un segmento que contiene código ejecutable. ¿Qué característica de la segmentación puede utilizar?",
+"tema": "Protección de segmentos",
+"opciones": [
+"Protección con permisos específicos para cada segmento",
+"Compactación de memoria",
+"FIFO",
+"Mapa de bits"
+],
+"respuestaCorrecta": "Protección con permisos específicos para cada segmento",
+"explicacionAcierto": "Correcto. Como cada segmento representa una unidad lógica, pueden establecerse diferentes tipos de protección para procedimientos, datos u otros objetos.",
+"explicacionFallo": "La segmentación facilita establecer permisos diferentes según el tipo de objeto almacenado en cada segmento."
+}
+]

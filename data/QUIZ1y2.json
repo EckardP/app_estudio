@@ -1,0 +1,652 @@
+[
+{
+"pregunta": "Un estudiante dice: “El sistema operativo me evita tener que preocuparme por cilindros, sectores, controladores o registros cuando quiero guardar un archivo”. ¿Qué función del sistema operativo está describiendo?",
+"tema": "Abstracción y funciones del sistema operativo",
+"opciones": [
+"Multiplexación de recursos.",
+"Administración de interrupciones.",
+"Máquina extendida mediante abstracciones.",
+"Planificación de procesos."
+],
+"respuestaCorrecta": "Máquina extendida mediante abstracciones.",
+"explicacionAcierto": "Correcto. El sistema operativo presenta abstracciones más sencillas, como archivos, ocultando al usuario los detalles del hardware de almacenamiento.",
+"explicacionFallo": "La función descrita corresponde a la idea del sistema operativo como una máquina extendida: proporciona abstracciones que simplifican el uso del hardware."
+},
+{
+"pregunta": "En un equipo se ejecutan al mismo tiempo un navegador, un editor de video y un reproductor de música. ¿Qué hace el sistema operativo para que todos puedan utilizar el procesador?",
+"tema": "Multiplexación y planificación de CPU",
+"opciones": [
+"Reparte el tiempo de CPU entre los procesos según un criterio de planificación.",
+"Divide físicamente el procesador en tres partes iguales.",
+"Copia cada programa a un disco diferente.",
+"Ejecuta primero todas las aplicaciones de usuario y después el kernel."
+],
+"respuestaCorrecta": "Reparte el tiempo de CPU entre los procesos según un criterio de planificación.",
+"explicacionAcierto": "Correcto. El sistema operativo utiliza la planificación para decidir qué proceso obtiene la CPU y durante cuánto tiempo.",
+"explicacionFallo": "Los procesos no necesitan una parte física de la CPU. El sistema operativo administra el procesador mediante mecanismos de planificación y multiplexación temporal."
+},
+{
+"pregunta": "Suponga que un proceso está esperando datos del disco y, mientras tanto, otro proceso utiliza la CPU. ¿Qué concepto histórico permitió aprovechar mejor esta situación?",
+"tema": "Multiprogramación",
+"opciones": [
+"Procesamiento por lotes.",
+"Exokernel.",
+"Sistema monousuario.",
+"Multiprogramación."
+],
+"respuestaCorrecta": "Multiprogramación.",
+"explicacionAcierto": "Correcto. La multiprogramación permite mantener varios programas en memoria y ejecutar otro proceso cuando uno queda esperando una operación de E/S.",
+"explicacionFallo": "El concepto relevante es la multiprogramación, porque permite aprovechar la CPU mientras otro proceso está bloqueado esperando E/S."
+},
+{
+"pregunta": "¿Por qué un programa de usuario no debería poder ejecutar directamente una instrucción que modifique el hardware de E/S?",
+"tema": "Modo kernel y protección",
+"opciones": [
+"Porque las instrucciones de E/S sólo existen en sistemas UNIX.",
+"Porque las operaciones críticas deben quedar controladas por el kernel para proteger el sistema.",
+"Porque los programas de usuario no utilizan memoria RAM.",
+"Porque todas las operaciones de E/S se ejecutan exclusivamente en la BIOS."
+],
+"respuestaCorrecta": "Porque las operaciones críticas deben quedar controladas por el kernel para proteger el sistema.",
+"explicacionAcierto": "Correcto. Las operaciones privilegiadas deben estar bajo control del sistema operativo para impedir que los programas de usuario interfieran indebidamente con los recursos del sistema.",
+"explicacionFallo": "El motivo es la protección. El hardware proporciona mecanismos de privilegio para evitar que un programa de usuario ejecute directamente operaciones críticas."
+},
+{
+"pregunta": "Un programa necesita abrir un archivo protegido. ¿Cuál es el mecanismo correcto para solicitar ese servicio al sistema operativo?",
+"tema": "Llamadas al sistema",
+"opciones": [
+"Modificar directamente el bit de modo de la CPU.",
+"Acceder al dispositivo de almacenamiento sin intermediarios.",
+"Realizar una llamada al sistema que transfiere el control al kernel.",
+"Reiniciar el proceso en modo supervisor."
+],
+"respuestaCorrecta": "Realizar una llamada al sistema que transfiere el control al kernel.",
+"explicacionAcierto": "Correcto. Una llamada al sistema proporciona a un programa de usuario una interfaz controlada para solicitar servicios del sistema operativo.",
+"explicacionFallo": "Los programas de usuario no deben acceder directamente a recursos protegidos. Utilizan llamadas al sistema para solicitar servicios al kernel."
+},
+{
+"pregunta": "En una arquitectura monolítica, muchos servicios del sistema operativo se ejecutan dentro del mismo espacio del kernel. ¿Cuál suele ser una ventaja de este enfoque?",
+"tema": "Arquitectura monolítica",
+"opciones": [
+"La comunicación entre componentes puede ser más directa y tener menor sobrecarga.",
+"Los errores de un componente nunca afectan al resto del sistema.",
+"No se necesitan llamadas al sistema.",
+"Los programas de usuario pueden ejecutar instrucciones privilegiadas."
+],
+"respuestaCorrecta": "La comunicación entre componentes puede ser más directa y tener menor sobrecarga.",
+"explicacionAcierto": "Correcto. Al ejecutarse muchos componentes dentro del kernel, pueden comunicarse directamente, evitando parte de la sobrecarga asociada a mecanismos más separados.",
+"explicacionFallo": "La ventaja señalada es la comunicación directa entre componentes. Las otras opciones contradicen las características de un sistema monolítico."
+},
+{
+"pregunta": "Un diseñador quiere que varios servicios del sistema operativo, como ciertos controladores o servidores, se ejecuten fuera del núcleo principal para mejorar el aislamiento. ¿Qué arquitectura se ajusta mejor?",
+"tema": "Microkernel",
+"opciones": [
+"Sistema por lotes.",
+"Sistema monolítico puro.",
+"Exokernel.",
+"Microkernel."
+],
+"respuestaCorrecta": "Microkernel.",
+"explicacionAcierto": "Correcto. Un microkernel intenta mantener en el núcleo solamente las funciones esenciales y trasladar otros servicios a procesos que se ejecutan fuera del núcleo.",
+"explicacionFallo": "La arquitectura microkernel busca reducir el tamaño del núcleo y ejecutar servicios como ciertos controladores o servidores fuera de él."
+},
+{
+"pregunta": "¿Qué situación representa mejor la diferencia entre multiplexación en tiempo y multiplexación en espacio?",
+"tema": "Multiplexación temporal y espacial",
+"opciones": [
+"Tiempo: dividir un disco en particiones; espacio: alternar procesos en la CPU.",
+"Tiempo: varios procesos usan la CPU por turnos; espacio: varios procesos ocupan distintas zonas de memoria al mismo tiempo.",
+"Tiempo: utilizar una caché; espacio: ejecutar interrupciones.",
+"Tiempo: dividir memoria virtual; espacio: ejecutar procesos secuencialmente."
+],
+"respuestaCorrecta": "Tiempo: varios procesos usan la CPU por turnos; espacio: varios procesos ocupan distintas zonas de memoria al mismo tiempo.",
+"explicacionAcierto": "Correcto. La multiplexación temporal reparte un recurso a lo largo del tiempo, mientras que la espacial permite que diferentes usuarios o procesos ocupen diferentes partes del recurso simultáneamente.",
+"explicacionFallo": "La diferencia fundamental es que la multiplexación temporal divide el uso de un recurso en intervalos de tiempo y la espacial divide el recurso físicamente entre varios usuarios."
+},
+{
+"pregunta": "Cuando el sistema operativo presenta al programa la idea de “archivo” en lugar de obligarlo a manejar sectores físicos del disco, ¿qué principio está aplicando?",
+"tema": "Abstracción",
+"opciones": [
+"Abstracción.",
+"Exclusión mutua.",
+"Concurrencia.",
+"Interrupción."
+],
+"respuestaCorrecta": "Abstracción.",
+"explicacionAcierto": "Correcto. El concepto de archivo oculta los detalles físicos del almacenamiento y proporciona una interfaz más sencilla para los programas.",
+"explicacionFallo": "La situación es un ejemplo de abstracción: el sistema operativo oculta detalles del hardware y presenta una representación más sencilla."
+},
+{
+"pregunta": "¿Qué distingue principalmente a un exokernel frente a otros diseños de sistemas operativos?",
+"tema": "Exokernel",
+"opciones": [
+"Ejecuta todos los servicios en una única capa monolítica.",
+"Elimina completamente la protección de los recursos físicos.",
+"Mantiene una capa mínima para proteger y asignar recursos, dejando muchas abstracciones a niveles superiores.",
+"Obliga a que cada aplicación tenga su propia máquina virtual completa."
+],
+"respuestaCorrecta": "Mantiene una capa mínima para proteger y asignar recursos, dejando muchas abstracciones a niveles superiores.",
+"explicacionAcierto": "Correcto. El exokernel mantiene una capa pequeña encargada principalmente de proteger y asignar recursos, mientras las abstracciones pueden implementarse en niveles superiores.",
+"explicacionFallo": "El exokernel no elimina la protección. Su característica es mantener el núcleo mínimo y trasladar muchas abstracciones a niveles superiores."
+},
+{
+"pregunta": "En una computadora moderna, ¿por qué el sistema operativo se considera una pieza diferente a una aplicación común?",
+"tema": "Kernel y privilegios",
+"opciones": [
+"Porque se ejecuta con privilegios que le permiten administrar hardware y recursos del sistema.",
+"Porque siempre tiene una interfaz gráfica.",
+"Porque sólo funciona cuando no hay usuarios conectados.",
+"Porque reemplaza físicamente a la CPU."
+],
+"respuestaCorrecta": "Porque se ejecuta con privilegios que le permiten administrar hardware y recursos del sistema.",
+"explicacionAcierto": "Correcto. El sistema operativo necesita privilegios especiales para controlar recursos como la CPU, memoria y dispositivos.",
+"explicacionFallo": "La diferencia principal no es la existencia de una interfaz gráfica, sino que el sistema operativo administra los recursos y puede ejecutar operaciones privilegiadas."
+},
+{
+"pregunta": "Durante el arranque, el equipo necesita localizar un dispositivo desde el cual cargar el sistema operativo. ¿Qué componente participa inicialmente en esa tarea?",
+"tema": "Arranque del sistema",
+"opciones": [
+"El planificador de procesos.",
+"El sistema de archivos del usuario.",
+"El intérprete de comandos.",
+"El BIOS o firmware de arranque."
+],
+"respuestaCorrecta": "El BIOS o firmware de arranque.",
+"explicacionAcierto": "Correcto. Durante el proceso de arranque, el firmware participa inicialmente en la localización y carga del software necesario para iniciar el sistema operativo.",
+"explicacionFallo": "El planificador, el shell y los procesos del usuario aparecen después. El firmware participa en las primeras etapas del arranque."
+},
+{
+"pregunta": "Un computador mantiene varios programas cargados y cambia entre ellos cuando uno queda esperando una operación de E/S. ¿Cuál fue la idea clave que hizo posible este aprovechamiento de la CPU?",
+"tema": "Multiprogramación",
+"opciones": [
+"La monoprogramación.",
+"La multiprogramación.",
+"El procesamiento manual de tarjetas.",
+"La memoria ROM."
+],
+"respuestaCorrecta": "La multiprogramación.",
+"explicacionAcierto": "Correcto. La multiprogramación permite que otro proceso utilice la CPU mientras el proceso actual espera una operación de E/S.",
+"explicacionFallo": "La monoprogramación no permite aprovechar la CPU de esta manera. La idea clave es mantener varios procesos disponibles para ejecutar."
+},
+{
+"pregunta": "Un usuario trabaja en una terminal y espera respuestas rápidas mientras otros usuarios también utilizan el mismo sistema. ¿Qué modelo histórico describe mejor esta situación?",
+"tema": "Sistemas de tiempo compartido",
+"opciones": [
+"Procesamiento por lotes puro.",
+"Sistema monousuario.",
+"Tiempo compartido.",
+"Ejecución sin sistema operativo."
+],
+"respuestaCorrecta": "Tiempo compartido.",
+"explicacionAcierto": "Correcto. Los sistemas de tiempo compartido permiten que varios usuarios interactúen con el sistema y reciban una parte del tiempo de procesamiento.",
+"explicacionFallo": "La situación corresponde al tiempo compartido, donde el procesador se reparte entre procesos para ofrecer una respuesta interactiva a varios usuarios."
+},
+{
+"pregunta": "En un sistema con varios usuarios, ¿qué problema intenta resolver el sistema operativo cuando controla quién puede leer, modificar o ejecutar un recurso?",
+"tema": "Protección y control de acceso",
+"opciones": [
+"La velocidad del reloj.",
+"El tamaño del disco.",
+"La compilación de programas.",
+"La protección y el control de acceso."
+],
+"respuestaCorrecta": "La protección y el control de acceso.",
+"explicacionAcierto": "Correcto. El sistema operativo debe controlar el acceso a los recursos para evitar que usuarios o procesos realicen operaciones no autorizadas.",
+"explicacionFallo": "La pregunta se refiere directamente a protección y control de acceso, mecanismos que determinan qué operaciones puede realizar cada usuario o proceso."
+},
+{
+"pregunta": "Un proceso necesita guardar temporalmente el estado de sus registros porque otro proceso va a usar la CPU. ¿Qué responsabilidad del sistema operativo se refleja aquí?",
+"tema": "Procesos y cambio de contexto",
+"opciones": [
+"Preservar el estado de ejecución para poder reanudar el proceso correctamente.",
+"Cambiar el sistema de archivos.",
+"Reconfigurar el BIOS.",
+"Formatear la memoria secundaria."
+],
+"respuestaCorrecta": "Preservar el estado de ejecución para poder reanudar el proceso correctamente.",
+"explicacionAcierto": "Correcto. Para cambiar de un proceso a otro, el sistema operativo debe conservar el estado necesario del proceso suspendido.",
+"explicacionFallo": "Guardar los registros permite preservar el estado de ejecución del proceso y restaurarlo cuando vuelva a recibir la CPU."
+},
+{
+"pregunta": "Al comparar registros, caché, memoria principal y disco, ¿qué comportamiento general presenta la jerarquía de memoria?",
+"tema": "Jerarquía de memoria",
+"opciones": [
+"A mayor capacidad siempre hay mayor velocidad.",
+"Todos los niveles tienen tiempos de acceso similares.",
+"Los niveles más cercanos a la CPU suelen ser más rápidos, pequeños y costosos por bit.",
+"El disco es más rápido que la caché porque tiene mayor capacidad."
+],
+"respuestaCorrecta": "Los niveles más cercanos a la CPU suelen ser más rápidos, pequeños y costosos por bit.",
+"explicacionAcierto": "Correcto. La jerarquía de memoria combina diferentes tecnologías: los niveles cercanos a la CPU ofrecen menor tiempo de acceso, pero normalmente tienen menor capacidad y mayor costo por bit.",
+"explicacionFallo": "La capacidad y la velocidad no aumentan juntas. En general, las memorias más rápidas y cercanas a la CPU son más pequeñas y costosas por bit."
+},
+{
+"pregunta": "Una CPU busca un dato en caché y no lo encuentra, por lo que debe traerlo desde memoria principal. ¿Cómo se denomina esta situación?",
+"tema": "Memoria caché",
+"opciones": [
+"Acierto de caché.",
+"Fallo de caché.",
+"Interrupción de reloj.",
+"Interbloqueo."
+],
+"respuestaCorrecta": "Fallo de caché.",
+"explicacionAcierto": "Correcto. Se produce un fallo de caché cuando el dato solicitado no está en la caché y debe obtenerse desde un nivel inferior de la jerarquía de memoria.",
+"explicacionFallo": "Un acierto ocurre cuando el dato está en la caché. Si no está y debe buscarse en memoria principal, se trata de un fallo de caché."
+},
+{
+"pregunta": "Un controlador de dispositivo termina una operación y necesita avisar a la CPU sin obligarla a estar preguntando continuamente si ya terminó. ¿Qué mecanismo resulta más apropiado?",
+"tema": "Interrupciones",
+"opciones": [
+"Una interrupción.",
+"Una llamada recursiva.",
+"Un cambio de sistema de archivos.",
+"Una partición de memoria."
+],
+"respuestaCorrecta": "Una interrupción.",
+"explicacionAcierto": "Correcto. Una interrupción permite que el dispositivo notifique a la CPU que una operación requiere atención sin que la CPU tenga que comprobar continuamente su estado.",
+"explicacionFallo": "La interrupción es el mecanismo utilizado para avisar a la CPU de eventos producidos por dispositivos u otros componentes."
+},
+{
+"pregunta": "Un dispositivo transfiere un bloque grande de datos directamente entre el controlador y la memoria, dejando a la CPU libre durante buena parte de la operación. ¿Qué mecanismo está usando?",
+"tema": "DMA y entrada/salida",
+"opciones": [
+"Spooling.",
+"Paginación.",
+"Tiempo compartido.",
+"DMA."
+],
+"respuestaCorrecta": "DMA.",
+"explicacionAcierto": "Correcto. DMA permite realizar transferencias de datos entre un dispositivo y la memoria con una intervención limitada de la CPU.",
+"explicacionFallo": "DMA significa acceso directo a memoria y está diseñado precisamente para transferir datos entre dispositivos y memoria reduciendo la participación directa de la CPU."
+},
+{
+"pregunta": "En UNIX y sistemas similares, un usuario escribe un comando en una terminal. ¿Qué componente interpreta normalmente ese comando y solicita los servicios necesarios al sistema operativo?",
+"tema": "Shell e interfaz del sistema operativo",
+"opciones": [
+"El BIOS.",
+"La MMU.",
+"El shell.",
+"El controlador de disco."
+],
+"respuestaCorrecta": "El shell.",
+"explicacionAcierto": "Correcto. El shell interpreta los comandos introducidos por el usuario y solicita al sistema operativo los servicios necesarios para ejecutarlos.",
+"explicacionFallo": "El BIOS participa en el arranque y la MMU administra aspectos de memoria. El componente que interpreta normalmente los comandos del usuario es el shell."
+},
+{
+"pregunta": "¿Cuál de las siguientes situaciones representa mejor una ruta absoluta en un sistema de archivos tipo UNIX?",
+"tema": "Sistemas de archivos y rutas",
+"opciones": [
+"proyectos/informe.txt",
+"/home/usuario/proyectos/informe.txt",
+"../proyectos/informe.txt",
+"informe.txt"
+],
+"respuestaCorrecta": "/home/usuario/proyectos/informe.txt",
+"explicacionAcierto": "Correcto. Una ruta absoluta comienza desde el directorio raíz, representado por `/`, y especifica la ubicación completa del archivo.",
+"explicacionFallo": "Las otras rutas son relativas al directorio actual o utilizan referencias como `..`. La ruta absoluta comienza desde la raíz."
+},
+{
+"pregunta": "Un sistema operativo para un servidor debe atender simultáneamente peticiones de muchos usuarios y compartir recursos de red. ¿Qué característica es más importante en ese contexto?",
+"tema": "Sistemas operativos multiusuario",
+"opciones": [
+"Trabajar sin procesos concurrentes.",
+"Ejecutar sólo una aplicación a la vez.",
+"Evitar el uso de memoria virtual.",
+"Gestionar múltiples solicitudes y recursos compartidos de forma controlada."
+],
+"respuestaCorrecta": "Gestionar múltiples solicitudes y recursos compartidos de forma controlada.",
+"explicacionAcierto": "Correcto. Un servidor necesita administrar concurrentemente procesos, usuarios y recursos compartidos.",
+"explicacionFallo": "La característica importante es la capacidad de gestionar múltiples solicitudes y compartir recursos de manera controlada y protegida."
+},
+{
+"pregunta": "Un proceso de usuario intenta cambiar directamente al modo kernel modificando el bit de privilegio de la CPU. ¿Qué debería ocurrir en un sistema correctamente protegido?",
+"tema": "Protección y modos de ejecución",
+"opciones": [
+"La operación debe impedirse porque ese cambio sólo puede realizarse mediante mecanismos controlados.",
+"El proceso se convierte automáticamente en administrador.",
+"El kernel se detiene hasta que el usuario confirme.",
+"La CPU desactiva permanentemente las interrupciones."
+],
+"respuestaCorrecta": "La operación debe impedirse porque ese cambio sólo puede realizarse mediante mecanismos controlados.",
+"explicacionAcierto": "Correcto. Permitir que un programa de usuario cambie directamente su nivel de privilegio eliminaría una parte fundamental de la protección del sistema.",
+"explicacionFallo": "El modo privilegiado no debe poder activarse arbitrariamente desde un programa de usuario. El cambio debe realizarse mediante mecanismos controlados por el hardware y el sistema operativo."
+},
+{
+"pregunta": "¿Qué estructura de sistema operativo organiza sus componentes en niveles donde cada capa usa los servicios de la inmediatamente inferior?",
+"tema": "Sistemas operativos por capas",
+"opciones": [
+"Exokernel.",
+"Sistema por capas.",
+"Procesamiento por lotes.",
+"Máquina virtual."
+],
+"respuestaCorrecta": "Sistema por capas.",
+"explicacionAcierto": "Correcto. En una estructura por capas, el sistema operativo se organiza en niveles y cada capa utiliza los servicios proporcionados por la capa inferior.",
+"explicacionFallo": "La descripción corresponde directamente a la arquitectura por capas. Exokernel y máquina virtual representan enfoques diferentes."
+},
+{
+"pregunta": "Una máquina virtual permite ejecutar un sistema operativo invitado sobre hardware virtualizado. ¿Cuál es la idea central de este enfoque?",
+"tema": "Máquinas virtuales",
+"opciones": [
+"Eliminar por completo el sistema operativo anfitrión.",
+"Hacer que todas las aplicaciones corran en modo kernel.",
+"Proporcionar a cada entorno una representación aislada de una máquina sobre la cual puede ejecutarse un SO.",
+"Sustituir la memoria RAM por almacenamiento secundario."
+],
+"respuestaCorrecta": "Proporcionar a cada entorno una representación aislada de una máquina sobre la cual puede ejecutarse un SO.",
+"explicacionAcierto": "Correcto. La virtualización proporciona a un sistema operativo invitado la ilusión de disponer de una máquina propia, aunque los recursos físicos sean compartidos.",
+"explicacionFallo": "Una máquina virtual no elimina necesariamente el sistema anfitrión ni sustituye la RAM. Su propósito es proporcionar un entorno de máquina virtualizado y aislado."
+},
+{
+"pregunta": "Si un sistema operativo guarda en disco los trabajos de impresión y los envía a la impresora uno por uno, ¿qué problema está evitando principalmente?",
+"tema": "Spooling",
+"opciones": [
+"Que las salidas de varios programas se mezclen de forma desordenada.",
+"Que la CPU ejecute procesos.",
+"Que existan archivos temporales.",
+"Que los usuarios utilicen memoria virtual."
+],
+"respuestaCorrecta": "Que las salidas de varios programas se mezclen de forma desordenada.",
+"explicacionAcierto": "Correcto. El spooling permite almacenar temporalmente trabajos destinados a un dispositivo y procesarlos de manera organizada.",
+"explicacionFallo": "El almacenamiento temporal de los trabajos de impresión permite coordinar las salidas de distintos programas y evitar que se interfieran entre sí."
+},
+{
+"pregunta": "Un sistema embebido que controla una máquina industrial debe responder dentro de límites de tiempo estrictos. ¿Qué tipo de sistema operativo describe mejor este caso?",
+"tema": "Sistemas de tiempo real",
+"opciones": [
+"Sistema de escritorio.",
+"Sistema por lotes.",
+"Sistema distribuido de propósito general.",
+"Sistema de tiempo real."
+],
+"respuestaCorrecta": "Sistema de tiempo real.",
+"explicacionAcierto": "Correcto. Los sistemas de tiempo real están diseñados para responder a eventos dentro de restricciones temporales determinadas.",
+"explicacionFallo": "La característica determinante es la necesidad de cumplir límites de tiempo estrictos, propia de los sistemas de tiempo real."
+},
+{
+"pregunta": "¿Qué afirmación distingue mejor un microkernel de un kernel monolítico?",
+"tema": "Microkernel y kernel monolítico",
+"opciones": [
+"El microkernel no utiliza modo privilegiado.",
+"El microkernel no administra procesos.",
+"El microkernel intenta mantener sólo funciones esenciales en el núcleo y mover otros servicios fuera de él.",
+"El microkernel obliga a usar una única aplicación."
+],
+"respuestaCorrecta": "El microkernel intenta mantener sólo funciones esenciales en el núcleo y mover otros servicios fuera de él.",
+"explicacionAcierto": "Correcto. La idea central del microkernel es reducir las funciones que deben ejecutarse dentro del núcleo y colocar otros servicios fuera de él.",
+"explicacionFallo": "Un microkernel sí utiliza mecanismos privilegiados y puede administrar funciones esenciales. Su característica distintiva es mantener pequeño el núcleo."
+},
+{
+"pregunta": "Cuando el sistema operativo divide la memoria principal entre varios programas al mismo tiempo, ¿qué forma de multiplexación está aplicando?",
+"tema": "Multiplexación espacial",
+"opciones": [
+"Multiplexación temporal.",
+"Multiplexación espacial.",
+"Procesamiento por lotes.",
+"Exclusión mutua."
+],
+"respuestaCorrecta": "Multiplexación espacial.",
+"explicacionAcierto": "Correcto. La memoria puede dividirse en diferentes regiones para que varios programas ocupen distintas partes al mismo tiempo.",
+"explicacionFallo": "La multiplexación espacial consiste en dividir un recurso en diferentes partes que pueden asignarse simultáneamente a distintos usuarios o procesos."
+},
+{
+"pregunta": "Un estudiante abre dos veces el mismo editor de texto. El archivo ejecutable es el mismo, pero cada instancia tiene su propio estado, memoria y recursos. ¿Qué representa cada instancia?",
+"tema": "Procesos",
+"opciones": [
+"Un driver.",
+"Un proceso independiente.",
+"Un archivo especial.",
+"Un semáforo."
+],
+"respuestaCorrecta": "Un proceso independiente.",
+"explicacionAcierto": "Correcto. Un proceso es una instancia de un programa en ejecución, con su propio estado y recursos asociados.",
+"explicacionFallo": "Aunque ambas instancias utilizan el mismo archivo ejecutable, cada ejecución constituye un proceso independiente."
+},
+{
+"pregunta": "Un proceso está esperando que llegue información desde el teclado. Mientras esa entrada no llegue, ¿qué estado describe mejor su situación?",
+"tema": "Estados de un proceso",
+"opciones": [
+"Ejecutando.",
+"Listo.",
+"Terminado.",
+"Bloqueado."
+],
+"respuestaCorrecta": "Bloqueado.",
+"explicacionAcierto": "Correcto. Un proceso que espera un evento externo, como la llegada de datos de E/S, no puede continuar y permanece bloqueado.",
+"explicacionFallo": "No está listo para ejecutar porque necesita que ocurra un evento. Por eso se encuentra bloqueado."
+},
+{
+"pregunta": "Un proceso terminó una operación de E/S y ya puede continuar, pero todavía no tiene la CPU. ¿A qué estado pasa normalmente?",
+"tema": "Estados de un proceso",
+"opciones": [
+"Listo.",
+"Bloqueado.",
+"Ejecutando.",
+"Suspendido definitivamente."
+],
+"respuestaCorrecta": "Listo.",
+"explicacionAcierto": "Correcto. Al terminar la operación que lo mantenía bloqueado, el proceso puede competir por la CPU y pasa al estado listo.",
+"explicacionFallo": "El proceso ya no está esperando E/S, pero tampoco está usando la CPU. Por eso queda en la cola de procesos listos."
+},
+{
+"pregunta": "El sistema operativo detiene temporalmente un proceso, guarda sus registros y pone a ejecutar otro. ¿Cómo se denomina ese cambio?",
+"tema": "Cambio de contexto",
+"opciones": [
+"Creación de proceso.",
+"Montaje de archivos.",
+"Cambio de contexto.",
+"Compilación dinámica."
+],
+"respuestaCorrecta": "Cambio de contexto.",
+"explicacionAcierto": "Correcto. Un cambio de contexto implica guardar el estado del proceso actual y restaurar el estado de otro proceso para darle la CPU.",
+"explicacionFallo": "La situación descrita corresponde a un cambio de contexto, no a la creación de un proceso ni a una operación de archivos."
+},
+{
+"pregunta": "Una aplicación de videollamada usa un hilo para audio, otro para video y otro para la interfaz. ¿Qué ventaja busca con esta organización?",
+"tema": "Hilos",
+"opciones": [
+"Que cada hilo tenga un sistema operativo diferente.",
+"Realizar varias actividades relacionadas de forma concurrente dentro del mismo proceso.",
+"Evitar por completo cualquier sincronización.",
+"Eliminar la necesidad de memoria compartida."
+],
+"respuestaCorrecta": "Realizar varias actividades relacionadas de forma concurrente dentro del mismo proceso.",
+"explicacionAcierto": "Correcto. Los hilos permiten organizar distintas actividades de un mismo proceso para que puedan avanzar de manera concurrente.",
+"explicacionFallo": "Los hilos pertenecen al mismo proceso y comparten recursos, por lo que pueden utilizarse para realizar diferentes actividades concurrentemente."
+},
+{
+"pregunta": "Dos hilos pertenecen al mismo proceso. ¿Cuál de estos elementos normalmente NO comparten?",
+"tema": "Hilos y recursos compartidos",
+"opciones": [
+"El espacio de direcciones.",
+"Los archivos abiertos del proceso.",
+"Datos globales.",
+"La pila de ejecución de cada hilo."
+],
+"respuestaCorrecta": "La pila de ejecución de cada hilo.",
+"explicacionAcierto": "Correcto. Cada hilo necesita su propia pila para mantener sus variables locales y su información de ejecución.",
+"explicacionFallo": "Los hilos de un proceso normalmente comparten espacio de direcciones, archivos abiertos y datos globales, pero cada hilo tiene su propia pila."
+},
+{
+"pregunta": "Una biblioteca de hilos realiza cambios entre hilos sin pedir ayuda al kernel. ¿Qué ventaja puede tener este diseño?",
+"tema": "Hilos en espacio de usuario",
+"opciones": [
+"El cambio puede ser muy rápido porque se realiza en espacio de usuario.",
+"El kernel siempre conoce el estado de cada hilo.",
+"Las llamadas bloqueantes nunca afectan al proceso.",
+"Los hilos dejan de necesitar una pila."
+],
+"respuestaCorrecta": "El cambio puede ser muy rápido porque se realiza en espacio de usuario.",
+"explicacionAcierto": "Correcto. Los cambios entre hilos administrados en espacio de usuario pueden evitar parte de la sobrecarga de entrar al kernel.",
+"explicacionFallo": "El beneficio principal es la rapidez potencial del cambio. Las otras opciones no describen correctamente las características de los hilos administrados en espacio de usuario."
+},
+{
+"pregunta": "En una implementación de hilos sólo en espacio de usuario, uno de ellos hace una llamada al sistema que bloquea todo el proceso. ¿Cuál es el problema principal?",
+"tema": "Hilos en espacio de usuario y bloqueo",
+"opciones": [
+"Se pierde automáticamente la memoria del proceso.",
+"El kernel puede no saber que existen otros hilos listos dentro de ese mismo proceso.",
+"Se crea un nuevo proceso por cada hilo.",
+"La CPU entra en modo de arranque."
+],
+"respuestaCorrecta": "El kernel puede no saber que existen otros hilos listos dentro de ese mismo proceso.",
+"explicacionAcierto": "Correcto. Cuando los hilos son gestionados completamente en espacio de usuario, el kernel puede considerar bloqueado al proceso completo aunque otros hilos del mismo proceso estén listos.",
+"explicacionFallo": "El problema deriva de que el kernel puede no tener conocimiento individual de los hilos administrados en espacio de usuario."
+},
+{
+"pregunta": "Dos procesos incrementan al mismo tiempo una variable compartida y, dependiendo del orden de ejecución, el resultado final cambia. ¿Qué fenómeno se está presentando?",
+"tema": "Condición de carrera",
+"opciones": [
+"Paginación.",
+"Fragmentación.",
+"Condición de carrera.",
+"Spooling."
+],
+"respuestaCorrecta": "Condición de carrera.",
+"explicacionAcierto": "Correcto. Una condición de carrera ocurre cuando el resultado depende del orden en que procesos o hilos acceden y modifican datos compartidos.",
+"explicacionFallo": "El fenómeno descrito es una condición de carrera, causada por accesos concurrentes a datos compartidos sin una sincronización adecuada."
+},
+{
+"pregunta": "Un programador quiere proteger una variable compartida para que dos hilos no la modifiquen simultáneamente. ¿Qué propiedad debe garantizar alrededor de esa sección de código?",
+"tema": "Exclusión mutua",
+"opciones": [
+"Paginación por demanda.",
+"Multiprogramación.",
+"Paralelismo obligatorio.",
+"Exclusión mutua."
+],
+"respuestaCorrecta": "Exclusión mutua.",
+"explicacionAcierto": "Correcto. La exclusión mutua garantiza que una sección crítica sea ejecutada por un solo hilo o proceso a la vez.",
+"explicacionFallo": "Para impedir modificaciones simultáneas sobre datos compartidos se necesita exclusión mutua, normalmente mediante mecanismos como mutexes o semáforos."
+},
+{
+"pregunta": "Una sección del programa manipula datos compartidos y sólo debería ser ejecutada por un hilo a la vez. ¿Cómo se denomina esa parte del código?",
+"tema": "Regiones críticas",
+"opciones": [
+"Región crítica.",
+"Espacio de direcciones.",
+"Tabla de páginas.",
+"Cola de impresión."
+],
+"respuestaCorrecta": "Región crítica.",
+"explicacionAcierto": "Correcto. Una región crítica es una parte del programa que accede a datos compartidos y debe protegerse para evitar accesos concurrentes incompatibles.",
+"explicacionFallo": "La descripción corresponde a una región crítica, que requiere mecanismos de sincronización para garantizar el acceso apropiado."
+},
+{
+"pregunta": "Un hilo intenta entrar a una región protegida por un mutex que ya está ocupado. ¿Qué debería hacer normalmente?",
+"tema": "Mutex y sincronización",
+"opciones": [
+"Entrar de todas formas.",
+"Esperar hasta que el mutex quede disponible.",
+"Reiniciar el proceso que posee el mutex.",
+"Cambiar al modo kernel permanentemente."
+],
+"respuestaCorrecta": "Esperar hasta que el mutex quede disponible.",
+"explicacionAcierto": "Correcto. Un mutex permite que sólo un hilo entre a la región protegida. Si está ocupado, otro hilo debe esperar hasta que sea liberado.",
+"explicacionFallo": "Entrar mientras el mutex está ocupado violaría la exclusión mutua. El comportamiento normal es esperar a que el recurso protegido quede disponible."
+},
+{
+"pregunta": "¿Qué característica vuelve útiles a los semáforos para sincronizar procesos o hilos?",
+"tema": "Semáforos",
+"opciones": [
+"Funcionan sólo con un proceso.",
+"Eliminan todos los bloqueos posibles.",
+"Reemplazan la planificación del procesador.",
+"Sus operaciones fundamentales se realizan de forma atómica."
+],
+"respuestaCorrecta": "Sus operaciones fundamentales se realizan de forma atómica.",
+"explicacionAcierto": "Correcto. Las operaciones fundamentales de los semáforos deben ejecutarse de manera indivisible para que puedan utilizarse de forma segura como mecanismos de sincronización.",
+"explicacionFallo": "La atomicidad de las operaciones de sincronización es fundamental para evitar que varios procesos o hilos interfieran entre sí al modificar el estado del semáforo."
+},
+{
+"pregunta": "En el problema productor-consumidor, el productor encuentra el búfer lleno. ¿Qué comportamiento es el más razonable?",
+"tema": "Productor-consumidor y sincronización",
+"opciones": [
+"Sobrescribir cualquier dato existente.",
+"Terminar el consumidor.",
+"Esperar hasta que exista espacio disponible en el búfer.",
+"Reiniciar el sistema operativo."
+],
+"respuestaCorrecta": "Esperar hasta que exista espacio disponible en el búfer.",
+"explicacionAcierto": "Correcto. Si el búfer está lleno, el productor debe esperar hasta que el consumidor retire algún elemento y haya espacio disponible.",
+"explicacionFallo": "Sobrescribir datos podría destruir información que todavía no ha sido consumida. La sincronización correcta hace que el productor espere."
+},
+{
+"pregunta": "Un algoritmo de planificación atiende cada proceso en el mismo orden en que llegó a la cola, sin distinguir su duración. ¿Cuál es?",
+"tema": "Planificación FCFS",
+"opciones": [
+"FCFS.",
+"Round Robin.",
+"Prioridades dinámicas.",
+"SJF."
+],
+"respuestaCorrecta": "FCFS.",
+"explicacionAcierto": "Correcto. FCFS (First-Come, First-Served) atiende los procesos según el orden en que llegan a la cola.",
+"explicacionFallo": "FCFS se basa en el orden de llegada. SJF selecciona el trabajo más corto y Round Robin utiliza cuantos de tiempo."
+},
+{
+"pregunta": "En un sistema interactivo, ¿por qué Round Robin suele resultar apropiado?",
+"tema": "Planificación Round Robin",
+"opciones": [
+"Porque ejecuta cada proceso hasta que termine.",
+"Porque reparte la CPU mediante cuantos de tiempo, favoreciendo tiempos de respuesta razonables.",
+"Porque elimina todos los cambios de contexto.",
+"Porque sólo funciona con procesos por lotes."
+],
+"respuestaCorrecta": "Porque reparte la CPU mediante cuantos de tiempo, favoreciendo tiempos de respuesta razonables.",
+"explicacionAcierto": "Correcto. Round Robin asigna a cada proceso un intervalo de tiempo y después permite que otro proceso utilice la CPU, lo que resulta adecuado para sistemas interactivos.",
+"explicacionFallo": "Round Robin no ejecuta necesariamente cada proceso hasta terminar ni elimina los cambios de contexto. Su característica es repartir la CPU mediante cuantos."
+},
+{
+"pregunta": "Si el quantum de Round Robin es extremadamente pequeño, ¿qué efecto puede aparecer?",
+"tema": "Planificación Round Robin y quantum",
+"opciones": [
+"El algoritmo se convierte en FCFS.",
+"Los procesos dejan de compartir la CPU.",
+"Desaparecen las interrupciones de reloj.",
+"Aumenta la sobrecarga por cambios de contexto frecuentes."
+],
+"respuestaCorrecta": "Aumenta la sobrecarga por cambios de contexto frecuentes.",
+"explicacionAcierto": "Correcto. Un quantum demasiado pequeño provoca cambios frecuentes entre procesos, aumentando el costo de los cambios de contexto.",
+"explicacionFallo": "Reducir demasiado el quantum no elimina la compartición de CPU; al contrario, provoca que los procesos cambien de turno con mayor frecuencia."
+},
+{
+"pregunta": "Un algoritmo siempre elige primero los trabajos con menor tiempo estimado de ejecución. ¿Qué política está aplicando?",
+"tema": "Planificación SJF",
+"opciones": [
+"Round Robin.",
+"FCFS.",
+"Shortest Job First (SJF).",
+"Planificación aleatoria."
+],
+"respuestaCorrecta": "Shortest Job First (SJF).",
+"explicacionAcierto": "Correcto. SJF selecciona para ejecución el trabajo que tiene el menor tiempo de ejecución estimado.",
+"explicacionFallo": "La política descrita corresponde a Shortest Job First, mientras que FCFS utiliza el orden de llegada y Round Robin utiliza cuantos de tiempo."
+},
+{
+"pregunta": "En planificación por prioridades, un proceso de prioridad muy baja lleva mucho tiempo esperando porque siempre llegan procesos más prioritarios. ¿Qué problema está sufriendo?",
+"tema": "Inanición en planificación",
+"opciones": [
+"Inanición.",
+"Condición de carrera.",
+"Fallo de página.",
+"Interrupción espuria."
+],
+"respuestaCorrecta": "Inanición.",
+"explicacionAcierto": "Correcto. La inanición ocurre cuando un proceso espera indefinidamente porque otros procesos con mayor prioridad reciben continuamente el recurso.",
+"explicacionFallo": "El problema descrito es la inanición: un proceso de baja prioridad puede quedar esperando durante mucho tiempo si los procesos prioritarios siguen llegando."
+},
+{
+"pregunta": "¿Qué técnica puede utilizar un planificador para reducir el riesgo de inanición de procesos con baja prioridad?",
+"tema": "Aging y planificación por prioridades",
+"opciones": [
+"Disminuir aún más su prioridad con el tiempo.",
+"Incrementar gradualmente su prioridad mientras esperan (aging).",
+"Bloquearlos hasta que no haya otros procesos.",
+"Ejecutarlos sólo durante el arranque."
+],
+"respuestaCorrecta": "Incrementar gradualmente su prioridad mientras esperan (aging).",
+"explicacionAcierto": "Correcto. El aging incrementa gradualmente la prioridad de un proceso mientras permanece esperando, reduciendo el riesgo de inanición.",
+"explicacionFallo": "Aumentar gradualmente la prioridad de los procesos que llevan mucho tiempo esperando permite que eventualmente reciban la CPU."
+}
+]

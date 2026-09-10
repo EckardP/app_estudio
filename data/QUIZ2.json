@@ -1,0 +1,600 @@
+[
+{
+"pregunta": "Un proceso está utilizando actualmente la CPU para ejecutar sus instrucciones. ¿En cuál de los estados básicos del modelo de procesos se encuentra?",
+"tema": "Estados de un proceso",
+"opciones": [
+"En ejecución",
+"Listo",
+"Bloqueado",
+"Terminado"
+],
+"respuestaCorrecta": "En ejecución",
+"explicacionAcierto": "Correcto. Un proceso está en ejecución cuando está utilizando la CPU en ese instante.",
+"explicacionFallo": "El estado en ejecución corresponde al proceso que actualmente está utilizando la CPU. Un proceso listo espera por la CPU y uno bloqueado espera por un evento."
+},
+{
+"pregunta": "Un proceso tiene todo lo necesario para continuar, pero otro proceso está utilizando la única CPU disponible. ¿En qué estado debe encontrarse?",
+"tema": "Estados de un proceso",
+"opciones": [
+"Bloqueado",
+"Listo",
+"En ejecución",
+"Terminado"
+],
+"respuestaCorrecta": "Listo",
+"explicacionAcierto": "Correcto. Un proceso listo puede ejecutarse, pero espera temporalmente porque la CPU está asignada a otro proceso.",
+"explicacionFallo": "Un proceso listo puede continuar su ejecución cuando obtenga la CPU. Un proceso bloqueado, en cambio, no puede continuar hasta que ocurra un evento externo."
+},
+{
+"pregunta": "Un proceso está esperando que lleguen datos desde el teclado antes de poder continuar. ¿Cuál es su estado?",
+"tema": "Estados de un proceso",
+"opciones": [
+"En ejecución",
+"Listo",
+"Bloqueado",
+"Planificado"
+],
+"respuestaCorrecta": "Bloqueado",
+"explicacionAcierto": "Correcto. El proceso está bloqueado porque lógicamente no puede continuar hasta que ocurra el evento que está esperando.",
+"explicacionFallo": "Un proceso bloqueado espera un evento externo, como la llegada de datos. No está simplemente esperando que el planificador le entregue la CPU."
+},
+{
+"pregunta": "Un proceso que estaba bloqueado recibe finalmente los datos que esperaba. ¿Qué estado puede alcanzar después de que desaparezca la causa del bloqueo?",
+"tema": "Transiciones de estados",
+"opciones": [
+"Listo",
+"Terminado",
+"Bloqueado nuevamente de forma obligatoria",
+"Eliminado"
+],
+"respuestaCorrecta": "Listo",
+"explicacionAcierto": "Correcto. Cuando ocurre el evento que esperaba un proceso bloqueado, puede pasar al estado listo para competir por la CPU.",
+"explicacionFallo": "El proceso deja de estar bloqueado cuando ocurre el evento que esperaba y pasa a estar listo para ejecutarse."
+},
+{
+"pregunta": "Un proceso que estaba ejecutándose pierde temporalmente la CPU porque el sistema operativo decide ejecutar otro proceso. ¿A qué estado puede pasar?",
+"tema": "Planificación de procesos",
+"opciones": [
+"Listo",
+"Bloqueado",
+"Terminado",
+"Eliminado"
+],
+"respuestaCorrecta": "Listo",
+"explicacionAcierto": "Correcto. Si el proceso todavía puede continuar pero el sistema operativo asigna la CPU a otro, pasa de ejecución a listo.",
+"explicacionFallo": "El proceso no está bloqueado porque no espera un evento externo; simplemente espera nuevamente su turno para utilizar la CPU."
+},
+{
+"pregunta": "Un programa necesita ejecutar otro programa como parte de su funcionamiento. En UNIX, ¿qué mecanismo permite crear un nuevo proceso para realizar ese trabajo?",
+"tema": "Creación de procesos",
+"opciones": [
+"fork",
+"read",
+"mkdir",
+"rmdir"
+],
+"respuestaCorrecta": "fork",
+"explicacionAcierto": "Correcto. En UNIX, fork se utiliza para crear un nuevo proceso a partir de uno existente.",
+"explicacionFallo": "fork está relacionada con la creación de procesos. Las otras llamadas indicadas tienen funciones relacionadas con archivos o directorios."
+},
+{
+"pregunta": "Un shell recibe un comando escrito por el usuario y necesita crear un proceso que ejecute el programa solicitado. ¿Qué relación representa mejor esta situación?",
+"tema": "Shell y procesos",
+"opciones": [
+"El shell crea un proceso para ejecutar el programa solicitado.",
+"El programa reemplaza al sistema operativo.",
+"El shell convierte el comando directamente en una interrupción de hardware.",
+"El usuario debe ejecutar manualmente el kernel."
+],
+"respuestaCorrecta": "El shell crea un proceso para ejecutar el programa solicitado.",
+"explicacionAcierto": "Correcto. El capítulo utiliza al shell como ejemplo de un proceso que recibe comandos y crea procesos para ejecutar los programas correspondientes.",
+"explicacionFallo": "El shell actúa como intérprete de comandos y puede crear procesos para ejecutar los programas solicitados."
+},
+{
+"pregunta": "Un proceso padre crea un nuevo proceso y este nuevo proceso crea posteriormente otros dos. ¿Qué estructura se forma entre estos procesos?",
+"tema": "Jerarquías de procesos",
+"opciones": [
+"Un árbol de procesos",
+"Una cola de E/S",
+"Una tabla de páginas",
+"Un monitor"
+],
+"respuestaCorrecta": "Un árbol de procesos",
+"explicacionAcierto": "Correcto. Cuando los procesos crean procesos hijos, las relaciones padre-hijo pueden representarse mediante un árbol de procesos.",
+"explicacionFallo": "Las relaciones de creación entre procesos forman una estructura jerárquica que puede representarse como un árbol."
+},
+{
+"pregunta": "En un sistema UNIX, un proceso crea un hijo y el hijo crea posteriormente otro proceso. ¿Qué proceso ocupa la posición superior respecto al proceso creado en último lugar?",
+"tema": "Jerarquías de procesos",
+"opciones": [
+"El proceso original",
+"El proceso hijo más reciente",
+"El proceso que tenga mayor prioridad",
+"El proceso que utilice más memoria"
+],
+"respuestaCorrecta": "El proceso original",
+"explicacionAcierto": "Correcto. En una jerarquía de procesos, el proceso original se encuentra por encima de sus descendientes en el árbol.",
+"explicacionFallo": "La jerarquía depende de las relaciones de creación entre procesos, no de su prioridad o consumo de memoria."
+},
+{
+"pregunta": "Un proceso termina normalmente después de completar todo el trabajo para el que fue creado. ¿Cuál de las siguientes situaciones corresponde a una terminación voluntaria?",
+"tema": "Terminación de procesos",
+"opciones": [
+"Salida normal",
+"Error fatal",
+"Eliminación por otro proceso",
+"Fallo de hardware"
+],
+"respuestaCorrecta": "Salida normal",
+"explicacionAcierto": "Correcto. La salida normal ocurre cuando el proceso termina voluntariamente después de completar su trabajo.",
+"explicacionFallo": "La salida normal es una terminación voluntaria. Un error fatal o la eliminación por otro proceso representan situaciones diferentes."
+},
+{
+"pregunta": "Un compilador termina porque el archivo que debía procesar no existe y el programa decide finalizar por ese motivo. ¿Qué tipo de terminación representa?",
+"tema": "Terminación de procesos",
+"opciones": [
+"Salida por error",
+"Salida normal",
+"Interbloqueo",
+"Cambio de contexto"
+],
+"respuestaCorrecta": "Salida por error",
+"explicacionAcierto": "Correcto. El capítulo distingue la salida por error como una terminación voluntaria causada por una condición de error detectada por el propio proceso.",
+"explicacionFallo": "La salida por error ocurre cuando el proceso detecta una condición que le impide continuar y termina voluntariamente."
+},
+{
+"pregunta": "Un programa intenta ejecutar una instrucción ilegal y como consecuencia no puede continuar. ¿Qué tipo de terminación puede producirse?",
+"tema": "Terminación de procesos",
+"opciones": [
+"Error fatal",
+"Salida normal",
+"Planificación por prioridad",
+"Bloqueo voluntario"
+],
+"respuestaCorrecta": "Error fatal",
+"explicacionAcierto": "Correcto. Una instrucción ilegal es un ejemplo de error fatal que puede provocar la terminación involuntaria del proceso.",
+"explicacionFallo": "Los errores fatales incluyen situaciones como ejecutar instrucciones ilegales, acceder a memoria inexistente o realizar una división entre cero."
+},
+{
+"pregunta": "En UNIX, un proceso necesita solicitar al sistema operativo que termine otro proceso. ¿Qué llamada se menciona en el capítulo para esta finalidad?",
+"tema": "Terminación de procesos",
+"opciones": [
+"kill",
+"fork",
+"wait",
+"exec"
+],
+"respuestaCorrecta": "kill",
+"explicacionAcierto": "Correcto. En UNIX, kill permite solicitar al sistema operativo la terminación de otro proceso.",
+"explicacionFallo": "kill se utiliza para enviar una solicitud relacionada con la terminación de un proceso. fork y exec tienen funciones diferentes."
+},
+{
+"pregunta": "Un proceso necesita conservar información suficiente para poder continuar correctamente después de haber sido suspendido. ¿Dónde mantiene el sistema operativo información como los registros del proceso?",
+"tema": "Implementación de procesos",
+"opciones": [
+"En la tabla de procesos",
+"Únicamente en el teclado",
+"En el monitor",
+"En el sistema de archivos del usuario"
+],
+"respuestaCorrecta": "En la tabla de procesos",
+"explicacionAcierto": "Correcto. La tabla de procesos contiene información sobre cada proceso, incluyendo el contenido de sus registros y otros datos necesarios para administrarlo.",
+"explicacionFallo": "El sistema operativo utiliza una tabla de procesos para almacenar información administrativa necesaria para gestionar y reanudar los procesos."
+},
+{
+"pregunta": "Un proceso tiene varios archivos abiertos y cada uno posee una posición actual que indica qué dato se leerá a continuación. ¿Por qué debe conservarse esta información?",
+"tema": "Implementación de procesos",
+"opciones": [
+"Para que el proceso pueda continuar las operaciones de E/S desde la posición correcta.",
+"Para aumentar automáticamente la prioridad del proceso.",
+"Para crear nuevos procesos hijos.",
+"Para eliminar el espacio de direcciones."
+],
+"respuestaCorrecta": "Para que el proceso pueda continuar las operaciones de E/S desde la posición correcta.",
+"explicacionAcierto": "Correcto. Los apuntadores asociados con los archivos abiertos deben conservarse para que una operación posterior continúe desde la posición apropiada.",
+"explicacionFallo": "La posición actual de los archivos abiertos forma parte del estado que debe conservarse para que las operaciones posteriores funcionen correctamente."
+},
+{
+"pregunta": "Dos procesos cooperan para realizar una tarea y necesitan intercambiar información. ¿Cómo se denomina de manera general este mecanismo?",
+"tema": "Comunicación entre procesos",
+"opciones": [
+"Comunicación entre procesos",
+"Conmutación de contexto",
+"Jerarquía de memoria",
+"Compilación"
+],
+"respuestaCorrecta": "Comunicación entre procesos",
+"explicacionAcierto": "Correcto. La comunicación entre procesos, o IPC, permite que procesos que trabajan juntos intercambien información y coordinen sus actividades.",
+"explicacionFallo": "IPC es el conjunto de mecanismos utilizados para que los procesos puedan comunicarse y sincronizarse."
+},
+{
+"pregunta": "Un proceso A produce datos que serán utilizados por un proceso B. ¿Cuál es uno de los problemas que debe resolver la comunicación entre procesos?",
+"tema": "IPC y sincronización",
+"opciones": [
+"Garantizar que B no utilice los datos antes de que A los produzca.",
+"Eliminar todos los procesos del sistema.",
+"Impedir que A pueda ejecutar instrucciones.",
+"Aumentar automáticamente la memoria física."
+],
+"respuestaCorrecta": "Garantizar que B no utilice los datos antes de que A los produzca.",
+"explicacionAcierto": "Correcto. Cuando existe una dependencia entre procesos, es necesario establecer una secuencia apropiada para que el consumidor no se adelante al productor.",
+"explicacionFallo": "Una de las cuestiones fundamentales de IPC es coordinar el orden de ejecución cuando un proceso depende de los resultados producidos por otro."
+},
+{
+"pregunta": "Dos procesos comparten una variable y ambos intentan modificarla casi al mismo tiempo. El resultado depende del orden exacto en que se ejecuten sus instrucciones. ¿Qué problema se presenta?",
+"tema": "Condiciones de carrera",
+"opciones": [
+"Una condición de carrera",
+"Una llamada al sistema",
+"Un cambio de nombre",
+"Una barrera de memoria"
+],
+"respuestaCorrecta": "Una condición de carrera",
+"explicacionAcierto": "Correcto. Una condición de carrera ocurre cuando varios procesos acceden a datos compartidos y el resultado depende de la secuencia temporal de sus operaciones.",
+"explicacionFallo": "Cuando el resultado depende del orden relativo de operaciones concurrentes sobre datos compartidos, existe una condición de carrera."
+},
+{
+"pregunta": "Un sistema de impresión utiliza variables compartidas para registrar las posiciones de los archivos pendientes. Dos procesos actualizan simultáneamente esas variables sin protección. ¿Cuál es el principal riesgo?",
+"tema": "Condiciones de carrera",
+"opciones": [
+"Que los procesos interfieran entre sí y produzcan resultados incorrectos.",
+"Que la CPU deje de funcionar permanentemente.",
+"Que todos los archivos desaparezcan automáticamente.",
+"Que el sistema se convierta en un sistema embebido."
+],
+"respuestaCorrecta": "Que los procesos interfieran entre sí y produzcan resultados incorrectos.",
+"explicacionAcierto": "Correcto. El ejemplo del spooler de impresión muestra cómo el acceso simultáneo a datos compartidos puede producir una condición de carrera.",
+"explicacionFallo": "El problema de acceder simultáneamente a variables compartidas sin coordinación es que las operaciones de un proceso pueden interferir con las del otro."
+},
+{
+"pregunta": "Un fragmento de programa modifica una estructura de datos compartida y debe ejecutarse de manera que ningún otro proceso pueda acceder a esa estructura simultáneamente. ¿Cómo se denomina ese fragmento?",
+"tema": "Regiones críticas",
+"opciones": [
+"Región crítica",
+"Proceso hijo",
+"Cola de prioridad",
+"Hilo emergente"
+],
+"respuestaCorrecta": "Región crítica",
+"explicacionAcierto": "Correcto. Una región crítica es una sección del programa donde se accede a datos compartidos y debe evitarse que varios procesos entren simultáneamente.",
+"explicacionFallo": "Las regiones críticas contienen operaciones sobre recursos compartidos que requieren exclusión mutua para evitar interferencias."
+},
+{
+"pregunta": "Un programador establece que dos procesos nunca pueden estar simultáneamente dentro de sus respectivas regiones críticas. ¿Qué propiedad está intentando garantizar?",
+"tema": "Exclusión mutua",
+"opciones": [
+"Exclusión mutua",
+"Multiprogramación",
+"Creación de procesos",
+"Terminación normal"
+],
+"respuestaCorrecta": "Exclusión mutua",
+"explicacionAcierto": "Correcto. La exclusión mutua garantiza que sólo un proceso a la vez pueda ejecutar la sección protegida de acceso al recurso compartido.",
+"explicacionFallo": "La exclusión mutua evita que dos procesos entren al mismo tiempo en regiones críticas que utilizan recursos compartidos."
+},
+{
+"pregunta": "Un proceso comprueba repetidamente una variable hasta que otro proceso la modifica, consumiendo CPU durante toda la espera. ¿Qué técnica está utilizando?",
+"tema": "Espera ocupada",
+"opciones": [
+"Espera ocupada",
+"Bloqueo mediante mensaje",
+"Terminación normal",
+"Planificación garantizada"
+],
+"respuestaCorrecta": "Espera ocupada",
+"explicacionAcierto": "Correcto. En la espera ocupada, un proceso permanece ejecutando comprobaciones mientras espera que ocurra una condición.",
+"explicacionFallo": "La espera ocupada consiste en revisar repetidamente una condición en lugar de bloquear el proceso hasta que el evento esperado ocurra."
+},
+{
+"pregunta": "Un sistema necesita garantizar que sólo un proceso entre a una región crítica en un momento determinado. ¿Qué mecanismo del capítulo puede utilizarse para proporcionar esta garantía?",
+"tema": "Semáforos",
+"opciones": [
+"Un semáforo binario",
+"Un proceso hijo",
+"Una tubería de comandos únicamente",
+"Un algoritmo de ordenamiento"
+],
+"respuestaCorrecta": "Un semáforo binario",
+"explicacionAcierto": "Correcto. Un semáforo binario inicializado apropiadamente puede utilizarse para asegurar la exclusión mutua entre procesos.",
+"explicacionFallo": "Los semáforos binarios pueden utilizarse para controlar el acceso exclusivo a regiones críticas."
+},
+{
+"pregunta": "Un semáforo utilizado para proteger una región crítica comienza con el valor 1. ¿Qué característica tiene este tipo de semáforo?",
+"tema": "Semáforos binarios",
+"opciones": [
+"Es un semáforo binario.",
+"Es necesariamente una barrera.",
+"Es un mensaje.",
+"Es un proceso bloqueado."
+],
+"respuestaCorrecta": "Es un semáforo binario.",
+"explicacionAcierto": "Correcto. Los semáforos que se inicializan a 1 y se utilizan para asegurar exclusión mutua se denominan semáforos binarios.",
+"explicacionFallo": "El semáforo binario tiene como característica fundamental que se utiliza para controlar la entrada exclusiva a una región crítica."
+},
+{
+"pregunta": "En el problema del productor-consumidor se dispone de un búfer con varias posiciones. ¿Qué semáforo permite contabilizar cuántas posiciones están actualmente ocupadas?",
+"tema": "Productor-consumidor",
+"opciones": [
+"El semáforo llenas",
+"El semáforo vacías",
+"El semáforo mutex",
+"El planificador"
+],
+"respuestaCorrecta": "El semáforo llenas",
+"explicacionAcierto": "Correcto. En la solución presentada, el semáforo llenas contabiliza el número de ranuras ocupadas del búfer.",
+"explicacionFallo": "El semáforo llenas representa las posiciones ocupadas; vacías representa las disponibles y mutex protege el acceso exclusivo al búfer."
+},
+{
+"pregunta": "En el problema del productor-consumidor, ¿qué semáforo se utiliza para contabilizar las posiciones disponibles del búfer?",
+"tema": "Productor-consumidor",
+"opciones": [
+"vacías",
+"llenas",
+"mutex",
+"prioridad"
+],
+"respuestaCorrecta": "vacías",
+"explicacionAcierto": "Correcto. El semáforo vacías contabiliza cuántas ranuras del búfer están disponibles para que el productor pueda colocar nuevos elementos.",
+"explicacionFallo": "El semáforo vacías representa las ranuras libres del búfer, mientras que llenas representa las ocupadas."
+},
+{
+"pregunta": "En la solución del productor-consumidor, ¿cuál es la función principal del semáforo mutex?",
+"tema": "Productor-consumidor y exclusión mutua",
+"opciones": [
+"Evitar que productor y consumidor accedan al búfer simultáneamente.",
+"Contar las posiciones llenas.",
+"Contar las posiciones vacías.",
+"Elegir qué proceso tendrá mayor prioridad."
+],
+"respuestaCorrecta": "Evitar que productor y consumidor accedan al búfer simultáneamente.",
+"explicacionAcierto": "Correcto. mutex se utiliza para garantizar la exclusión mutua durante el acceso al búfer compartido.",
+"explicacionFallo": "mutex no cuenta las posiciones del búfer. Su función es impedir que productor y consumidor accedan simultáneamente a la región protegida."
+},
+{
+"pregunta": "Un programador utiliza las operaciones down y up sobre un semáforo para controlar una región crítica. ¿Qué objetivo busca conseguir?",
+"tema": "Operaciones de semáforos",
+"opciones": [
+"Garantizar la exclusión mutua.",
+"Crear automáticamente un nuevo proceso.",
+"Cambiar el nombre de un archivo.",
+"Aumentar la cantidad de CPU."
+],
+"respuestaCorrecta": "Garantizar la exclusión mutua.",
+"explicacionAcierto": "Correcto. Una operación down antes de entrar y una operación up después de salir de la región crítica permiten utilizar el semáforo para garantizar exclusión mutua.",
+"explicacionFallo": "Las operaciones down y up forman parte del mecanismo de semáforos y permiten controlar el acceso a regiones críticas."
+},
+{
+"pregunta": "Un sistema utiliza un mecanismo que permite encapsular datos compartidos y los procedimientos que operan sobre ellos, asegurando que sólo un proceso pueda estar activo dentro del mecanismo a la vez. ¿Qué mecanismo es?",
+"tema": "Monitores",
+"opciones": [
+"Monitor",
+"Proceso hijo",
+"Planificador por prioridad",
+"Búfer de impresión"
+],
+"respuestaCorrecta": "Monitor",
+"explicacionAcierto": "Correcto. Un monitor es un mecanismo de sincronización que agrupa datos y procedimientos relacionados y proporciona exclusión mutua.",
+"explicacionFallo": "Los monitores están diseñados para facilitar la sincronización mediante la encapsulación de los datos compartidos y sus operaciones."
+},
+{
+"pregunta": "Dentro de un monitor, un proceso necesita esperar hasta que se cumpla una condición antes de continuar. ¿Qué operación se utiliza para suspenderlo mientras espera?",
+"tema": "Monitores y variables de condición",
+"opciones": [
+"wait",
+"signal",
+"fork",
+"kill"
+],
+"respuestaCorrecta": "wait",
+"explicacionAcierto": "Correcto. En la sincronización mediante monitores, wait permite que un proceso se suspenda mientras espera que se cumpla una condición.",
+"explicacionFallo": "wait sirve para esperar una condición dentro de un monitor. signal se utiliza para indicar que una condición puede haber cambiado."
+},
+{
+"pregunta": "Un proceso dentro de un monitor realiza una operación que indica a otro proceso que la condición que esperaba puede haberse cumplido. ¿Qué operación corresponde?",
+"tema": "Monitores y variables de condición",
+"opciones": [
+"signal",
+"wait",
+"fork",
+"exec"
+],
+"respuestaCorrecta": "signal",
+"explicacionAcierto": "Correcto. signal se utiliza para señalar que un proceso que estaba esperando una condición puede continuar.",
+"explicacionFallo": "wait suspende al proceso mientras espera; signal sirve para notificar que una condición puede permitir que otro proceso continúe."
+},
+{
+"pregunta": "Varios procesos trabajan sobre diferentes partes de una matriz. Ninguno puede comenzar la siguiente iteración hasta que todos hayan terminado la actual. ¿Qué mecanismo resulta apropiado?",
+"tema": "Barreras",
+"opciones": [
+"Una barrera",
+"Un semáforo binario utilizado como archivo",
+"Un árbol de procesos",
+"Un cambio de contexto"
+],
+"respuestaCorrecta": "Una barrera",
+"explicacionAcierto": "Correcto. Una barrera permite que los procesos esperen hasta que todos hayan alcanzado un punto determinado antes de continuar.",
+"explicacionFallo": "Las barreras son apropiadas cuando varios procesos deben completar una etapa antes de que cualquiera pueda iniciar la siguiente."
+},
+{
+"pregunta": "Un proceso necesita enviar datos a otro sin compartir directamente su espacio de direcciones. ¿Qué mecanismo de comunicación puede utilizar?",
+"tema": "Comunicación mediante mensajes",
+"opciones": [
+"Intercambio de mensajes",
+"Región crítica únicamente",
+"Cambio de prioridad",
+"Tabla de procesos"
+],
+"respuestaCorrecta": "Intercambio de mensajes",
+"explicacionAcierto": "Correcto. El intercambio de mensajes permite que los procesos se comuniquen sin requerir necesariamente un espacio de direcciones compartido.",
+"explicacionFallo": "La comunicación mediante mensajes es una alternativa de IPC para intercambiar información entre procesos."
+},
+{
+"pregunta": "Un proceso ejecuta una operación de recepción y no existe ningún mensaje disponible. ¿Qué comportamiento puede presentar dependiendo de la implementación de la comunicación?",
+"tema": "Comunicación mediante mensajes",
+"opciones": [
+"El proceso puede bloquearse hasta que llegue un mensaje.",
+"El proceso debe terminar inmediatamente.",
+"El proceso se convierte automáticamente en padre de otro proceso.",
+"La CPU se apaga."
+],
+"respuestaCorrecta": "El proceso puede bloquearse hasta que llegue un mensaje.",
+"explicacionAcierto": "Correcto. Una operación de recepción puede hacer que el proceso espere cuando todavía no existe un mensaje disponible.",
+"explicacionFallo": "La comunicación puede utilizar operaciones bloqueantes, en las que el proceso espera hasta que exista información disponible."
+},
+{
+"pregunta": "Un programa contiene varias tareas que necesitan ejecutarse dentro del mismo espacio de direcciones y compartir datos con facilidad. ¿Qué recurso del capítulo puede utilizarse?",
+"tema": "Hilos",
+"opciones": [
+"Varios hilos dentro de un proceso",
+"Un proceso independiente para cada instrucción",
+"Una nueva computadora para cada tarea",
+"Un archivo diferente para cada variable"
+],
+"respuestaCorrecta": "Varios hilos dentro de un proceso",
+"explicacionAcierto": "Correcto. Los hilos permiten varias ejecuciones dentro de un mismo proceso y comparten su espacio de direcciones y otros recursos.",
+"explicacionFallo": "Una característica fundamental de los hilos es permitir múltiples flujos de ejecución dentro de un proceso compartiendo un espacio de direcciones."
+},
+{
+"pregunta": "Tres tareas se ejecutan como tres hilos pertenecientes al mismo proceso. ¿Qué recurso comparten principalmente estos hilos?",
+"tema": "Modelo clásico de hilos",
+"opciones": [
+"El espacio de direcciones del proceso",
+"Una pila individual idéntica",
+"Un contador de programa único",
+"Todos los registros de la CPU"
+],
+"respuestaCorrecta": "El espacio de direcciones del proceso",
+"explicacionAcierto": "Correcto. Los hilos de un mismo proceso comparten el espacio de direcciones y otros recursos del proceso.",
+"explicacionFallo": "Cada hilo mantiene su propio estado de ejecución, incluyendo contador de programa, registros y pila, pero comparte el espacio de direcciones del proceso."
+},
+{
+"pregunta": "Un proceso contiene tres hilos que se ejecutan de forma independiente. ¿Qué elemento tiene cada hilo para mantener su propio historial de llamadas y variables locales?",
+"tema": "Estructura de un hilo",
+"opciones": [
+"Su propia pila",
+"Su propio espacio de direcciones completo",
+"Su propio sistema operativo",
+"Su propia memoria física exclusiva"
+],
+"respuestaCorrecta": "Su propia pila",
+"explicacionAcierto": "Correcto. Cada hilo tiene su propia pila, donde se conserva el historial de ejecución y la información asociada con las llamadas a procedimientos.",
+"explicacionFallo": "Los hilos comparten el espacio de direcciones del proceso, pero cada hilo necesita su propia pila para mantener su estado de ejecución."
+},
+{
+"pregunta": "Un programa multihilo necesita saber qué instrucción debe ejecutar a continuación para cada hilo. ¿Qué elemento mantiene esa información?",
+"tema": "Estructura de un hilo",
+"opciones": [
+"El contador de programa de cada hilo",
+"El semáforo mutex",
+"La cola de impresión",
+"El directorio de procesos"
+],
+"respuestaCorrecta": "El contador de programa de cada hilo",
+"explicacionAcierto": "Correcto. Cada hilo posee un contador de programa que indica cuál es la siguiente instrucción que debe ejecutar.",
+"explicacionFallo": "El contador de programa pertenece al estado de ejecución de cada hilo y permite conocer dónde debe continuar su ejecución."
+},
+{
+"pregunta": "Una aplicación UNIX quiere utilizar una interfaz estándar para crear y administrar hilos que facilite la portabilidad entre diferentes sistemas UNIX. ¿Qué estándar del capítulo corresponde a esta necesidad?",
+"tema": "Pthreads",
+"opciones": [
+"Pthreads",
+"POSIX 1003.1c",
+"TCP exclusivamente",
+"BIOS"
+],
+"respuestaCorrecta": "Pthreads",
+"explicacionAcierto": "Correcto. Pthreads es el paquete de hilos definido por el estándar IEEE 1003.1c y es aceptado por la mayoría de los sistemas UNIX.",
+"explicacionFallo": "Pthreads es la interfaz de hilos asociada al estándar IEEE 1003.1c descrito en el capítulo."
+},
+{
+"pregunta": "Un hilo decide entregar voluntariamente la CPU para permitir que otro hilo tenga oportunidad de ejecutarse. ¿Qué llamada de hilos se menciona para esta finalidad?",
+"tema": "Pthreads y administración de hilos",
+"opciones": [
+"thread_yield",
+"thread_exit",
+"mkdir",
+"rmdir"
+],
+"respuestaCorrecta": "thread_yield",
+"explicacionAcierto": "Correcto. thread_yield permite que un hilo entregue voluntariamente la CPU para que otro pueda ejecutarse.",
+"explicacionFallo": "thread_yield está relacionada con ceder voluntariamente el procesador. Las otras llamadas indicadas no cumplen esa función."
+},
+{
+"pregunta": "Un sistema implementa los hilos principalmente en espacio de usuario. ¿Cuál es una ventaja potencial de este enfoque?",
+"tema": "Implementación de hilos",
+"opciones": [
+"Las operaciones de administración de hilos pueden realizarse sin entrar constantemente al kernel.",
+"Cada hilo obtiene automáticamente una CPU física exclusiva.",
+"Los hilos dejan de compartir el espacio de direcciones.",
+"El sistema elimina la necesidad de planificar hilos."
+],
+"respuestaCorrecta": "Las operaciones de administración de hilos pueden realizarse sin entrar constantemente al kernel.",
+"explicacionAcierto": "Correcto. Los hilos implementados en espacio de usuario pueden administrarse mediante una biblioteca sin requerir necesariamente una llamada al kernel para cada operación.",
+"explicacionFallo": "Una ventaja de los hilos de usuario es que muchas operaciones pueden realizarse sin la sobrecarga de entrar al kernel."
+},
+{
+"pregunta": "Un sistema implementa los hilos en el kernel. ¿Qué ventaja importante tiene este enfoque cuando un hilo se bloquea?",
+"tema": "Hilos a nivel kernel",
+"opciones": [
+"El kernel puede planificar otro hilo del proceso.",
+"Todos los hilos quedan obligatoriamente bloqueados.",
+"El proceso pierde automáticamente su espacio de direcciones.",
+"El sistema deja de utilizar planificación."
+],
+"respuestaCorrecta": "El kernel puede planificar otro hilo del proceso.",
+"explicacionAcierto": "Correcto. Cuando el kernel conoce los hilos, puede planificarlos individualmente y ejecutar otro hilo cuando uno se bloquea.",
+"explicacionFallo": "Una ventaja de los hilos administrados por el kernel es que éste conoce su existencia y puede planificarlos de manera independiente."
+},
+{
+"pregunta": "Un servidor tiene muchos procesos listos para ejecutarse y sólo dispone de una CPU. ¿Qué componente decide cuál proceso debe ejecutarse a continuación?",
+"tema": "Planificación de procesos",
+"opciones": [
+"El planificador de procesos",
+"El sistema de archivos",
+"El compilador",
+"El controlador de teclado"
+],
+"respuestaCorrecta": "El planificador de procesos",
+"explicacionAcierto": "Correcto. El planificador de procesos es la parte del sistema operativo que decide qué proceso debe utilizar la CPU a continuación.",
+"explicacionFallo": "La selección del siguiente proceso corresponde al planificador, mientras que el algoritmo utilizado por éste se denomina algoritmo de planificación."
+},
+{
+"pregunta": "Un sistema utiliza un algoritmo que da a cada proceso ejecutable un intervalo limitado de CPU y después pasa al siguiente proceso de la cola. ¿Qué algoritmo representa mejor esta descripción?",
+"tema": "Algoritmos de planificación",
+"opciones": [
+"Turno circular",
+"Trabajo más corto primero",
+"Planificación por prioridad",
+"Planificación garantizada"
+],
+"respuestaCorrecta": "Turno circular",
+"explicacionAcierto": "Correcto. En la planificación por turno circular, los procesos reciben turnos de CPU mediante quántums.",
+"explicacionFallo": "El turno circular asigna quántums de CPU a los procesos de manera rotatoria. Los otros algoritmos utilizan criterios diferentes."
+},
+{
+"pregunta": "En un sistema interactivo, el planificador asigna un quántum demasiado pequeño. ¿Qué problema puede aparecer?",
+"tema": "Planificación por turno circular",
+"opciones": [
+"Un número excesivo de conmutaciones de procesos.",
+"La eliminación de todos los procesos bloqueados.",
+"La desaparición de la memoria principal.",
+"La imposibilidad de utilizar hilos."
+],
+"respuestaCorrecta": "Un número excesivo de conmutaciones de procesos.",
+"explicacionAcierto": "Correcto. Un quántum demasiado corto provoca muchas conmutaciones de procesos y puede reducir la eficiencia de la CPU.",
+"explicacionFallo": "El texto señala que un quántum demasiado corto genera demasiadas conmutaciones, mientras que uno demasiado largo puede perjudicar el tiempo de respuesta interactivo."
+},
+{
+"pregunta": "Un sistema asigna a cada proceso un valor numérico y siempre prefiere ejecutar el proceso listo que tenga el valor de prioridad más alto. ¿Qué algoritmo está utilizando?",
+"tema": "Planificación por prioridad",
+"opciones": [
+"Planificación por prioridad",
+"Turno circular",
+"Trabajo más corto primero",
+"Planificación por lotería"
+],
+"respuestaCorrecta": "Planificación por prioridad",
+"explicacionAcierto": "Correcto. En la planificación por prioridad, cada proceso recibe una prioridad y se selecciona el proceso ejecutable con la prioridad más alta.",
+"explicacionFallo": "El criterio fundamental de este algoritmo es utilizar la prioridad asignada a cada proceso para decidir cuál debe ejecutarse."
+}
+]

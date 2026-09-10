@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090d1a">
+  <title>ICFES Lab | Entrenamiento interactivo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="brand"><div class="brand-mark">IL</div><h1>ICFES Lab</h1></header>
+
+    <section id="menu" class="view">
+      <div class="panel hero">
+        <p class="eyebrow">Entrenamiento inteligente</p>
+        <h2>Elige tu próximo reto.</h2>
+        <p>Resuelve preguntas, entiende tus errores y descubre qué temas necesitan más práctica.</p>
+        <div id="quiz-list" class="quiz-list" aria-live="polite"></div>
+        <p id="menu-status" class="status">Cargando cuestionarios...</p>
+      </div>
+    </section>
+
+    <section id="juego" class="view" hidden>
+      <div class="panel">
+        <div class="quiz-top"><span id="quiz-name">Cuestionario</span><span id="question-counter">1 / 1</span></div>
+        <div class="progress-track"><div id="progress-bar" class="progress-bar" style="width: 0%"></div></div>
+        <p id="question-topic" class="eyebrow"></p>
+        <h2 id="question-text" class="question">Pregunta</h2>
+        <div id="options" class="options"></div>
+        <div id="feedback" class="feedback" hidden aria-live="polite"></div>
+        <div class="next-row"><button id="next-button" class="primary-button" type="button" hidden>Siguiente</button></div>
+      </div>
+    </section>
+
+    <section id="resultados" class="view" hidden>
+      <div class="panel">
+        <p class="eyebrow">Sesión terminada</p>
+        <h2>Así estuvo tu práctica.</h2>
+        <div class="results-grid">
+          <div class="stat"><small>Total</small><strong id="result-total">0</strong></div>
+          <div class="stat"><small>Aciertos</small><strong id="result-correct">0</strong></div>
+          <div class="stat"><small>Fallos</small><strong id="result-wrong">0</strong></div>
+          <div class="stat"><small>Precisión</small><strong id="result-percent">0%</strong></div>
+        </div>
+        <h3 class="difficulty-title">Temas para reforzar</h3>
+        <div id="topic-results"></div>
+        <button id="menu-button" class="secondary-button" type="button">Volver al menú</button>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

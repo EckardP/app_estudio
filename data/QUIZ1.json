@@ -1,0 +1,535 @@
+[
+{
+"pregunta": "Una empresa necesita procesar miles de trabajos que se envían al computador sin que un usuario tenga que interactuar con cada uno. ¿Qué modalidad de operación describe mejor esta situación?",
+"tema": "Tipos de sistemas operativos",
+"opciones": [
+"Tiempo compartido.",
+"Procesamiento por lotes.",
+"Sistema de tiempo real.",
+"Sistema interactivo de escritorio."
+],
+"respuestaCorrecta": "Procesamiento por lotes.",
+"explicacionAcierto": "Correcto. El procesamiento por lotes permite ejecutar trabajos de rutina sin que exista un usuario interactivo presente durante su procesamiento.",
+"explicacionFallo": "El procesamiento por lotes está orientado a ejecutar trabajos de manera no interactiva. El tiempo compartido, en cambio, busca ofrecer interacción a varios usuarios."
+},
+{
+"pregunta": "Un banco necesita procesar una gran cantidad de solicitudes pequeñas, como operaciones realizadas por clientes, durante cada segundo. ¿Qué tipo de servicio de un sistema operativo de mainframe se relaciona mejor con este escenario?",
+"tema": "Sistemas operativos de mainframe",
+"opciones": [
+"Procesamiento de transacciones.",
+"Procesamiento por lotes.",
+"Compilación interactiva.",
+"Administración de memoria virtual."
+],
+"respuestaCorrecta": "Procesamiento de transacciones.",
+"explicacionAcierto": "Correcto. El procesamiento de transacciones está diseñado para manejar grandes cantidades de pequeñas solicitudes, como las operaciones bancarias.",
+"explicacionFallo": "Aunque un sistema de mainframe también puede realizar procesamiento por lotes, las numerosas solicitudes pequeñas y repetitivas corresponden al procesamiento de transacciones."
+},
+{
+"pregunta": "Una organización ofrece un servicio de impresión y almacenamiento de archivos a varios computadores conectados mediante una red. ¿Qué categoría de sistema operativo describe mejor al equipo que proporciona esos servicios?",
+"tema": "Sistemas operativos de servidores",
+"opciones": [
+"Sistema operativo de bolsillo.",
+"Sistema operativo de servidor.",
+"Sistema operativo embebido.",
+"Sistema operativo monousuario."
+],
+"respuestaCorrecta": "Sistema operativo de servidor.",
+"explicacionAcierto": "Correcto. Los sistemas operativos de servidores están diseñados para atender a varios usuarios mediante una red y compartir recursos de hardware y software.",
+"explicacionFallo": "La función descrita es propia de un servidor, que proporciona servicios como impresión, archivos o Web a otros equipos."
+},
+{
+"pregunta": "Un dispositivo controla una función específica de un automóvil y no está pensado para que el usuario instale programas de propósito general. ¿Qué tipo de sistema operativo es más probable que utilice?",
+"tema": "Sistemas operativos embebidos",
+"opciones": [
+"Sistema operativo embebido.",
+"Sistema operativo de mainframe.",
+"Sistema operativo de servidor.",
+"Sistema operativo de computadora personal."
+],
+"respuestaCorrecta": "Sistema operativo embebido.",
+"explicacionAcierto": "Correcto. Los sistemas embebidos operan en computadores que controlan dispositivos que normalmente no se consideran computadoras de propósito general.",
+"explicacionFallo": "Un sistema embebido está destinado a controlar funciones específicas dentro de un dispositivo y no necesariamente permite instalar software de propósito general."
+},
+{
+"pregunta": "Un computador personal mantiene numerosos programas cargados y permite que el usuario trabaje con varias aplicaciones durante una misma sesión. ¿Qué característica de los sistemas operativos modernos de computadoras personales permite este comportamiento?",
+"tema": "Multiprogramación",
+"opciones": [
+"Monoprogramación.",
+"Multiprogramación.",
+"Procesamiento exclusivamente por lotes.",
+"Ausencia de administración de procesos."
+],
+"respuestaCorrecta": "Multiprogramación.",
+"explicacionAcierto": "Correcto. Los sistemas operativos modernos de computadoras personales soportan multiprogramación, permitiendo mantener y ejecutar múltiples programas.",
+"explicacionFallo": "La capacidad de mantener varios programas y alternar su ejecución corresponde a la multiprogramación."
+},
+{
+"pregunta": "Un sistema operativo necesita impedir que un programa de usuario escriba directamente en los registros utilizados para controlar un dispositivo de E/S. ¿Qué mecanismo del hardware contribuye directamente a lograrlo?",
+"tema": "Protección y modos de operación",
+"opciones": [
+"La separación entre modo usuario y modo kernel.",
+"La caché de instrucciones.",
+"El reloj de tiempo real.",
+"La memoria secundaria."
+],
+"respuestaCorrecta": "La separación entre modo usuario y modo kernel.",
+"explicacionAcierto": "Correcto. La separación de privilegios permite restringir las operaciones que pueden realizar los programas de usuario y reservar operaciones críticas para el kernel.",
+"explicacionFallo": "La protección se basa en mecanismos de privilegio que separan las capacidades del software de usuario de las del sistema operativo."
+},
+{
+"pregunta": "Una CPU está ejecutando un programa de usuario y recibe una señal de un dispositivo que acaba de terminar una operación. ¿Qué ocurre normalmente como consecuencia de esa señal?",
+"tema": "Interrupciones",
+"opciones": [
+"La CPU ignora siempre el dispositivo.",
+"La CPU puede ejecutar el manejador correspondiente a la interrupción.",
+"El programa de usuario obtiene privilegios de kernel.",
+"El dispositivo reemplaza directamente al sistema operativo."
+],
+"respuestaCorrecta": "La CPU puede ejecutar el manejador correspondiente a la interrupción.",
+"explicacionAcierto": "Correcto. Cuando se acepta una interrupción, la CPU transfiere el control al manejador asociado con el dispositivo que generó el evento.",
+"explicacionFallo": "Una interrupción permite que un dispositivo solicite atención de la CPU. El sistema operativo utiliza un manejador para procesar ese evento."
+},
+{
+"pregunta": "Un sistema tiene varios dispositivos conectados y dos de ellos terminan operaciones prácticamente al mismo tiempo. El hardware debe decidir cuál interrupción atender primero. ¿Qué criterio puede utilizar?",
+"tema": "Prioridad de interrupciones",
+"opciones": [
+"El nombre del usuario que inició la operación.",
+"La prioridad asignada al dispositivo.",
+"El tamaño del archivo transferido únicamente.",
+"La cantidad de memoria instalada."
+],
+"respuestaCorrecta": "La prioridad asignada al dispositivo.",
+"explicacionAcierto": "Correcto. El controlador de interrupciones puede utilizar prioridades para decidir qué dispositivo debe recibir atención primero.",
+"explicacionFallo": "Las interrupciones pueden gestionarse mediante prioridades asignadas a los dispositivos; el dispositivo con mayor prioridad puede ser atendido primero."
+},
+{
+"pregunta": "Mientras la CPU está ejecutando un manejador de interrupciones, el sistema necesita evitar que determinadas interrupciones interfieran con esa operación. ¿Qué mecanismo puede utilizar la CPU?",
+"tema": "Manejo de interrupciones",
+"opciones": [
+"Deshabilitar temporalmente las interrupciones.",
+"Eliminar la memoria caché.",
+"Desactivar permanentemente el kernel.",
+"Formatear el dispositivo."
+],
+"respuestaCorrecta": "Deshabilitar temporalmente las interrupciones.",
+"explicacionAcierto": "Correcto. La CPU puede deshabilitar temporalmente las interrupciones y rehabilitarlas después para controlar cuándo puede ser interrumpida.",
+"explicacionFallo": "El mecanismo descrito en el capítulo consiste en deshabilitar temporalmente las interrupciones, no en eliminarlas de manera permanente."
+},
+{
+"pregunta": "Un dispositivo debe transferir una gran cantidad de datos a la memoria y se desea evitar que la CPU tenga que intervenir en cada transferencia individual. ¿Qué tecnología resulta adecuada?",
+"tema": "Acceso directo a memoria",
+"opciones": [
+"DMA.",
+"Shell.",
+"Spooling.",
+"Tiempo compartido."
+],
+"respuestaCorrecta": "DMA.",
+"explicacionAcierto": "Correcto. DMA permite que un controlador especializado gestione el flujo de datos entre la memoria y un dispositivo sin intervención constante de la CPU.",
+"explicacionFallo": "DMA está diseñado precisamente para reducir la intervención constante de la CPU durante transferencias de datos entre memoria y dispositivos."
+},
+{
+"pregunta": "En un sistema informático, varios componentes necesitan comunicarse con la CPU y la memoria. ¿Qué elemento proporciona una vía de comunicación entre estos componentes?",
+"tema": "Buses de computadora",
+"opciones": [
+"El bus.",
+"El shell.",
+"El sistema de archivos.",
+"El proceso de usuario."
+],
+"respuestaCorrecta": "El bus.",
+"explicacionAcierto": "Correcto. Los buses proporcionan vías de comunicación para transportar información entre componentes como CPU, memoria y dispositivos.",
+"explicacionFallo": "El bus es el mecanismo de interconexión utilizado para transportar información entre diferentes componentes del sistema."
+},
+{
+"pregunta": "Una computadora moderna incorpora varios buses con diferentes velocidades y funciones en lugar de utilizar un único bus para todo el tráfico. ¿Por qué surgió esta evolución?",
+"tema": "Arquitectura de buses",
+"opciones": [
+"Porque un único bus podía verse limitado al aumentar la velocidad de procesadores y memorias.",
+"Porque los sistemas modernos ya no utilizan dispositivos de E/S.",
+"Porque la CPU dejó de necesitar memoria.",
+"Porque los sistemas operativos eliminaron los dispositivos periféricos."
+],
+"respuestaCorrecta": "Porque un único bus podía verse limitado al aumentar la velocidad de procesadores y memorias.",
+"explicacionAcierto": "Correcto. El aumento de velocidad de procesadores y memorias hizo que un único bus tuviera dificultades para manejar todo el tráfico, favoreciendo arquitecturas con varios buses.",
+"explicacionFallo": "La evolución de los buses estuvo relacionada con el aumento del rendimiento y del tráfico entre CPU, memoria y dispositivos de E/S."
+},
+{
+"pregunta": "Un programa necesita solicitar al sistema operativo que cree un nuevo proceso. ¿Qué tipo de interfaz proporciona el mecanismo adecuado para realizar esta solicitud desde un programa de usuario?",
+"tema": "Llamadas al sistema",
+"opciones": [
+"Una llamada al sistema.",
+"Una modificación directa de los registros del dispositivo.",
+"Una interrupción generada manualmente por el usuario.",
+"Un cambio directo al modo kernel."
+],
+"respuestaCorrecta": "Una llamada al sistema.",
+"explicacionAcierto": "Correcto. Las llamadas al sistema proporcionan una interfaz mediante la cual los programas pueden solicitar servicios al sistema operativo.",
+"explicacionFallo": "Un programa de usuario no debe modificar directamente los mecanismos privilegiados. Para solicitar servicios del sistema operativo utiliza llamadas al sistema."
+},
+{
+"pregunta": "Un programa necesita consultar información sobre un archivo que ya está abierto. ¿Qué tipo de llamada al sistema del conjunto descrito en el capítulo permite obtener información sobre ese archivo?",
+"tema": "Llamadas al sistema para archivos",
+"opciones": [
+"fstat.",
+"mkdir.",
+"rmdir.",
+"fork."
+],
+"respuestaCorrecta": "fstat.",
+"explicacionAcierto": "Correcto. La llamada fstat permite obtener información relacionada con un archivo abierto.",
+"explicacionFallo": "fstat está relacionada con la consulta de información de un archivo abierto. mkdir y rmdir se utilizan para directorios y fork para crear un nuevo proceso."
+},
+{
+"pregunta": "Un programa necesita crear un directorio vacío para organizar nuevos archivos. ¿Qué llamada al sistema resulta apropiada?",
+"tema": "Administración de directorios",
+"opciones": [
+"mkdir.",
+"rmdir.",
+"fstat.",
+"exec."
+],
+"respuestaCorrecta": "mkdir.",
+"explicacionAcierto": "Correcto. mkdir se utiliza para crear un directorio vacío.",
+"explicacionFallo": "mkdir crea directorios. rmdir realiza la operación contraria, eliminando directorios vacíos."
+},
+{
+"pregunta": "Un usuario quiere eliminar un directorio que ya no necesita, siempre que dicho directorio esté vacío. ¿Qué llamada al sistema corresponde a esta operación?",
+"tema": "Administración de directorios",
+"opciones": [
+"rmdir.",
+"mkdir.",
+"fstat.",
+"read."
+],
+"respuestaCorrecta": "rmdir.",
+"explicacionAcierto": "Correcto. rmdir permite eliminar directorios vacíos.",
+"explicacionFallo": "La llamada mkdir crea directorios, mientras que rmdir se utiliza para eliminarlos cuando están vacíos."
+},
+{
+"pregunta": "Dos usuarios necesitan acceder al mismo archivo desde directorios diferentes y quieren que los cambios realizados por uno sean visibles para el otro. ¿Qué mecanismo descrito para los sistemas de archivos permite esta situación?",
+"tema": "Enlaces de archivos",
+"opciones": [
+"link.",
+"mkdir.",
+"rmdir.",
+"fstat."
+],
+"respuestaCorrecta": "link.",
+"explicacionAcierto": "Correcto. link permite que un mismo archivo aparezca bajo dos o más nombres, incluso en directorios diferentes.",
+"explicacionFallo": "El mecanismo link permite tener varios nombres para un mismo archivo. No crea copias independientes del contenido."
+},
+{
+"pregunta": "Un equipo utiliza una jerarquía de memoria formada por registros, caché, memoria principal y almacenamiento secundario. ¿Qué objetivo general persigue esta organización?",
+"tema": "Jerarquía de memoria",
+"opciones": [
+"Combinar diferentes costos, capacidades y velocidades de acceso.",
+"Hacer que todos los niveles tengan exactamente la misma velocidad.",
+"Eliminar la necesidad de almacenamiento secundario.",
+"Garantizar que el disco sea siempre más rápido que la memoria."
+],
+"respuestaCorrecta": "Combinar diferentes costos, capacidades y velocidades de acceso.",
+"explicacionAcierto": "Correcto. La jerarquía de memoria utiliza diferentes niveles para equilibrar velocidad, capacidad y costo.",
+"explicacionFallo": "Los niveles de memoria tienen características diferentes. La jerarquía busca aprovechar esas diferencias para obtener un sistema eficiente."
+},
+{
+"pregunta": "Una CPU puede acceder rápidamente a un pequeño conjunto de datos que se encuentra en una memoria situada muy cerca del procesador. ¿Qué nivel de la jerarquía representa mejor este ejemplo?",
+"tema": "Jerarquía de memoria y caché",
+"opciones": [
+"Caché.",
+"Disco duro.",
+"Almacenamiento externo.",
+"Sistema de archivos."
+],
+"respuestaCorrecta": "Caché.",
+"explicacionAcierto": "Correcto. La caché se encuentra entre los niveles de almacenamiento más rápidos y cercanos a la CPU, aunque tiene una capacidad limitada.",
+"explicacionFallo": "El disco y otros almacenamientos secundarios tienen mayor capacidad pero tiempos de acceso considerablemente mayores que la caché."
+},
+{
+"pregunta": "Un sistema operativo necesita saber qué dispositivo generó una interrupción para poder ejecutar el código adecuado. ¿Qué estructura puede utilizar para localizar el manejador correspondiente?",
+"tema": "Vectores de interrupción",
+"opciones": [
+"El vector de interrupción.",
+"La tabla de particiones.",
+"La cola de procesos.",
+"El sistema de archivos."
+],
+"respuestaCorrecta": "El vector de interrupción.",
+"explicacionAcierto": "Correcto. El número del dispositivo puede utilizarse para localizar en el vector de interrupción la dirección del manejador correspondiente.",
+"explicacionFallo": "El vector de interrupción contiene información que permite localizar los manejadores asociados con las interrupciones de los dispositivos."
+},
+{
+"pregunta": "Un sistema necesita que una interrupción pueda devolver la CPU al programa que estaba ejecutándose antes de atender el evento. ¿Qué información debe preservarse para poder continuar correctamente?",
+"tema": "Manejo de interrupciones y estado de CPU",
+"opciones": [
+"El contador de programa y el estado del procesador.",
+"Únicamente el nombre del usuario.",
+"Sólo el tamaño del disco.",
+"La lista de archivos del sistema."
+],
+"respuestaCorrecta": "El contador de programa y el estado del procesador.",
+"explicacionAcierto": "Correcto. Durante el manejo de una interrupción se preserva información del estado de ejecución, incluyendo el contador de programa y el PSW, para poder continuar posteriormente.",
+"explicacionFallo": "Para regresar correctamente al programa interrumpido es necesario preservar información que describa dónde estaba ejecutándose y el estado relevante de la CPU."
+},
+{
+"pregunta": "Un sistema operativo ofrece al usuario la posibilidad de trabajar con archivos sin exigirle conocer cómo están organizados físicamente los datos en el dispositivo. ¿Qué papel fundamental del sistema operativo se observa?",
+"tema": "Abstracciones del sistema operativo",
+"opciones": [
+"Crear abstracciones sobre el hardware.",
+"Eliminar el hardware físico.",
+"Reemplazar la CPU.",
+"Impedir toda comunicación con dispositivos."
+],
+"respuestaCorrecta": "Crear abstracciones sobre el hardware.",
+"explicacionAcierto": "Correcto. Una de las ideas centrales del capítulo es que el sistema operativo proporciona abstracciones que ocultan detalles complejos del hardware.",
+"explicacionFallo": "El sistema operativo no elimina ni reemplaza el hardware; proporciona abstracciones que permiten utilizarlo de una manera más sencilla."
+},
+{
+"pregunta": "En un sistema con varios programas, el sistema operativo debe decidir qué programa obtiene el procesador cuando la CPU queda disponible. ¿Qué componente conceptual del sistema operativo está relacionado directamente con esa decisión?",
+"tema": "Administración del procesador",
+"opciones": [
+"El planificador.",
+"El sistema de archivos.",
+"El controlador de teclado.",
+"El BIOS."
+],
+"respuestaCorrecta": "El planificador.",
+"explicacionAcierto": "Correcto. El planificador participa en la decisión de qué proceso debe utilizar el procesador.",
+"explicacionFallo": "La asignación del procesador entre procesos es una función de planificación. El sistema de archivos y los controladores tienen responsabilidades diferentes."
+},
+{
+"pregunta": "Un sistema operativo se organiza de manera que cada nivel proporciona servicios al nivel inmediatamente superior y utiliza los servicios del nivel inferior. ¿Qué beneficio conceptual ofrece esta organización?",
+"tema": "Sistemas operativos por capas",
+"opciones": [
+"Separar las funciones del sistema en niveles definidos.",
+"Eliminar completamente el kernel.",
+"Permitir que todos los programas ejecuten instrucciones privilegiadas.",
+"Evitar cualquier comunicación entre componentes."
+],
+"respuestaCorrecta": "Separar las funciones del sistema en niveles definidos.",
+"explicacionAcierto": "Correcto. La estructura por capas organiza las funciones del sistema operativo en niveles, estableciendo relaciones claras entre ellos.",
+"explicacionFallo": "La arquitectura por capas busca organizar y separar responsabilidades. No elimina el kernel ni concede privilegios a los programas de usuario."
+},
+{
+"pregunta": "Un diseñador considera que colocar demasiadas funciones dentro del kernel aumenta el impacto potencial de los errores. ¿Qué enfoque arquitectónico responde directamente a esta preocupación?",
+"tema": "Microkernels",
+"opciones": [
+"Microkernel.",
+"Sistema monolítico.",
+"Procesamiento por lotes.",
+"Sistema monousuario."
+],
+"respuestaCorrecta": "Microkernel.",
+"explicacionAcierto": "Correcto. El enfoque microkernel intenta mantener sólo funciones esenciales en modo kernel y ejecutar otros componentes como procesos de usuario, buscando mejorar el aislamiento.",
+"explicacionFallo": "El microkernel aborda precisamente la preocupación de reducir la cantidad de código privilegiado y aislar componentes para que un error tenga menor impacto sobre todo el sistema."
+},
+{
+"pregunta": "En un sistema basado en microkernel, un controlador de dispositivo defectuoso falla mientras se ejecuta fuera del núcleo. ¿Cuál es una ventaja potencial de este diseño?",
+"tema": "Aislamiento en microkernels",
+"opciones": [
+"El fallo puede quedar limitado al componente defectuoso en lugar de detener todo el sistema.",
+"El controlador obtiene automáticamente todos los privilegios del kernel.",
+"El sistema elimina la necesidad de controladores.",
+"La CPU deja de utilizar interrupciones."
+],
+"respuestaCorrecta": "El fallo puede quedar limitado al componente defectuoso en lugar de detener todo el sistema.",
+"explicacionAcierto": "Correcto. Al ejecutar componentes como controladores fuera del núcleo, un error en uno de ellos puede aislarse y no necesariamente provocar la caída completa del sistema.",
+"explicacionFallo": "Una de las motivaciones del diseño microkernel es mejorar la confiabilidad mediante el aislamiento de componentes que no necesitan ejecutarse dentro del núcleo."
+},
+{
+"pregunta": "En MINIX 3, un controlador de dispositivo que se ejecuta en modo usuario necesita realizar una operación de E/S. ¿Cómo puede solicitarla?",
+"tema": "Microkernel y MINIX 3",
+"opciones": [
+"Mediante una solicitud al kernel para que realice la operación autorizada.",
+"Ejecutando directamente cualquier instrucción privilegiada.",
+"Modificando físicamente el dispositivo.",
+"Reiniciando el sistema."
+],
+"respuestaCorrecta": "Mediante una solicitud al kernel para que realice la operación autorizada.",
+"explicacionAcierto": "Correcto. En MINIX 3 los controladores se ejecutan en modo usuario y solicitan al kernel las operaciones de E/S que necesitan, permitiendo que el kernel compruebe los accesos.",
+"explicacionFallo": "El diseño busca impedir que los controladores en modo usuario accedan directamente al hardware protegido; deben solicitar al kernel las operaciones correspondientes."
+},
+{
+"pregunta": "Un diseñador quiere minimizar la cantidad de abstracciones impuestas por el núcleo y permitir que niveles superiores decidan cómo utilizar determinados recursos físicos. ¿Qué arquitectura corresponde mejor con esta idea?",
+"tema": "Exokernel",
+"opciones": [
+"Exokernel.",
+"Kernel monolítico.",
+"Sistema por lotes.",
+"Sistema de tiempo compartido."
+],
+"respuestaCorrecta": "Exokernel.",
+"explicacionAcierto": "Correcto. El exokernel mantiene una capa mínima que asigna y protege recursos, dejando muchas abstracciones a niveles superiores.",
+"explicacionFallo": "La característica distintiva del exokernel es mantener el núcleo reducido a funciones de protección y asignación, dejando mayor libertad a las capas superiores."
+},
+{
+"pregunta": "Una máquina virtual necesita utilizar un recurso físico, pero el sistema debe impedir que interfiera con los recursos asignados a otra máquina virtual. ¿Qué función cumple el exokernel en este contexto?",
+"tema": "Exokernel y máquinas virtuales",
+"opciones": [
+"Asignar y proteger los recursos entre las máquinas virtuales.",
+"Ejecutar todas las aplicaciones de usuario.",
+"Convertir todos los archivos en memoria caché.",
+"Eliminar la necesidad de hardware físico."
+],
+"respuestaCorrecta": "Asignar y proteger los recursos entre las máquinas virtuales.",
+"explicacionAcierto": "Correcto. El exokernel puede asignar recursos a las máquinas virtuales y comprobar que cada una utilice únicamente los recursos que le fueron asignados.",
+"explicacionFallo": "El exokernel no reemplaza el hardware ni ejecuta todas las aplicaciones. Su función en este modelo es administrar y proteger la asignación de recursos."
+},
+{
+"pregunta": "Un sistema operativo debe atender a muchos usuarios remotos que utilizan simultáneamente una gran base de datos y necesitan recibir respuestas interactivas. ¿Qué modalidad resulta más apropiada?",
+"tema": "Tiempo compartido",
+"opciones": [
+"Tiempo compartido.",
+"Procesamiento por lotes puro.",
+"Sistema embebido.",
+"Procesamiento sin concurrencia."
+],
+"respuestaCorrecta": "Tiempo compartido.",
+"explicacionAcierto": "Correcto. El tiempo compartido permite que varios usuarios remotos ejecuten trabajos al mismo tiempo y reciban atención interactiva.",
+"explicacionFallo": "El procesamiento por lotes no está orientado a la interacción continua con el usuario. El tiempo compartido sí permite atender interactivamente a múltiples usuarios."
+},
+{
+"pregunta": "Una empresa necesita un computador que atienda solicitudes de impresión, archivos y páginas Web provenientes de múltiples equipos conectados por red. ¿Qué característica es esencial para este sistema?",
+"tema": "Sistemas operativos de servidores",
+"opciones": [
+"Compartir recursos y atender múltiples usuarios mediante la red.",
+"Ejecutar exclusivamente una aplicación local.",
+"Evitar cualquier comunicación de red.",
+"Funcionar únicamente cuando no haya usuarios conectados."
+],
+"respuestaCorrecta": "Compartir recursos y atender múltiples usuarios mediante la red.",
+"explicacionAcierto": "Correcto. Los sistemas operativos de servidores proporcionan servicios a múltiples usuarios y permiten compartir recursos de hardware y software mediante una red.",
+"explicacionFallo": "La función central de un servidor es proporcionar servicios y compartir recursos con otros equipos y usuarios a través de la red."
+},
+{
+"pregunta": "Un sistema contiene varias CPU conectadas dentro de una misma computadora y necesita un sistema operativo capaz de administrar la comunicación, conectividad y consistencia entre ellas. ¿Qué categoría corresponde mejor?",
+"tema": "Sistemas operativos de multiprocesadores",
+"opciones": [
+"Sistema operativo de multiprocesadores.",
+"Sistema operativo monousuario sin multiprogramación.",
+"Sistema operativo embebido simple.",
+"Sistema operativo exclusivamente por lotes."
+],
+"respuestaCorrecta": "Sistema operativo de multiprocesadores.",
+"explicacionAcierto": "Correcto. Los sistemas con varias CPU requieren sistemas operativos con características especiales para manejar la comunicación, conectividad y consistencia entre los procesadores.",
+"explicacionFallo": "La presencia de varias CPU dentro de un mismo sistema corresponde al ámbito de los sistemas operativos de multiprocesadores."
+},
+{
+"pregunta": "Un usuario quiere ejecutar un programa que necesita utilizar servicios del sistema operativo, pero no tiene permisos para realizar directamente operaciones privilegiadas. ¿Cuál es la razón principal de esta restricción?",
+"tema": "Protección del sistema operativo",
+"opciones": [
+"Evitar que los programas de usuario puedan comprometer el funcionamiento del sistema.",
+"Obligar a todos los programas a utilizar la misma interfaz gráfica.",
+"Reducir el tamaño de los archivos.",
+"Eliminar la necesidad de memoria principal."
+],
+"respuestaCorrecta": "Evitar que los programas de usuario puedan comprometer el funcionamiento del sistema.",
+"explicacionAcierto": "Correcto. Las restricciones de privilegios protegen al sistema frente a programas que podrían realizar operaciones indebidas sobre hardware o recursos compartidos.",
+"explicacionFallo": "La separación de privilegios existe principalmente para proteger el sistema y controlar el acceso de los programas de usuario a operaciones críticas."
+},
+{
+"pregunta": "Un sistema operativo recibe una petición de un programa para realizar una operación que requiere privilegios del kernel. ¿Qué transición conceptual ocurre durante la atención de esa solicitud?",
+"tema": "Modo usuario y modo kernel",
+"opciones": [
+"El control pasa mediante un mecanismo controlado al código del sistema operativo.",
+"El programa obtiene permanentemente privilegios de administrador.",
+"El hardware se apaga temporalmente.",
+"El proceso deja de existir inmediatamente."
+],
+"respuestaCorrecta": "El control pasa mediante un mecanismo controlado al código del sistema operativo.",
+"explicacionAcierto": "Correcto. Las llamadas al sistema permiten que un programa de usuario solicite servicios y que el control pase de manera controlada al código privilegiado del sistema operativo.",
+"explicacionFallo": "Una solicitud al sistema operativo no convierte permanentemente al programa en privilegiado. El acceso al kernel se realiza mediante mecanismos controlados."
+},
+{
+"pregunta": "Un sistema necesita mantener una separación clara entre las aplicaciones y las funciones que administran directamente los recursos físicos. ¿Qué concepto arquitectónico ayuda a establecer esta separación?",
+"tema": "Estructura de los sistemas operativos",
+"opciones": [
+"La distinción entre espacio de usuario y espacio del kernel.",
+"La eliminación de los controladores.",
+"La ejecución de todas las aplicaciones en modo kernel.",
+"La eliminación de las llamadas al sistema."
+],
+"respuestaCorrecta": "La distinción entre espacio de usuario y espacio del kernel.",
+"explicacionAcierto": "Correcto. Separar el espacio de usuario del espacio del kernel permite restringir las capacidades de las aplicaciones y reservar operaciones privilegiadas para el sistema operativo.",
+"explicacionFallo": "La separación entre usuario y kernel es un mecanismo fundamental para organizar privilegios y proteger los recursos del sistema."
+},
+{
+"pregunta": "Un sistema operativo necesita administrar tanto el procesador como los dispositivos de E/S y proporcionar una interfaz sencilla para los programas. ¿Cuál de estas opciones resume mejor sus responsabilidades generales?",
+"tema": "Funciones del sistema operativo",
+"opciones": [
+"Administrar recursos y proporcionar abstracciones y servicios a los programas.",
+"Ejecutar únicamente aplicaciones gráficas.",
+"Controlar únicamente el teclado y el monitor.",
+"Reemplazar completamente las aplicaciones del usuario."
+],
+"respuestaCorrecta": "Administrar recursos y proporcionar abstracciones y servicios a los programas.",
+"explicacionAcierto": "Correcto. El sistema operativo administra los recursos de la computadora y ofrece abstracciones y servicios que permiten a los programas utilizarlos de forma controlada.",
+"explicacionFallo": "El sistema operativo tiene responsabilidades mucho más amplias que controlar dispositivos de entrada y salida o ejecutar aplicaciones gráficas."
+},
+{
+"pregunta": "Un diseñador debe elegir entre colocar un controlador dentro del kernel o ejecutarlo como un proceso separado con privilegios reducidos. ¿Cuál es la principal razón para preferir la segunda alternativa en un diseño microkernel?",
+"tema": "Diseño de microkernels",
+"opciones": [
+"Reducir el impacto de un error del controlador sobre todo el sistema.",
+"Permitir que el controlador ignore las reglas de protección.",
+"Eliminar toda comunicación entre el controlador y el kernel.",
+"Hacer que el controlador tenga más privilegios que el kernel."
+],
+"respuestaCorrecta": "Reducir el impacto de un error del controlador sobre todo el sistema.",
+"explicacionAcierto": "Correcto. Ejecutar componentes como procesos de usuario puede aislar sus errores y aumentar la confiabilidad del sistema.",
+"explicacionFallo": "El aislamiento es una de las motivaciones centrales de los microkernels: un componente defectuoso puede fallar sin necesariamente provocar una caída completa del sistema."
+},
+{
+"pregunta": "Un estudiante afirma que una copia de un archivo y dos nombres que apuntan al mismo archivo son exactamente lo mismo. ¿Cuál afirmación corrige mejor su idea?",
+"tema": "Archivos y enlaces",
+"opciones": [
+"Dos nombres mediante un enlace pueden referirse al mismo archivo, por lo que los cambios son visibles desde ambos nombres.",
+"Un enlace siempre crea una copia independiente del archivo.",
+"Una copia y un enlace siempre ocupan exactamente el mismo espacio.",
+"Los enlaces sólo pueden utilizarse con directorios vacíos."
+],
+"respuestaCorrecta": "Dos nombres mediante un enlace pueden referirse al mismo archivo, por lo que los cambios son visibles desde ambos nombres.",
+"explicacionAcierto": "Correcto. El mecanismo link permite que un mismo archivo aparezca bajo varios nombres; sigue existiendo un único archivo compartido.",
+"explicacionFallo": "Una copia genera contenido independiente, mientras que un enlace puede proporcionar otro nombre para el mismo archivo."
+},
+{
+"pregunta": "Durante una transferencia de datos, un controlador de DMA termina su trabajo y necesita informar a la CPU. ¿Qué mecanismo puede utilizar para comunicar que la operación terminó?",
+"tema": "DMA e interrupciones",
+"opciones": [
+"Una interrupción.",
+"Una nueva partición del disco.",
+"Una llamada a mkdir.",
+"Un cambio de usuario."
+],
+"respuestaCorrecta": "Una interrupción.",
+"explicacionAcierto": "Correcto. Después de terminar la transferencia, el DMA puede generar una interrupción para informar a la CPU.",
+"explicacionFallo": "DMA reduce la intervención de la CPU durante la transferencia, pero puede utilizar una interrupción para notificar que la operación ha terminado."
+},
+{
+"pregunta": "Un sistema operativo quiere verificar que un controlador de dispositivo sólo acceda a las operaciones de E/S que tiene autorizadas. ¿Qué ventaja proporciona ejecutar dicho controlador fuera del kernel?",
+"tema": "Aislamiento y protección",
+"opciones": [
+"El kernel puede controlar las operaciones que el controlador solicita.",
+"El controlador obtiene acceso irrestricto al hardware.",
+"El controlador ya no necesita comunicarse con ningún componente.",
+"Todas las operaciones de E/S dejan de necesitar privilegios."
+],
+"respuestaCorrecta": "El kernel puede controlar las operaciones que el controlador solicita.",
+"explicacionAcierto": "Correcto. Al ejecutarse en modo usuario, el controlador no tiene acceso directo a determinadas operaciones privilegiadas y debe solicitar al kernel que las realice.",
+"explicacionFallo": "La ejecución fuera del kernel permite restringir las capacidades del controlador y hacer que el kernel compruebe las operaciones solicitadas."
+},
+{
+"pregunta": "Una computadora debe reaccionar a eventos externos sin que la CPU tenga que consultar continuamente el estado de cada dispositivo. ¿Qué enfoque permite conseguirlo?",
+"tema": "Entrada y salida e interrupciones",
+"opciones": [
+"Utilizar interrupciones generadas por los dispositivos.",
+"Preguntar constantemente a todos los dispositivos.",
+"Desactivar todos los dispositivos.",
+"Guardar todas las operaciones en archivos antes de ejecutarlas."
+],
+"respuestaCorrecta": "Utilizar interrupciones generadas por los dispositivos.",
+"explicacionAcierto": "Correcto. Las interrupciones permiten que los dispositivos avisen a la CPU cuando requieren atención o han completado una operación.",
+"explicacionFallo": "Las interrupciones evitan la necesidad de que la CPU esté consultando continuamente si cada dispositivo terminó su operación."
+}
+]

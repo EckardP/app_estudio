@@ -1,0 +1,41 @@
+[
+  {
+    "pregunta": "En un texto argumentativo, ¿qué función cumple principalmente la tesis?",
+    "tema": "Comprensión de textos argumentativos",
+    "opciones": [
+      "Presentar la posición central que el autor busca defender",
+      "Enumerar todos los datos secundarios del texto",
+      "Describir únicamente el contexto histórico",
+      "Cerrar el texto sin relacionarlo con los argumentos"
+    ],
+    "respuestaCorrecta": "Presentar la posición central que el autor busca defender",
+    "explicacionAcierto": "Correcto. La tesis expresa la idea o posición central que los argumentos desarrollan y respaldan.",
+    "explicacionFallo": "La tesis es la posición central que el autor pretende defender; los argumentos aportan razones o evidencias para respaldarla."
+  },
+  {
+    "pregunta": "Si un artículo afirma que leer diariamente mejora el vocabulario y presenta resultados de una encuesta para respaldarlo, la encuesta funciona como:",
+    "tema": "Comprensión de textos argumentativos",
+    "opciones": [
+      "Una evidencia",
+      "Un título",
+      "Una conclusión sin relación",
+      "Una opinión del lector"
+    ],
+    "respuestaCorrecta": "Una evidencia",
+    "explicacionAcierto": "Correcto. Los resultados de una encuesta aportan datos que apoyan la afirmación del artículo.",
+    "explicacionFallo": "Los resultados de una encuesta son evidencia porque aportan datos observables para respaldar una afirmación."
+  },
+  {
+    "pregunta": "¿Cuál es el propósito principal de un conector como «sin embargo»?",
+    "tema": "Relaciones lógicas",
+    "opciones": [
+      "Introducir un contraste entre ideas",
+      "Indicar una causa directa",
+      "Ordenar hechos cronológicamente",
+      "Repetir la idea anterior"
+    ],
+    "respuestaCorrecta": "Introducir un contraste entre ideas",
+    "explicacionAcierto": "Correcto. «Sin embargo» señala que la idea siguiente contrasta o limita la anterior.",
+    "explicacionFallo": "«Sin embargo» es un conector de contraste: presenta una idea que se opone o matiza a la anterior."
+  }
+]
