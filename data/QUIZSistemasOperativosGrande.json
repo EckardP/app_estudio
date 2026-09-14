@@ -1,0 +1,912 @@
+[
+{
+"pregunta": "Un servidor que ejecuta un modelo de IA recibe solicitudes de varios usuarios al mismo tiempo. Desde la visión del sistema operativo como administrador de recursos, ¿qué tarea es la más importante?",
+"tema": "Administración de recursos",
+"opciones": [
+"Asignar CPU, memoria y dispositivos entre los procesos que compiten por ellos.",
+"Convertir todas las solicitudes en un único archivo antes de ejecutarlas.",
+"Permitir que cada aplicación controle directamente el hardware.",
+"Reservar toda la CPU para el primer proceso que se inició."
+],
+"respuestaCorrecta": "Asignar CPU, memoria y dispositivos entre los procesos que compiten por ellos.",
+"explicacionAcierto": "La función del sistema operativo como administrador de recursos consiste precisamente en coordinar y asignar recursos físicos, como CPU, memoria y dispositivos de E/S, entre los procesos que los necesitan. En un servidor multiusuario, esta función permite que las distintas solicitudes puedan ejecutarse de manera controlada y protegida.",
+"explicacionFallo": "La respuesta correcta refleja la función administrativa del sistema operativo. Convertir solicitudes en un archivo no es una función general del sistema operativo; permitir acceso directo al hardware eliminaría la protección y el control centralizado; y reservar la CPU para el primer proceso contradice la necesidad de compartir y planificar los recursos entre procesos."
+},
+{
+"pregunta": "Una aplicación de análisis de datos guarda un archivo sin conocer sectores, pistas ni detalles físicos del disco. ¿Qué idea del sistema operativo permite trabajar así?",
+"tema": "Abstracciones del sistema operativo",
+"opciones": [
+"Multiprogramación.",
+"Máquina extendida mediante abstracciones.",
+"Interrupción de reloj.",
+"Planificación por prioridades."
+],
+"respuestaCorrecta": "Máquina extendida mediante abstracciones.",
+"explicacionAcierto": "El sistema operativo presenta abstracciones que ocultan los detalles físicos del hardware. El concepto de máquina extendida permite que una aplicación trabaje con una interfaz más sencilla, como archivos, sin tener que gestionar directamente sectores, pistas y demás características del disco.",
+"explicacionFallo": "La máquina extendida es la opción adecuada porque describe la ocultación de complejidad mediante abstracciones. La multiprogramación se refiere a mantener varios programas en ejecución; una interrupción de reloj permite llamar la atención de la CPU periódicamente; y la planificación por prioridades decide qué proceso obtiene CPU, no cómo una aplicación maneja los discos."
+},
+{
+"pregunta": "Un software de seguridad se ejecuta en modo usuario y necesita cambiar una configuración protegida del sistema. ¿Cuál es la vía correcta?",
+"tema": "Modo usuario y llamadas al sistema",
+"opciones": [
+"Modificar directamente los registros privilegiados del procesador.",
+"Escribir sobre la memoria del kernel.",
+"Solicitar el servicio mediante una llamada al sistema controlada.",
+"Desactivar temporalmente el modo kernel."
+],
+"respuestaCorrecta": "Solicitar el servicio mediante una llamada al sistema controlada.",
+"explicacionAcierto": "Las llamadas al sistema constituyen la interfaz controlada mediante la cual los programas de usuario solicitan servicios al sistema operativo. Esta separación permite que el kernel realice operaciones privilegiadas sin conceder a las aplicaciones acceso directo y sin restricciones al hardware protegido.",
+"explicacionFallo": "La llamada al sistema es la vía diseñada para pasar de las operaciones de usuario a servicios privilegiados. Modificar registros privilegiados o escribir directamente en memoria del kernel vulneraría la protección; además, no se 'desactiva' el modo kernel para obtener privilegios, sino que una transición controlada permite ejecutar el servicio solicitado."
+},
+{
+"pregunta": "En un equipo de análisis forense se ejecutan varias herramientas y la CPU les concede pequeños intervalos de ejecución. ¿Qué concepto describe mejor esta situación?",
+"tema": "Multiplexación",
+"opciones": [
+"Multiplexación en espacio.",
+"Spooling.",
+"DMA.",
+"Multiplexación en el tiempo."
+],
+"respuestaCorrecta": "Multiplexación en el tiempo.",
+"explicacionAcierto": "La multiplexación en el tiempo consiste en permitir que distintos usuarios o procesos compartan un recurso alternando su utilización a lo largo del tiempo. Los pequeños intervalos concedidos por la CPU representan precisamente este principio de reparto temporal.",
+"explicacionFallo": "La multiplexación en el tiempo corresponde al reparto sucesivo de la CPU. La multiplexación en espacio asigna diferentes partes de un recurso simultáneamente; el spooling organiza operaciones mediante almacenamiento intermedio; y DMA permite transferencias entre dispositivos y memoria con menor intervención directa de la CPU."
+},
+{
+"pregunta": "Un servicio de red queda esperando la llegada de datos mientras otro proceso aprovecha la CPU. Históricamente, ¿qué técnica hizo posible utilizar mejor el procesador en situaciones como ésta?",
+"tema": "Multiprogramación",
+"opciones": [
+"Multiprogramación.",
+"Monoprogramación.",
+"Segmentación.",
+"Exokernel."
+],
+"respuestaCorrecta": "Multiprogramación.",
+"explicacionAcierto": "La multiprogramación permite mantener varios programas disponibles para ejecución y aprovechar la CPU cuando uno de ellos queda bloqueado, por ejemplo esperando E/S. De esta manera, el procesador puede realizar trabajo útil en lugar de permanecer ocioso durante la espera.",
+"explicacionFallo": "La multiprogramación explica directamente el aprovechamiento de la CPU durante las esperas. La monoprogramación mantiene esencialmente un solo programa; la segmentación es una técnica de administración de memoria; y el exokernel es un diseño arquitectónico del sistema operativo, no la técnica histórica descrita en esta situación."
+},
+{
+"pregunta": "Un programa intenta ejecutar una instrucción reservada al sistema operativo y el procesador impide la operación. ¿Qué principio se está protegiendo principalmente?",
+"tema": "Protección del sistema",
+"opciones": [
+"La velocidad del bus.",
+"La separación entre modo usuario y modo kernel.",
+"La estructura de directorios.",
+"La compatibilidad POSIX."
+],
+"respuestaCorrecta": "La separación entre modo usuario y modo kernel.",
+"explicacionAcierto": "La distinción entre modo usuario y modo kernel restringe las operaciones privilegiadas. El procesador impide que un programa ordinario ejecute instrucciones reservadas al sistema operativo, protegiendo así el control del hardware y de los recursos del sistema.",
+"explicacionFallo": "La separación entre modos es la que impide directamente la ejecución de instrucciones privilegiadas. La velocidad del bus es una cuestión de rendimiento del hardware; la estructura de directorios pertenece al sistema de archivos; y POSIX es un estándar de interfaces, no el mecanismo de protección descrito."
+},
+{
+"pregunta": "En un servidor Linux un dispositivo de red termina de recibir un paquete y necesita llamar la atención de la CPU. ¿Qué mecanismo utiliza normalmente el hardware?",
+"tema": "Interrupciones",
+"opciones": [
+"Paginación.",
+"Llamada a procedimiento.",
+"Interrupción.",
+"Cambio de directorio."
+],
+"respuestaCorrecta": "Interrupción.",
+"explicacionAcierto": "Una interrupción permite que un dispositivo señale a la CPU que requiere atención. En este caso, al finalizar la recepción de un paquete, el dispositivo puede generar una interrupción para que el sistema operativo procese el evento sin tener que consultar continuamente el dispositivo.",
+"explicacionFallo": "La interrupción es el mecanismo de señalización entre el dispositivo y la CPU. La paginación administra memoria virtual; una llamada a procedimiento representa una transferencia de control dentro del software; y cambiar de directorio pertenece a la interacción con el sistema de archivos."
+},
+{
+"pregunta": "Una tarjeta de red transfiere un bloque de datos a memoria sin obligar a la CPU a copiar byte por byte. ¿Qué mecanismo describe mejor esa operación?",
+"tema": "DMA",
+"opciones": [
+"Trap.",
+"Spooling.",
+"Time sharing.",
+"DMA."
+],
+"respuestaCorrecta": "DMA.",
+"explicacionAcierto": "El acceso directo a memoria, DMA, permite que un dispositivo transfiera datos directamente con la memoria, reduciendo la intervención de la CPU en la transferencia de cada byte. Esto resulta especialmente útil para bloques de datos de dispositivos de E/S.",
+"explicacionFallo": "DMA describe exactamente la transferencia directa entre dispositivo y memoria. Un trap es una transferencia controlada de ejecución hacia el sistema operativo; spooling utiliza almacenamiento intermedio para organizar E/S; y time sharing reparte el tiempo de CPU entre procesos."
+},
+{
+"pregunta": "En un sistema orientado a seguridad se busca que varios servicios, como ciertos controladores, puedan ejecutarse fuera del núcleo para aislar fallos. ¿Qué arquitectura se ajusta mejor?",
+"tema": "Arquitecturas de sistemas operativos",
+"opciones": [
+"Microkernel.",
+"Monolítica pura.",
+"Procesamiento por lotes.",
+"Exclusivamente por capas sin IPC."
+],
+"respuestaCorrecta": "Microkernel.",
+"explicacionAcierto": "El enfoque de microkernel mantiene un núcleo reducido y permite que diversos servicios se ejecuten fuera del núcleo, normalmente en espacio de usuario. Esta separación puede mejorar el aislamiento, de modo que un fallo en un servicio tenga un impacto menor sobre el núcleo completo.",
+"explicacionFallo": "El microkernel es el diseño que corresponde al aislamiento de servicios fuera del núcleo. Un sistema monolítico concentra más servicios en el kernel; el procesamiento por lotes es un modelo de ejecución; y una arquitectura sin IPC no sería coherente con servicios separados que necesitan comunicarse."
+},
+{
+"pregunta": "Linux suele describirse como un kernel monolítico modular. ¿Qué significa esto en términos prácticos?",
+"tema": "Linux",
+"opciones": [
+"Todos los programas de usuario se ejecutan dentro del kernel.",
+"Muchos servicios trabajan en modo kernel, pero pueden incorporarse componentes mediante módulos.",
+"No existen controladores de dispositivos.",
+"Cada módulo tiene su propio sistema operativo."
+],
+"respuestaCorrecta": "Muchos servicios trabajan en modo kernel, pero pueden incorporarse componentes mediante módulos.",
+"explicacionAcierto": "Un kernel monolítico concentra numerosos servicios en el espacio del núcleo, mientras que la modularidad permite incorporar determinados componentes sin que todos tengan que formar parte de una imagen fija del kernel. Esta combinación caracteriza la descripción práctica de Linux presentada en el material.",
+"explicacionFallo": "La segunda opción recoge las dos características: concentración de servicios en kernel y posibilidad de añadir módulos. Los programas de usuario no pasan todos al kernel; Linux sí dispone de controladores; y un módulo es un componente del kernel, no un sistema operativo independiente."
+},
+{
+"pregunta": "Un equipo de ciberseguridad quiere reducir el impacto de un fallo en un servicio del sistema operativo. ¿Qué característica de un microkernel contribuye más a este objetivo?",
+"tema": "Microkernel y aislamiento",
+"opciones": [
+"Eliminar la comunicación entre procesos.",
+"Permitir instrucciones privilegiadas a cualquier aplicación.",
+"Mantener varios servicios en procesos separados del espacio de usuario.",
+"Desactivar la protección de memoria."
+],
+"respuestaCorrecta": "Mantener varios servicios en procesos separados del espacio de usuario.",
+"explicacionAcierto": "Al ejecutar servicios en procesos separados del espacio de usuario, un fallo queda más aislado del núcleo y de otros componentes. Esta separación es una de las principales ventajas del enfoque microkernel cuando se busca limitar el impacto de errores.",
+"explicacionFallo": "La separación de servicios en procesos de usuario es la que proporciona aislamiento. Eliminar la comunicación impediría que los componentes cooperaran; permitir instrucciones privilegiadas a cualquier aplicación destruiría la protección; y desactivar la memoria protegida produciría precisamente el efecto contrario al buscado."
+},
+{
+"pregunta": "Una máquina virtual usada para aislar un laboratorio de malware permite ejecutar otro sistema operativo sobre hardware virtual. ¿Qué concepto del capítulo 1 representa?",
+"tema": "Máquinas virtuales",
+"opciones": [
+"Un directorio compartido.",
+"Una llamada al sistema.",
+"Un driver de red.",
+"Una máquina virtual como abstracción del hardware."
+],
+"respuestaCorrecta": "Una máquina virtual como abstracción del hardware.",
+"explicacionAcierto": "La virtualización presenta una representación de hardware sobre la que puede ejecutarse otro sistema operativo. En el contexto indicado, la máquina virtual proporciona una abstracción del hardware y permite aislar un entorno de laboratorio.",
+"explicacionFallo": "La máquina virtual es la abstracción que permite ejecutar otro sistema operativo sobre hardware virtual. Un directorio compartido se relaciona con archivos; una llamada al sistema es una interfaz entre aplicaciones y kernel; y un driver de red gestiona un dispositivo, no crea un entorno completo de hardware virtual."
+},
+{
+"pregunta": "Dos aplicaciones usan la dirección virtual 1000, pero cada una debe acceder a memoria independiente. ¿Qué concepto básico permite esa separación?",
+"tema": "Espacios de direcciones",
+"opciones": [
+"Espacios de direcciones asociados a cada proceso.",
+"IRQ compartidas.",
+"Spooling de memoria.",
+"Un único espacio físico sin protección."
+],
+"respuestaCorrecta": "Espacios de direcciones asociados a cada proceso.",
+"explicacionAcierto": "Cada proceso puede disponer de su propio espacio de direcciones virtuales. Por ello, la misma dirección virtual puede representar ubicaciones físicas diferentes para procesos distintos, proporcionando aislamiento y protección de memoria.",
+"explicacionFallo": "Los espacios de direcciones por proceso explican directamente la independencia de una misma dirección virtual. Las IRQ se relacionan con interrupciones; el spooling no es una técnica para separar espacios de memoria; y un único espacio físico sin protección permitiría que los procesos interfirieran entre sí."
+},
+{
+"pregunta": "Un sistema de detección de intrusiones abre varios archivos de registro y mantiene conexiones activas. ¿Qué concepto reúne el programa en ejecución, su estado y sus recursos asociados?",
+"tema": "Procesos",
+"opciones": [
+"Archivo ejecutable.",
+"Proceso.",
+"Driver.",
+"BIOS."
+],
+"respuestaCorrecta": "Proceso.",
+"explicacionAcierto": "Un proceso representa un programa en ejecución junto con su estado y los recursos asociados. Por eso, no se limita al archivo ejecutable: incluye el contexto necesario para que el programa pueda ejecutarse y utilizar recursos.",
+"explicacionFallo": "Proceso es el concepto que reúne programa en ejecución, estado y recursos. Un archivo ejecutable es simplemente el programa almacenado; un driver gestiona un dispositivo; y la BIOS participa en funciones de firmware y arranque, no representa una ejecución de programa con sus recursos."
+},
+{
+"pregunta": "Un administrador quiere saber qué servicios ofrece realmente el kernel a los programas. Según Tanenbaum, ¿qué elemento revela de forma directa esas capacidades?",
+"tema": "Llamadas al sistema",
+"opciones": [
+"Los nombres de los archivos del usuario.",
+"La frecuencia del reloj.",
+"El conjunto de llamadas al sistema.",
+"La marca del procesador."
+],
+"respuestaCorrecta": "El conjunto de llamadas al sistema.",
+"explicacionAcierto": "Las llamadas al sistema forman la interfaz mediante la cual los programas solicitan servicios al kernel. Por ello, observar su conjunto permite identificar directamente las capacidades que el sistema operativo ofrece a los programas.",
+"explicacionFallo": "El conjunto de llamadas al sistema es la interfaz funcional del kernel para los programas. Los nombres de archivos son datos del sistema de archivos; la frecuencia del reloj es una característica del hardware; y la marca del procesador identifica el hardware, pero no los servicios proporcionados por el kernel."
+},
+{
+"pregunta": "Una aplicación intenta abrir un archivo para el cual no tiene permisos. Desde la perspectiva del sistema operativo, ¿qué concepto es el más relacionado con impedir ese acceso?",
+"tema": "Protección y seguridad",
+"opciones": [
+"Multiprogramación.",
+"Jerarquía de memoria.",
+"DMA.",
+"Protección y seguridad de recursos."
+],
+"respuestaCorrecta": "Protección y seguridad de recursos.",
+"explicacionAcierto": "El control de permisos determina qué usuarios o procesos pueden utilizar determinados recursos. Impedir que una aplicación abra un archivo sin autorización es, por tanto, una función de protección y seguridad de los recursos administrados por el sistema operativo.",
+"explicacionFallo": "La protección y seguridad se ocupa directamente de controlar accesos a recursos. La multiprogramación trata del uso compartido de la CPU; la jerarquía de memoria organiza distintos niveles de almacenamiento; y DMA gestiona transferencias de datos entre dispositivos y memoria."
+},
+{
+"pregunta": "En un servidor con muchos usuarios, ¿por qué sería riesgoso permitir que cada programa acceda directamente a cualquier dispositivo de hardware?",
+"tema": "Protección de recursos",
+"opciones": [
+"Porque rompería el control y la protección centralizada de los recursos.",
+"Porque aumentaría automáticamente la memoria RAM.",
+"Porque impediría usar archivos de texto.",
+"Porque todos los programas pasarían a ser hilos."
+],
+"respuestaCorrecta": "Porque rompería el control y la protección centralizada de los recursos.",
+"explicacionAcierto": "El sistema operativo actúa como intermediario y administrador de los recursos físicos. Si cada programa pudiera controlar directamente cualquier dispositivo, se perderían las garantías de protección, coordinación y asignación que permiten compartir los recursos de forma segura.",
+"explicacionFallo": "La pérdida del control centralizado es el problema fundamental. El acceso directo no aumenta la RAM, tampoco impide utilizar archivos de texto y no transforma los programas en hilos; esas consecuencias no se desprenden del principio de protección de recursos."
+},
+{
+"pregunta": "Una empresa quiere mover una aplicación entre distintos sistemas tipo UNIX conservando interfaces conocidas. ¿Qué estándar del capítulo 1 está relacionado con esa portabilidad?",
+"tema": "POSIX",
+"opciones": [
+"NTFS.",
+"POSIX.",
+"BIOS.",
+"DMA."
+],
+"respuestaCorrecta": "POSIX.",
+"explicacionAcierto": "POSIX define interfaces y características estandarizadas asociadas a sistemas tipo UNIX. Mantenerse dentro de estas interfaces favorece la portabilidad de aplicaciones entre sistemas que implementan el estándar.",
+"explicacionFallo": "POSIX es el estándar relacionado con interfaces portables entre sistemas tipo UNIX. NTFS es un sistema de archivos de Windows; BIOS es firmware asociado al arranque del equipo; y DMA es un mecanismo de transferencia de datos, no un estándar de portabilidad de aplicaciones."
+},
+{
+"pregunta": "En un diseño de sistema operativo, ¿qué opción representa mejor la diferencia entre mecanismo y política?",
+"tema": "Mecanismo y política",
+"opciones": [
+"El mecanismo decide qué usuario es confiable y la política ejecuta la instrucción.",
+"No existe diferencia entre ambos conceptos.",
+"El mecanismo proporciona cómo realizar una acción y la política decide cuándo o a quién aplicarla.",
+"La política pertenece al hardware y el mecanismo sólo a las aplicaciones."
+],
+"respuestaCorrecta": "El mecanismo proporciona cómo realizar una acción y la política decide cuándo o a quién aplicarla.",
+"explicacionAcierto": "La distinción separa el medio de la decisión. El mecanismo proporciona las capacidades necesarias para realizar una operación, mientras que la política establece los criterios sobre cuándo, cómo o para quién se utiliza esa capacidad.",
+"explicacionFallo": "La tercera opción expresa correctamente la separación. La primera invierte las funciones; la segunda niega una distinción fundamental del diseño de sistemas operativos; y la cuarta asigna incorrectamente política y mecanismo exclusivamente al hardware o a las aplicaciones."
+},
+{
+"pregunta": "Para una plataforma de IA multiusuario se quiere que el núcleo proteja y asigne recursos físicos, dejando gran parte de las abstracciones a bibliotecas de usuario. ¿Qué diseño se aproxima más a esa idea?",
+"tema": "Exokernel",
+"opciones": [
+"Sistema por lotes.",
+"Kernel híbrido.",
+"Cliente-servidor tradicional.",
+"Exokernel."
+],
+"respuestaCorrecta": "Exokernel.",
+"explicacionAcierto": "El exokernel busca mantener en el núcleo funciones fundamentales como protección y asignación de recursos, dejando que las abstracciones de más alto nivel sean proporcionadas por bibliotecas o componentes de usuario. Esto coincide directamente con el escenario descrito.",
+"explicacionFallo": "El exokernel es el diseño que separa la protección y asignación de recursos de las abstracciones de alto nivel. Un sistema por lotes describe una forma de procesamiento; un kernel híbrido combina características de diferentes arquitecturas; y cliente-servidor organiza servicios mediante comunicación, pero no expresa específicamente la idea planteada."
+},
+{
+"pregunta": "Un servidor de inferencia tiene un hilo que recibe solicitudes, otro que prepara datos y otro que procesa resultados. ¿Qué ventaja principal aporta este diseño?",
+"tema": "Hilos",
+"opciones": [
+"Permite varias secuencias de ejecución dentro del mismo proceso compartiendo recursos.",
+"Cada hilo obtiene automáticamente un espacio de direcciones independiente.",
+"Elimina toda necesidad de sincronización.",
+"Impide que la CPU cambie entre tareas."
+],
+"respuestaCorrecta": "Permite varias secuencias de ejecución dentro del mismo proceso compartiendo recursos.",
+"explicacionAcierto": "Los hilos proporcionan varias secuencias de ejecución dentro de un proceso. Al pertenecer al mismo proceso, pueden compartir recursos y estructuras, lo que resulta útil para dividir tareas como recepción, preparación y procesamiento.",
+"explicacionFallo": "La primera opción describe la ventaja esencial de los hilos. Los hilos del mismo proceso no reciben espacios de direcciones independientes; la concurrencia no elimina la necesidad de sincronización cuando existen recursos compartidos; y los hilos permiten, no impiden, que el sistema planifique distintas tareas."
+},
+{
+"pregunta": "Dos hilos de una aplicación modifican simultáneamente una estructura compartida y el resultado depende del orden exacto de ejecución. ¿Qué problema se presenta?",
+"tema": "Condiciones de carrera",
+"opciones": [
+"Fallo de página.",
+"Condición de carrera.",
+"Fragmentación interna.",
+"Fallo de TLB."
+],
+"respuestaCorrecta": "Condición de carrera.",
+"explicacionAcierto": "Una condición de carrera aparece cuando varios hilos acceden a datos compartidos y el resultado depende de la secuencia temporal de sus operaciones. El problema indicado surge precisamente porque las modificaciones concurrentes no están adecuadamente coordinadas.",
+"explicacionFallo": "La condición de carrera corresponde directamente a la dependencia del resultado respecto del orden de ejecución. Un fallo de página pertenece a memoria virtual; la fragmentación interna es un problema de asignación de memoria; y un fallo de TLB se relaciona con la ausencia de una traducción en la caché de traducciones."
+},
+{
+"pregunta": "En un servicio concurrente se debe garantizar que sólo un hilo actualice una tabla crítica a la vez. ¿Qué concepto se necesita?",
+"tema": "Exclusión mutua",
+"opciones": [
+"Paginación.",
+"Spooling.",
+"Exclusión mutua.",
+"Reubicación estática."
+],
+"respuestaCorrecta": "Exclusión mutua.",
+"explicacionAcierto": "La exclusión mutua garantiza que una sección crítica sea utilizada por un único hilo a la vez. En este caso, la actualización de la tabla compartida debe protegerse para evitar que dos operaciones concurrentes produzcan resultados inconsistentes.",
+"explicacionFallo": "La exclusión mutua es el concepto específico para impedir accesos simultáneos a una región crítica. La paginación administra memoria virtual; el spooling organiza operaciones mediante almacenamiento intermedio; y la reubicación estática se relaciona con la ubicación de programas en memoria."
+},
+{
+"pregunta": "Un mutex está ocupado por un hilo y otro intenta adquirirlo. ¿Qué comportamiento es el esperado para evitar una condición de carrera?",
+"tema": "Mutex",
+"opciones": [
+"El segundo hilo modifica el recurso de todos modos.",
+"El kernel elimina al primer hilo.",
+"El mutex se convierte en semáforo automáticamente.",
+"El segundo hilo espera hasta que el recurso sea liberado."
+],
+"respuestaCorrecta": "El segundo hilo espera hasta que el recurso sea liberado.",
+"explicacionAcierto": "Un mutex protege la exclusión mutua de un recurso. Si un hilo ya posee el mutex, otro hilo que intenta adquirirlo debe esperar hasta que el primero lo libere, evitando así que ambos entren simultáneamente en la región crítica.",
+"explicacionFallo": "Esperar la liberación del mutex mantiene la exclusión mutua. Permitir que el segundo hilo modifique el recurso provocaría la carrera; eliminar al primer hilo no es el comportamiento esperado de un mutex; y un mutex no se convierte automáticamente en un semáforo."
+},
+{
+"pregunta": "En el problema productor-consumidor, ¿para qué se utiliza un semáforo mutex?",
+"tema": "Semáforos y sincronización",
+"opciones": [
+"Para impedir que productor y consumidor accedan al búfer crítico al mismo tiempo.",
+"Para aumentar el tamaño del búfer.",
+"Para traducir direcciones virtuales.",
+"Para asignar direcciones IP."
+],
+"respuestaCorrecta": "Para impedir que productor y consumidor accedan al búfer crítico al mismo tiempo.",
+"explicacionAcierto": "El mutex se utiliza para proporcionar exclusión mutua sobre la estructura compartida. En el problema productor-consumidor, protege el acceso al búfer para que las operaciones concurrentes no modifiquen su estado simultáneamente de manera incorrecta.",
+"explicacionFallo": "La primera opción describe la finalidad de la exclusión mutua sobre el búfer. El tamaño del búfer es una cuestión de capacidad; traducir direcciones corresponde a la administración de memoria; y asignar direcciones IP pertenece a la configuración de redes."
+},
+{
+"pregunta": "Un sistema distribuido necesita que procesos ubicados en máquinas distintas intercambien información por la red. ¿Qué mecanismo del capítulo 2 resulta especialmente apropiado?",
+"tema": "Pasaje de mensajes",
+"opciones": [
+"Registros base y límite.",
+"Pasaje de mensajes.",
+"Memoria física absoluta.",
+"Compactación."
+],
+"respuestaCorrecta": "Pasaje de mensajes.",
+"explicacionAcierto": "El pasaje de mensajes proporciona un mecanismo de comunicación entre procesos que no necesitan compartir directamente la misma memoria física. En un sistema distribuido, los procesos pueden utilizar este mecanismo para intercambiar información a través de la red.",
+"explicacionFallo": "El pasaje de mensajes es apropiado para procesos ubicados en máquinas diferentes. Los registros base y límite se relacionan con protección y reubicación de memoria; la memoria física absoluta no constituye un mecanismo de comunicación distribuida; y la compactación organiza espacios de memoria."
+},
+{
+"pregunta": "Un hilo está listo para ejecutarse, pero la CPU está atendiendo otro. ¿Qué componente decide cuándo podrá usar el procesador?",
+"tema": "Planificación",
+"opciones": [
+"El sistema de archivos.",
+"La MMU.",
+"El planificador.",
+"El cargador de arranque."
+],
+"respuestaCorrecta": "El planificador.",
+"explicacionAcierto": "El planificador determina qué proceso o hilo obtiene el procesador y cuándo. Por ello, cuando un hilo está listo pero la CPU está ocupada, corresponde al planificador decidir el momento en que podrá ejecutarse.",
+"explicacionFallo": "El planificador es el componente encargado de tomar decisiones de asignación de CPU. El sistema de archivos gestiona archivos; la MMU participa en traducción y protección de memoria; y el cargador de arranque interviene durante el arranque del sistema."
+},
+{
+"pregunta": "En Round Robin, un proceso consume completamente su quantum. ¿Qué suele ocurrir a continuación?",
+"tema": "Planificación Round Robin",
+"opciones": [
+"Obtiene privilegios de kernel.",
+"Se elimina de memoria.",
+"Se convierte en hilo.",
+"Regresa a la cola de listos para que otro proceso use la CPU."
+],
+"respuestaCorrecta": "Regresa a la cola de listos para que otro proceso use la CPU.",
+"explicacionAcierto": "Round Robin asigna a cada proceso un intervalo de tiempo, denominado quantum. Cuando el proceso consume ese intervalo y todavía puede continuar, se coloca nuevamente en la cola de listos para permitir que otros procesos reciban su turno.",
+"explicacionFallo": "La vuelta a la cola de listos es el comportamiento característico de Round Robin cuando expira el quantum. El proceso no adquiere privilegios por consumir su turno, tampoco se elimina automáticamente de memoria ni se convierte en hilo."
+},
+{
+"pregunta": "Un sistema de seguridad usa varios procesos aislados en lugar de un único proceso con muchos hilos. ¿Qué diferencia apoya esa decisión?",
+"tema": "Procesos e hilos",
+"opciones": [
+"Los procesos tienen espacios de direcciones separados, mientras los hilos del mismo proceso comparten el suyo.",
+"Los procesos nunca usan CPU.",
+"Los hilos no pueden comunicarse.",
+"Los procesos no tienen recursos asociados."
+],
+"respuestaCorrecta": "Los procesos tienen espacios de direcciones separados, mientras los hilos del mismo proceso comparten el suyo.",
+"explicacionAcierto": "Los procesos proporcionan una separación de espacios de direcciones que contribuye al aislamiento. En cambio, los hilos de un mismo proceso comparten el espacio de direcciones y otros recursos, por lo que los procesos resultan apropiados cuando se busca mayor separación.",
+"explicacionFallo": "La primera opción identifica la diferencia fundamental relevante para el aislamiento. Los procesos sí usan CPU, los hilos sí pueden comunicarse y compartir datos, y los procesos sí poseen recursos asociados, por lo que las otras afirmaciones son falsas."
+},
+{
+"pregunta": "En una aplicación de red, una llamada bloqueante espera datos. ¿Por qué los hilos pueden ser útiles?",
+"tema": "Hilos y E/S",
+"opciones": [
+"Porque eliminan las operaciones de E/S.",
+"Porque otro hilo del mismo proceso puede continuar trabajando mientras uno espera, según el modelo de hilos utilizado.",
+"Porque convierten la red en memoria compartida.",
+"Porque desactivan las interrupciones."
+],
+"respuestaCorrecta": "Porque otro hilo del mismo proceso puede continuar trabajando mientras uno espera, según el modelo de hilos utilizado.",
+"explicacionAcierto": "La concurrencia mediante hilos permite que una parte del programa permanezca esperando una operación bloqueante mientras otra secuencia de ejecución realiza trabajo útil. Esto puede mejorar la utilización del proceso y de la CPU, dependiendo del modelo de implementación de hilos.",
+"explicacionFallo": "La segunda opción expresa la ventaja de los hilos frente a una espera bloqueante. Los hilos no eliminan la E/S, no transforman la red en memoria compartida y no necesitan desactivar las interrupciones para permitir que otro hilo continúe."
+},
+{
+"pregunta": "Un proceso de entrenamiento de IA utiliza la dirección virtual 5000 y otro proceso usa también 5000. ¿Por qué no tienen que acceder a la misma ubicación física?",
+"tema": "Espacios de direcciones",
+"opciones": [
+"Porque cada proceso puede disponer de su propio espacio de direcciones.",
+"Porque la CPU cambia automáticamente el contenido de la RAM.",
+"Porque todas las direcciones virtuales son archivos.",
+"Porque la red asigna las direcciones de memoria."
+],
+"respuestaCorrecta": "Porque cada proceso puede disponer de su propio espacio de direcciones.",
+"explicacionAcierto": "La memoria virtual proporciona a cada proceso un espacio de direcciones que puede ser independiente de los demás. Así, una misma dirección virtual puede traducirse mediante mecanismos de memoria a diferentes ubicaciones físicas según el proceso que la utilice.",
+"explicacionFallo": "La existencia de espacios de direcciones separados explica la independencia. La CPU no cambia arbitrariamente la RAM para resolver esta situación; las direcciones virtuales no son archivos; y las direcciones de memoria no son asignadas por la red."
+},
+{
+"pregunta": "Para ejecutar varios programas sin que uno sobrescriba la memoria del otro, ¿qué dos problemas identifica Tanenbaum que deben resolverse?",
+"tema": "Protección y reubicación",
+"opciones": [
+"Caché y disco.",
+"Protección y reubicación.",
+"Red y cifrado.",
+"Planificación y compilación."
+],
+"respuestaCorrecta": "Protección y reubicación.",
+"explicacionAcierto": "Cuando varios programas ocupan memoria, el sistema debe impedir que uno acceda indebidamente al espacio de otro y también debe poder ubicar los programas en las posiciones apropiadas. Estos problemas corresponden a protección y reubicación.",
+"explicacionFallo": "Protección evita accesos indebidos y reubicación permite adaptar las direcciones a la ubicación real del programa. Caché y disco son componentes de almacenamiento; red y cifrado corresponden a otras áreas; y planificación y compilación no resuelven directamente estos dos problemas de memoria."
+},
+{
+"pregunta": "Un sistema usa registros base y límite. ¿Qué aporta el registro límite?",
+"tema": "Protección de memoria",
+"opciones": [
+"La dirección IP del proceso.",
+"El número de archivos abiertos.",
+"Un control para impedir accesos fuera del rango asignado.",
+"La contraseña del usuario."
+],
+"respuestaCorrecta": "Un control para impedir accesos fuera del rango asignado.",
+"explicacionAcierto": "El registro límite establece el tamaño o límite del rango de memoria que un proceso puede utilizar junto con el registro base. El mecanismo permite detectar accesos que excedan el espacio asignado y proteger la memoria de otros procesos.",
+"explicacionFallo": "El registro límite está relacionado con los límites de acceso a memoria. Una dirección IP pertenece a redes; el número de archivos abiertos es información de recursos del proceso; y la contraseña pertenece a autenticación, no a protección mediante registros de memoria."
+},
+{
+"pregunta": "Un servidor tiene más procesos activos que memoria física disponible y mueve temporalmente procesos completos entre RAM y disco. ¿Qué técnica está utilizando?",
+"tema": "Intercambio de memoria",
+"opciones": [
+"Paginación por demanda.",
+"Caché L1.",
+"DMA.",
+"Intercambio o swapping."
+],
+"respuestaCorrecta": "Intercambio o swapping.",
+"explicacionAcierto": "El swapping consiste en mover temporalmente procesos completos entre la memoria principal y el almacenamiento secundario para gestionar una cantidad de procesos que excede la memoria física disponible. Esto coincide con el escenario descrito.",
+"explicacionFallo": "El intercambio o swapping mueve procesos completos entre RAM y disco. La paginación por demanda trabaja con páginas, no necesariamente con procesos completos; la caché L1 es una memoria rápida del procesador; y DMA gestiona transferencias de E/S."
+},
+{
+"pregunta": "Después de varios intercambios quedan muchos huecos pequeños entre procesos. ¿Qué problema describe esta situación?",
+"tema": "Fragmentación de memoria",
+"opciones": [
+"Fragmentación externa.",
+"Fallo de TLB.",
+"Condición de carrera.",
+"Fragmentación de red."
+],
+"respuestaCorrecta": "Fragmentación externa.",
+"explicacionAcierto": "La fragmentación externa aparece cuando el espacio libre de memoria queda dividido en numerosos huecos pequeños separados entre sí. Aunque exista suficiente memoria libre total, puede resultar difícil encontrar un bloque contiguo suficientemente grande.",
+"explicacionFallo": "La fragmentación externa describe precisamente los huecos libres distribuidos entre bloques ocupados. Un fallo de TLB pertenece a traducciones de memoria virtual; una condición de carrera pertenece a concurrencia; y la fragmentación de red no representa el problema de memoria planteado."
+},
+{
+"pregunta": "En un mapa de bits de memoria, cada bit representa una unidad de asignación. ¿Cuál es el compromiso principal al elegir unidades muy pequeñas?",
+"tema": "Administración de memoria libre",
+"opciones": [
+"La RAM deja de ser volátil.",
+"El mapa de bits se hace más grande, aunque puede reducirse el desperdicio dentro de unidades.",
+"Desaparecen los fallos de página.",
+"No se pueden ejecutar procesos."
+],
+"respuestaCorrecta": "El mapa de bits se hace más grande, aunque puede reducirse el desperdicio dentro de unidades.",
+"explicacionAcierto": "Si cada bit representa una unidad de asignación más pequeña, se necesita un mayor número de bits para representar la misma cantidad de memoria. A cambio, las unidades más pequeñas permiten una administración más precisa y pueden disminuir el desperdicio interno.",
+"explicacionFallo": "La segunda opción expresa el equilibrio entre tamaño del mapa y granularidad de asignación. El tamaño de la unidad no cambia la volatilidad de la RAM, no elimina los fallos de página y tampoco impide ejecutar procesos."
+},
+{
+"pregunta": "Un administrador de memoria busca el primer hueco suficientemente grande y deja de buscar. ¿Qué algoritmo está usando?",
+"tema": "Asignación de memoria",
+"opciones": [
+"Best Fit.",
+"Worst Fit.",
+"First Fit.",
+"LRU."
+],
+"respuestaCorrecta": "First Fit.",
+"explicacionAcierto": "First Fit recorre los huecos disponibles hasta encontrar el primero que sea suficientemente grande para satisfacer la solicitud y entonces detiene la búsqueda. La descripción coincide exactamente con este comportamiento.",
+"explicacionFallo": "First Fit se define por elegir el primer hueco adecuado. Best Fit continúa buscando para encontrar el hueco más pequeño que pueda contener la solicitud; Worst Fit busca uno grande; y LRU es un algoritmo de reemplazo de páginas, no de asignación de huecos de memoria."
+},
+{
+"pregunta": "¿Por qué Best Fit no siempre produce el mejor aprovechamiento real de la memoria?",
+"tema": "Algoritmos de asignación de memoria",
+"opciones": [
+"Porque nunca busca huecos pequeños.",
+"Porque sólo funciona con paginación.",
+"Porque requiere una GPU.",
+"Porque puede dejar muchos huecos pequeños difíciles de reutilizar."
+],
+"respuestaCorrecta": "Porque puede dejar muchos huecos pequeños difíciles de reutilizar.",
+"explicacionAcierto": "Best Fit selecciona el hueco más pequeño que pueda satisfacer una solicitud. Aunque esto parece minimizar el espacio desperdiciado en cada asignación, puede generar muchos fragmentos pequeños que posteriormente resulten poco útiles para nuevas solicitudes.",
+"explicacionFallo": "La cuarta opción expresa el problema conocido de Best Fit. El algoritmo sí busca huecos pequeños cuando son adecuados; no depende exclusivamente de paginación ni requiere una GPU. Su limitación es que sus elecciones pueden producir fragmentación difícil de aprovechar."
+},
+{
+"pregunta": "Una aplicación de IA necesita un espacio de direcciones mayor que la RAM física disponible. ¿Qué técnica permite ejecutarla sin cargar todo el programa simultáneamente en RAM?",
+"tema": "Memoria virtual",
+"opciones": [
+"Memoria virtual.",
+"Sólo compactación.",
+"Desactivar el kernel.",
+"Cambiar la dirección IP."
+],
+"respuestaCorrecta": "Memoria virtual.",
+"explicacionAcierto": "La memoria virtual proporciona a los procesos espacios de direcciones que pueden ser mayores que la memoria física disponible. Mediante técnicas como paginación, sólo una parte de las páginas necesarias debe estar en RAM en un momento determinado.",
+"explicacionFallo": "La memoria virtual permite precisamente ejecutar programas cuyo espacio de direcciones supera la RAM disponible. La compactación reorganiza memoria física pero no crea por sí misma un espacio virtual mayor; desactivar el kernel no resuelve la limitación; y la dirección IP no tiene relación con la capacidad de memoria."
+},
+{
+"pregunta": "En memoria virtual paginada, ¿cómo se denomina el bloque de tamaño fijo del espacio de direcciones virtual?",
+"tema": "Paginación",
+"opciones": [
+"Segmento físico.",
+"Página.",
+"Proceso.",
+"IRQ."
+],
+"respuestaCorrecta": "Página.",
+"explicacionAcierto": "En un sistema de memoria virtual paginada, el espacio de direcciones virtual se divide en bloques de tamaño fijo llamados páginas. Estas páginas pueden asociarse posteriormente con marcos de página de la memoria física.",
+"explicacionFallo": "Página es el nombre del bloque virtual de tamaño fijo. Un marco de página es el bloque correspondiente de memoria física; un proceso es una entidad de ejecución; e IRQ identifica una solicitud de interrupción, no una unidad de memoria virtual."
+},
+{
+"pregunta": "¿Cómo se denomina el bloque físico de RAM donde puede colocarse una página virtual?",
+"tema": "Paginación",
+"opciones": [
+"TLB.",
+"Heap.",
+"Marco de página.",
+"Registro límite."
+],
+"respuestaCorrecta": "Marco de página.",
+"explicacionAcierto": "La memoria física se divide en bloques de tamaño fijo llamados marcos de página. Una página virtual puede cargarse en uno de estos marcos, y la tabla de páginas mantiene la correspondencia entre ambos espacios.",
+"explicacionFallo": "Marco de página es el bloque físico que recibe una página virtual. El TLB almacena traducciones recientes; el heap es una región usada para asignación dinámica; y el registro límite sirve para control de rangos de memoria."
+},
+{
+"pregunta": "La CPU genera una dirección virtual y necesita convertirla en física. ¿Qué componente realiza normalmente esa traducción?",
+"tema": "MMU",
+"opciones": [
+"El sistema de archivos.",
+"El planificador.",
+"El shell.",
+"La MMU."
+],
+"respuestaCorrecta": "La MMU.",
+"explicacionAcierto": "La unidad de administración de memoria, MMU, participa en la traducción de direcciones virtuales a direcciones físicas utilizando la información de las estructuras de memoria correspondientes. Es un componente fundamental de la implementación de memoria virtual.",
+"explicacionFallo": "La MMU es el componente directamente asociado a la traducción de direcciones. El sistema de archivos gestiona almacenamiento lógico; el planificador decide qué proceso o hilo usa la CPU; y el shell proporciona una interfaz de usuario para ejecutar comandos."
+},
+{
+"pregunta": "Una página requerida por un proceso no está actualmente en RAM. ¿Qué evento se produce?",
+"tema": "Fallos de página",
+"opciones": [
+"Fallo de página.",
+"Cambio de usuario.",
+"Interrupción de teclado obligatoria.",
+"Fallo de DNS."
+],
+"respuestaCorrecta": "Fallo de página.",
+"explicacionAcierto": "Cuando una referencia de memoria requiere una página que no se encuentra actualmente en la memoria física, se produce un fallo de página. El sistema operativo debe entonces gestionar la carga de la página desde el almacenamiento de respaldo y actualizar las estructuras correspondientes.",
+"explicacionFallo": "El fallo de página es exactamente el evento generado por la ausencia de la página requerida en RAM. Cambiar de usuario pertenece a control de sesiones; una interrupción de teclado es un evento de E/S distinto; y un fallo de DNS pertenece a resolución de nombres de red."
+},
+{
+"pregunta": "En una entrada de tabla de páginas, el bit de presente/ausente vale 0. ¿Qué indica?",
+"tema": "Tablas de páginas",
+"opciones": [
+"La página está cifrada.",
+"La página virtual no se encuentra actualmente en memoria física.",
+"El proceso terminó.",
+"La página pertenece al kernel."
+],
+"respuestaCorrecta": "La página virtual no se encuentra actualmente en memoria física.",
+"explicacionAcierto": "El bit de presente/ausente permite indicar si la página correspondiente se encuentra en la memoria física. Un valor 0 señala que la página no está actualmente presente en RAM y que una referencia a ella puede provocar un fallo de página.",
+"explicacionFallo": "La segunda opción interpreta directamente el significado del bit. El bit no indica cifrado, finalización del proceso ni pertenencia al kernel; esas características requieren otra información y no se deducen del bit presente/ausente."
+},
+{
+"pregunta": "Una página fue escrita después de cargarse en memoria. ¿Qué bit ayuda al sistema operativo a saber que debe actualizar la copia en disco antes de desalojarla?",
+"tema": "Páginas modificadas",
+"opciones": [
+"Bit de usuario.",
+"Bit de ejecución.",
+"Bit de modificada o sucia.",
+"Bit de red."
+],
+"respuestaCorrecta": "Bit de modificada o sucia.",
+"explicacionAcierto": "El bit de modificada, también llamado bit sucio, indica que el contenido de una página ha cambiado desde que fue cargado. Si debe desalojarse, esta información permite saber que la copia de respaldo debe actualizarse para conservar los cambios.",
+"explicacionFallo": "El bit de modificada identifica exactamente si la página ha sido alterada. Los otros bits propuestos no cumplen esa función en el contexto descrito: no existe un bit de red con esta finalidad y los bits de usuario o ejecución no indican que el contenido deba escribirse nuevamente en disco."
+},
+{
+"pregunta": "¿Para qué sirve principalmente un TLB?",
+"tema": "TLB y memoria virtual",
+"opciones": [
+"Para guardar archivos temporales.",
+"Para planificar procesos.",
+"Para ampliar físicamente la RAM.",
+"Para acelerar traducciones recientes entre direcciones virtuales y físicas."
+],
+"respuestaCorrecta": "Para acelerar traducciones recientes entre direcciones virtuales y físicas.",
+"explicacionAcierto": "El TLB es una caché de traducciones de direcciones. Al conservar traducciones utilizadas recientemente, evita tener que consultar repetidamente las tablas de páginas para esas referencias y acelera el proceso de traducción de direcciones virtuales a físicas.",
+"explicacionFallo": "La cuarta opción describe directamente la función del TLB. No es un almacenamiento de archivos temporales, no planifica procesos y no aumenta físicamente la RAM; su objetivo es acelerar las traducciones de memoria."
+},
+{
+"pregunta": "En un servidor, una traducción no está en el TLB pero la página sí está en RAM. ¿Qué situación describe mejor este caso?",
+"tema": "Fallos de TLB",
+"opciones": [
+"Un fallo de TLB que no exige traer la página desde disco.",
+"Un fallo de página duro necesariamente.",
+"Una condición de carrera.",
+"Una fragmentación externa."
+],
+"respuestaCorrecta": "Un fallo de TLB que no exige traer la página desde disco.",
+"explicacionAcierto": "Un fallo de TLB ocurre cuando la traducción buscada no está en la caché de traducciones. Si la página correspondiente ya está en RAM, no es necesario recuperarla del disco; basta con obtener la traducción mediante las estructuras de páginas y actualizar el TLB.",
+"explicacionFallo": "La primera opción distingue correctamente un fallo de TLB de un fallo de página. Un fallo de página implica que la página no está disponible en memoria física, mientras que una condición de carrera es un problema de concurrencia y la fragmentación externa es un problema de organización de memoria libre."
+},
+{
+"pregunta": "Cuando se produce un fallo de página y la RAM está llena, ¿qué debe decidir el sistema operativo?",
+"tema": "Reemplazo de páginas",
+"opciones": [
+"Qué usuario cambia su contraseña.",
+"Qué página desalojar para liberar un marco.",
+"Qué interfaz de red apagar.",
+"Qué archivo renombrar."
+],
+"respuestaCorrecta": "Qué página desalojar para liberar un marco.",
+"explicacionAcierto": "Si una página requerida no está en RAM y todos los marcos están ocupados, el sistema operativo necesita seleccionar una página residente que pueda desalojarse. Esta decisión es precisamente el problema que resuelven los algoritmos de reemplazo de páginas.",
+"explicacionFallo": "La selección de la página a desalojar es necesaria para liberar un marco donde cargar la página requerida. Cambiar contraseñas, apagar interfaces de red o renombrar archivos son tareas ajenas al problema de reemplazo de páginas."
+},
+{
+"pregunta": "Un sistema utiliza FIFO, pero antes de expulsar la página más antigua comprueba su bit R y, si fue usada, le concede otra oportunidad. ¿Qué algoritmo es?",
+"tema": "Algoritmos de reemplazo de páginas",
+"opciones": [
+"Óptimo.",
+"NRU.",
+"Segunda oportunidad.",
+"First Fit."
+],
+"respuestaCorrecta": "Segunda oportunidad.",
+"explicacionAcierto": "El algoritmo de segunda oportunidad parte de FIFO, pero utiliza el bit de referencia R para evitar expulsar inmediatamente una página que ha sido utilizada recientemente. Si el bit indica uso, se le concede otra oportunidad y se continúa buscando una candidata.",
+"explicacionFallo": "La segunda oportunidad es específicamente una variante de FIFO que consulta el bit R. El algoritmo óptimo se basa en el conocimiento de referencias futuras; NRU clasifica páginas según bits de referencia y modificación; y First Fit es un algoritmo de asignación de memoria, no de reemplazo de páginas."
+},
+{
+"pregunta": "Un proceso produce fallos de página de manera tan frecuente que pasa más tiempo intercambiando páginas que ejecutando trabajo útil. ¿Cómo se denomina este fenómeno?",
+"tema": "Thrashing",
+"opciones": [
+"Spooling.",
+"Deadlock.",
+"Swapping normal.",
+"Thrashing o sobrepaginación."
+],
+"respuestaCorrecta": "Thrashing o sobrepaginación.",
+"explicacionAcierto": "El thrashing o sobrepaginación ocurre cuando la frecuencia de fallos de página es tan alta que el sistema dedica gran parte de su tiempo a mover páginas en lugar de ejecutar trabajo útil. Es un problema característico de una presión excesiva sobre la memoria virtual.",
+"explicacionFallo": "La cuarta opción identifica el fenómeno descrito. Spooling es una técnica de almacenamiento intermedio; deadlock es un interbloqueo entre procesos y recursos; y el swapping normal describe intercambio de procesos, pero no necesariamente la situación patológica de excesiva paginación."
+},
+{
+"pregunta": "Estás conectado a Ubuntu y quieres confirmar con qué cuenta estás trabajando antes de cambiar permisos. ¿Qué comando ejecutarías?",
+"tema": "Comandos básicos de Ubuntu",
+"opciones": [
+"whoami",
+"pwd",
+"uname -r",
+"hostname"
+],
+"respuestaCorrecta": "whoami",
+"explicacionAcierto": "El comando whoami muestra el nombre del usuario con el que se está ejecutando la sesión actual. Es apropiado para verificar la identidad de la cuenta antes de realizar operaciones relacionadas con permisos.",
+"explicacionFallo": "whoami responde directamente qué usuario está activo. pwd muestra el directorio de trabajo; uname -r muestra la versión del kernel; y hostname identifica el nombre del equipo, no la cuenta de usuario."
+},
+{
+"pregunta": "Quieres ver el UID, GID y grupos asociados al usuario Estudiante1. ¿Qué comando permite verificarlo directamente?",
+"tema": "Usuarios y grupos en Ubuntu",
+"opciones": [
+"whoami Estudiante1",
+"id Estudiante1",
+"groups --kernel Estudiante1",
+"pwd Estudiante1"
+],
+"respuestaCorrecta": "id Estudiante1",
+"explicacionAcierto": "El comando id muestra información de identidad del usuario, incluyendo UID, GID y grupos asociados. Por ello, id Estudiante1 permite comprobar directamente los datos solicitados.",
+"explicacionFallo": "id es el comando diseñado para mostrar UID, GID y grupos. whoami identifica el usuario actual y no acepta esa sintaxis para consultar todos esos datos; groups --kernel no es el comando indicado; y pwd muestra la ruta del directorio de trabajo."
+},
+{
+"pregunta": "Antes de crear archivos necesitas confirmar en qué directorio estás ubicado. ¿Qué comando usarías?",
+"tema": "Navegación en Ubuntu",
+"opciones": [
+"ls -la",
+"cd",
+"pwd",
+"whereami"
+],
+"respuestaCorrecta": "pwd",
+"explicacionAcierto": "pwd significa print working directory y muestra la ruta absoluta del directorio de trabajo actual. Es la herramienta adecuada para confirmar la ubicación antes de crear o manipular archivos.",
+"explicacionFallo": "pwd muestra directamente el directorio actual. ls -la lista archivos y directorios; cd cambia de directorio; y whereami no es el comando estándar indicado para esta operación."
+},
+{
+"pregunta": "Quieres listar también los archivos ocultos y ver permisos, propietario y grupo. ¿Qué comando es el más adecuado?",
+"tema": "Listado de archivos",
+"opciones": [
+"ls",
+"ls -h",
+"dir /a",
+"ls -la"
+],
+"respuestaCorrecta": "ls -la",
+"explicacionAcierto": "La opción -a hace que ls incluya archivos ocultos y -l proporciona un listado detallado que incluye permisos, propietario y grupo, entre otros datos. Por eso, ls -la satisface conjuntamente los requisitos planteados.",
+"explicacionFallo": "ls -la combina las dos opciones necesarias. ls sin opciones no muestra normalmente los ocultos ni proporciona el nivel de detalle solicitado; ls -h se relaciona con formatos legibles de tamaños; y dir /a corresponde a una sintaxis propia de otros entornos, no al comando indicado para Ubuntu."
+},
+{
+"pregunta": "Debes crear la estructura /UPC2026/SO en una sola instrucción aunque UPC2026 todavía no exista. ¿Qué comando usarías con privilegios suficientes?",
+"tema": "Creación de directorios",
+"opciones": [
+"sudo mkdir -p /UPC2026/SO",
+"sudo touch /UPC2026/SO",
+"sudo cd /UPC2026/SO",
+"mkdir /UPC2026 && rm SO"
+],
+"respuestaCorrecta": "sudo mkdir -p /UPC2026/SO",
+"explicacionAcierto": "mkdir crea directorios y la opción -p permite crear los directorios padre que todavía no existen. El uso de sudo aporta privilegios cuando la ubicación requiere permisos administrativos, por lo que la instrucción satisface todos los requisitos.",
+"explicacionFallo": "La primera opción combina creación de directorios, creación de padres y privilegios. touch crea archivos, no la estructura de directorios solicitada; cd cambia de ubicación pero no crea directorios; y la última opción no crea correctamente la estructura y además intenta eliminar un elemento."
+},
+{
+"pregunta": "Estás dentro de un directorio de práctica y quieres crear un archivo vacío llamado evidencia.txt. ¿Qué comando ejecutarías?",
+"tema": "Creación de archivos",
+"opciones": [
+"mkdir evidencia.txt",
+"touch evidencia.txt",
+"cat evidencia.txt > /dev/null",
+"nano -d evidencia.txt"
+],
+"respuestaCorrecta": "touch evidencia.txt",
+"explicacionAcierto": "touch puede crear un archivo vacío si el archivo indicado no existe. Por eso, touch evidencia.txt es la instrucción directa para crear el archivo solicitado sin introducir contenido.",
+"explicacionFallo": "touch es el comando apropiado para crear el archivo vacío. mkdir crea un directorio; cat con redirección no es la forma directa planteada para crear el archivo; y nano -d no corresponde a la sintaxis estándar indicada para crear un archivo vacío."
+},
+{
+"pregunta": "Quieres mostrar en pantalla el contenido de tarea.txt sin editarlo. ¿Qué comando usarías?",
+"tema": "Visualización de archivos",
+"opciones": [
+"pwd tarea.txt",
+"grep -r tarea.txt",
+"cat tarea.txt",
+"chmod tarea.txt"
+],
+"respuestaCorrecta": "cat tarea.txt",
+"explicacionAcierto": "cat lee el contenido de un archivo y lo escribe en la salida estándar, por lo que permite mostrar tarea.txt directamente sin abrir un editor ni modificar su contenido.",
+"explicacionFallo": "cat es la herramienta indicada para mostrar el contenido. pwd muestra una ruta; grep busca patrones de texto y la opción propuesta no expresa correctamente la operación solicitada; chmod modifica permisos y no sirve para visualizar el contenido."
+},
+{
+"pregunta": "Necesitas agregar la línea 'Prueba completada' al final de tarea.txt sin borrar lo anterior. ¿Cuál opción es correcta?",
+"tema": "Redirección de salida",
+"opciones": [
+"echo 'Prueba completada' > tarea.txt",
+"cat 'Prueba completada' tarea.txt",
+"touch 'Prueba completada' >> tarea.txt",
+"echo 'Prueba completada' >> tarea.txt"
+],
+"respuestaCorrecta": "echo 'Prueba completada' >> tarea.txt",
+"explicacionAcierto": "echo produce la cadena indicada y el operador >> redirige la salida agregándola al final del archivo, conservando el contenido existente. Por ello, esta combinación cumple exactamente con la operación solicitada.",
+"explicacionFallo": "La opción correcta utiliza >>, que agrega sin sobrescribir. El operador > reemplaza el contenido existente; cat no se utiliza así para añadir la cadena solicitada; y touch sirve principalmente para crear archivos o actualizar sus marcas de tiempo, no para escribir esa línea."
+},
+{
+"pregunta": "Quieres copiar tarea.txt al directorio Evidencias conservando el original. ¿Qué comando corresponde?",
+"tema": "Copia de archivos",
+"opciones": [
+"cp tarea.txt Evidencias/",
+"mv tarea.txt Evidencias/",
+"rm tarea.txt Evidencias/",
+"cat Evidencias/ tarea.txt"
+],
+"respuestaCorrecta": "cp tarea.txt Evidencias/",
+"explicacionAcierto": "cp crea una copia del archivo en la ubicación indicada y conserva el archivo original. Al especificar Evidencias/ como destino, tarea.txt queda copiado en ese directorio.",
+"explicacionFallo": "cp es el comando de copia. mv mueve o cambia de ubicación el archivo y, por tanto, no conserva el original en su ubicación; rm elimina archivos; y cat no es el comando destinado a copiar archivos entre directorios."
+},
+{
+"pregunta": "Necesitas cambiar el nombre de evidencia1.txt a evidencia_final.txt sin crear una copia adicional. ¿Qué comando usarías?",
+"tema": "Movimiento y renombrado",
+"opciones": [
+"cp evidencia1.txt evidencia_final.txt",
+"mv evidencia1.txt evidencia_final.txt",
+"rename --copy evidencia1.txt evidencia_final.txt",
+"touch evidencia_final.txt"
+],
+"respuestaCorrecta": "mv evidencia1.txt evidencia_final.txt",
+"explicacionAcierto": "mv permite mover un archivo y, cuando el destino está en el mismo directorio con otro nombre, funciona como una operación de renombrado. No crea una segunda copia independiente del archivo.",
+"explicacionFallo": "mv es la operación apropiada para renombrar sin conservar una copia adicional. cp sí crearía una copia; la sintaxis rename --copy no representa el comando solicitado; y touch sólo crearía o actualizaría un archivo con el nuevo nombre sin renombrar el original."
+},
+{
+"pregunta": "Quieres encontrar todos los archivos .txt dentro de /UPC2026. ¿Qué comando permite verificarlo?",
+"tema": "Búsqueda de archivos",
+"opciones": [
+"grep /UPC2026 '*.txt'",
+"ls /UPC2026 | txt",
+"find /UPC2026 -name '*.txt'",
+"pwd /UPC2026/*.txt"
+],
+"respuestaCorrecta": "find /UPC2026 -name '*.txt'",
+"explicacionAcierto": "find permite recorrer una jerarquía de directorios y aplicar criterios de búsqueda. Con /UPC2026 como punto de partida y -name '*.txt' como patrón, localiza los archivos cuya denominación termina en .txt.",
+"explicacionFallo": "find es la herramienta diseñada para localizar archivos por nombre dentro de una jerarquía. grep busca contenido o patrones de texto; ls lista directorios pero la tubería propuesta no constituye una búsqueda válida; y pwd muestra el directorio actual, no localiza archivos."
+},
+{
+"pregunta": "Dentro de tarea.txt quieres comprobar si aparece la palabra 'Sistemas'. ¿Qué comando es apropiado?",
+"tema": "Búsqueda de texto",
+"opciones": [
+"find Sistemas tarea.txt",
+"cat Sistemas > tarea.txt",
+"ls -S tarea.txt",
+"grep 'Sistemas' tarea.txt"
+],
+"respuestaCorrecta": "grep 'Sistemas' tarea.txt",
+"explicacionAcierto": "grep busca patrones de texto dentro de archivos. La expresión grep 'Sistemas' tarea.txt permite comprobar si la cadena indicada aparece en el contenido de tarea.txt y mostrar las líneas coincidentes.",
+"explicacionFallo": "grep es el comando destinado a buscar texto dentro de archivos. find busca archivos y directorios; cat con redirección escribiría contenido y podría sobrescribir el archivo; y ls -S ordena listados por tamaño, no busca palabras dentro de archivos."
+},
+{
+"pregunta": "Quieres saber qué versión del kernel Linux está ejecutando el equipo. ¿Qué comando utilizarías?",
+"tema": "Información del sistema",
+"opciones": [
+"uname -r",
+"kernel --version",
+"whoami -r",
+"ls /kernel"
+],
+"respuestaCorrecta": "uname -r",
+"explicacionAcierto": "uname proporciona información del sistema y la opción -r muestra la versión o release del kernel. Por ello, uname -r permite consultar directamente la versión del kernel Linux en ejecución.",
+"explicacionFallo": "uname -r es el comando y opción indicados para obtener la versión del kernel. Las otras alternativas no corresponden al comando estándar utilizado en el taller para esa consulta: whoami identifica al usuario y ls lista contenidos de directorios."
+},
+{
+"pregunta": "Necesitas revisar de forma legible cuánta memoria RAM está disponible y usada. ¿Qué comando ejecutarías?",
+"tema": "Memoria en Ubuntu",
+"opciones": [
+"df -h",
+"free -h",
+"ps -h",
+"ram -h"
+],
+"respuestaCorrecta": "free -h",
+"explicacionAcierto": "free muestra información sobre memoria disponible y utilizada. La opción -h presenta las cantidades en un formato legible para las personas, por lo que free -h responde directamente a la necesidad planteada.",
+"explicacionFallo": "free -h está destinado a consultar la memoria RAM de forma legible. df -h muestra espacio de sistemas de archivos; ps muestra información de procesos; y ram -h no es el comando estándar indicado para esta consulta."
+},
+{
+"pregunta": "Quieres consultar el espacio utilizado y disponible de los sistemas de archivos montados. ¿Qué comando es el más directo?",
+"tema": "Espacio en sistemas de archivos",
+"opciones": [
+"free -h",
+"du -u /",
+"df -h",
+"lsblk -p --users"
+],
+"respuestaCorrecta": "df -h",
+"explicacionAcierto": "df informa sobre el espacio utilizado y disponible de los sistemas de archivos. La opción -h presenta los tamaños en unidades legibles, por lo que df -h es la opción directa para consultar la capacidad disponible de los sistemas montados.",
+"explicacionFallo": "df -h está diseñado para mostrar uso y disponibilidad de sistemas de archivos. free -h se ocupa de memoria RAM; du se utiliza para estimar el espacio ocupado por archivos y directorios; y lsblk muestra información de dispositivos de bloque, no el resumen directo de espacio usado y disponible."
+},
+{
+"pregunta": "Necesitas ver una lista amplia de procesos en ejecución, incluyendo procesos de otros usuarios. ¿Qué comando del taller usarías?",
+"tema": "Procesos en Ubuntu",
+"opciones": [
+"who",
+"top -file",
+"ls -process",
+"ps aux"
+],
+"respuestaCorrecta": "ps aux",
+"explicacionAcierto": "ps permite consultar procesos y la combinación aux proporciona un listado amplio de procesos, incluyendo los pertenecientes a otros usuarios. Por ello, es apropiado para obtener una visión general de los procesos en ejecución.",
+"explicacionFallo": "ps aux es la opción indicada para obtener una lista amplia de procesos. who muestra información de usuarios conectados; top -file no es la sintaxis indicada; y ls -process no constituye el comando estándar para listar procesos."
+},
+{
+"pregunta": "En un archivo propiedad de Estudiante1 quieres dejar permisos rw-------. ¿Qué comando numérico representa exactamente esa configuración?",
+"tema": "Permisos de archivos",
+"opciones": [
+"chmod 600 tarea.txt",
+"chmod 700 tarea.txt",
+"chmod 644 tarea.txt",
+"chmod 666 tarea.txt"
+],
+"respuestaCorrecta": "chmod 600 tarea.txt",
+"explicacionAcierto": "En la representación octal de permisos, 6 corresponde a lectura y escritura, mientras que 0 significa ausencia de permisos. Por tanto, 600 establece rw-------: lectura y escritura para el propietario y ningún permiso para grupo ni otros.",
+"explicacionFallo": "600 representa exactamente rw-------. 700 añade permiso de ejecución al propietario; 644 concede lectura a grupo y otros; y 666 concede lectura y escritura también a grupo y otros. Por ello, ninguna de esas configuraciones coincide con la requerida."
+},
+{
+"pregunta": "Quieres que sólo el propietario pueda leer, escribir e ingresar al directorio SO, y nadie más tenga permisos. ¿Qué configuración corresponde?",
+"tema": "Permisos de directorios",
+"opciones": [
+"chmod 600 SO",
+"chmod 700 SO",
+"chmod 755 SO",
+"chmod 777 SO"
+],
+"respuestaCorrecta": "chmod 700 SO",
+"explicacionAcierto": "Para un directorio, 7 representa lectura, escritura y ejecución para el propietario. En un directorio, el permiso de ejecución permite ingresar o atravesarlo. Los ceros posteriores eliminan todos los permisos para grupo y otros, dando como resultado la configuración solicitada.",
+"explicacionFallo": "700 concede rwx al propietario y ningún permiso a los demás. 600 no proporciona ejecución, necesaria para ingresar al directorio; 755 concede permisos de lectura y ejecución a grupo y otros; y 777 concede todos los permisos a todos."
+},
+{
+"pregunta": "El archivo tarea.txt fue creado por root, pero deseas que Estudiante1 sea su propietario y también su grupo principal. ¿Qué comando usarías?",
+"tema": "Propietarios y grupos",
+"opciones": [
+"chmod Estudiante1:Estudiante1 tarea.txt",
+"usermod tarea.txt Estudiante1",
+"sudo chown Estudiante1:Estudiante1 tarea.txt",
+"sudo passwd Estudiante1 tarea.txt"
+],
+"respuestaCorrecta": "sudo chown Estudiante1:Estudiante1 tarea.txt",
+"explicacionAcierto": "chown permite cambiar el propietario y el grupo de un archivo. La sintaxis usuario:grupo permite establecer ambos simultáneamente, y sudo proporciona los privilegios necesarios cuando el archivo pertenece originalmente a root.",
+"explicacionFallo": "chown es el comando destinado a modificar propietario y grupo. chmod cambia permisos, no propietarios; usermod modifica propiedades de cuentas de usuario; y passwd gestiona contraseñas, por lo que ninguna de esas alternativas realiza la operación solicitada."
+},
+{
+"pregunta": "Quieres comprobar desde la terminal que Usuario1 no puede leer /UPC2026/SO/tarea.txt sin cambiar de sesión gráfica. ¿Qué prueba es la más adecuada si tienes sudo?",
+"tema": "Pruebas de permisos",
+"opciones": [
+"sudo chmod Usuario1 /UPC2026/SO/tarea.txt",
+"sudo cat --user Usuario1 /UPC2026/SO/tarea.txt",
+"su tarea.txt Usuario1",
+"sudo -u Usuario1 cat /UPC2026/SO/tarea.txt"
+],
+"respuestaCorrecta": "sudo -u Usuario1 cat /UPC2026/SO/tarea.txt",
+"explicacionAcierto": "sudo -u permite ejecutar un comando como un usuario diferente. Al ejecutar cat como Usuario1, la lectura se prueba bajo la identidad y permisos efectivos de ese usuario, permitiendo comprobar desde la misma terminal si el acceso al archivo está correctamente restringido.",
+"explicacionFallo": "sudo -u Usuario1 cat realiza la prueba bajo la cuenta que se quiere verificar. chmod modifica permisos en lugar de comprobarlos; sudo cat --user no representa la sintaxis indicada para ejecutar cat como otro usuario; y su tarea.txt Usuario1 no es una forma válida de realizar esta prueba."
+}
+]

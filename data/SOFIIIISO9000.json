@@ -1,0 +1,327 @@
+[
+{
+"pregunta": "Una empresa quiere certificarse, pero pretende comenzar directamente con la auditoría de certificación para ahorrar tiempo. Según el mapa de ruta presentado, ¿cuál es el principal problema de este enfoque?",
+"tema": "Proyecto de certificación",
+"opciones": [
+"La auditoría de certificación debe realizarse después de construir, implementar, auditar y corregir el SGC",
+"La auditoría de certificación solo puede realizarse antes de definir el alcance de los procesos",
+"La capacitación del personal sustituye la necesidad de una auditoría interna previa",
+"La entidad certificadora es responsable de construir el SGC antes de evaluarlo"
+],
+"respuestaCorrecta": "La auditoría de certificación debe realizarse después de construir, implementar, auditar y corregir el SGC",
+"explicacionAcierto": "La lógica del mapa de ruta es secuencial: primero se analiza el contexto y alcance, después se construye y capacita, luego se ejecuta el sistema y se realiza una auditoría interna, se corrigen los incumplimientos y finalmente interviene la entidad de certificación. La certificación evalúa un sistema que ya debe estar funcionando, no una intención de implementarlo.",
+"explicacionFallo": "La primera opción es correcta porque respeta la secuencia de preparación y verificación. La segunda es falsa porque el alcance se define al inicio. La tercera es falsa porque la capacitación forma parte de la construcción, pero no sustituye la comprobación mediante auditoría interna. La cuarta es engañosa: la entidad certificadora interviene al final para evaluar la conformidad, no para diseñar el SGC de la empresa."
+},
+{
+"pregunta": "Una organización tiene procedimientos documentados, pero sus empleados los desconocen y las actividades se realizan de manera improvisada. ¿Qué conclusión se ajusta mejor al enfoque del documento?",
+"tema": "Sistema de Gestión de la Calidad",
+"opciones": [
+"La existencia de documentos por sí sola demuestra que el SGC está funcionando correctamente",
+"El sistema presenta una brecha entre la documentación y la ejecución real de los procesos",
+"La improvisación es positiva porque permite adaptar libremente todos los procesos",
+"La certificación elimina la necesidad de que el personal conozca los procedimientos"
+],
+"respuestaCorrecta": "El sistema presenta una brecha entre la documentación y la ejecución real de los procesos",
+"explicacionAcierto": "El documento presenta el SGC como un sistema operativo, no como un conjunto de documentos aislados. La documentación debe respaldar una forma estructurada de trabajar y, durante la etapa de ejecución y auditoría interna, debe demostrarse que el sistema se utiliza realmente. Por ello, tener procedimientos escritos sin aplicación efectiva revela una desconexión importante.",
+"explicacionFallo": "La primera opción confunde documentación con funcionamiento real. La tercera contradice la idea de estandarización y previsibilidad que busca el sistema. La cuarta también es incorrecta porque el proyecto incluye explícitamente la capacitación del personal; además, el compromiso de las personas es uno de los principios de calidad."
+},
+{
+"pregunta": "Una empresa desea reducir su dependencia de empleados que resuelven problemas mediante experiencia personal y esfuerzo extraordinario. ¿Qué transformación representa mejor el propósito de la ISO 9000 descrito en el documento?",
+"tema": "Excelencia operativa",
+"opciones": [
+"Sustituir el conocimiento individual por sistemas robustos, predecibles y estandarizados",
+"Eliminar toda intervención humana mediante automatización completa",
+"Permitir que cada empleado establezca sus propios procedimientos",
+"Concentrar todas las decisiones operativas exclusivamente en la Alta Dirección"
+],
+"respuestaCorrecta": "Sustituir el conocimiento individual por sistemas robustos, predecibles y estandarizados",
+"explicacionAcierto": "El documento plantea que la norma ayuda a que las empresas no dependan de un esfuerzo heroico de las personas, sino que sean impulsadas por sistemas robustos y predecibles. La estandarización convierte buenas prácticas individuales en formas organizadas y reproducibles de operar, favoreciendo la excelencia operativa.",
+"explicacionFallo": "La primera opción recoge directamente la transformación descrita. La segunda exagera el concepto: el objetivo no es eliminar a las personas. La tercera produce precisamente la variabilidad que la estandarización busca reducir. La cuarta tampoco representa el modelo, porque el sistema distribuye responsabilidades y contempla el compromiso de las personas en todos los niveles."
+},
+{
+"pregunta": "Durante la Primera Guerra Mundial se detectó que la diversidad de componentes dificultaba el intercambio y reparación de armamento. ¿Qué principio de gestión se puede inferir de esta situación según el documento?",
+"tema": "Origen de la estandarización",
+"opciones": [
+"La estandarización permite producir componentes compatibles y facilitar su mantenimiento",
+"La diversidad de componentes garantiza siempre una mayor eficiencia productiva",
+"La calidad depende principalmente de aumentar la cantidad de componentes diferentes",
+"La incompatibilidad es necesaria para proteger los procesos frente al comercio externo"
+],
+"respuestaCorrecta": "La estandarización permite producir componentes compatibles y facilitar su mantenimiento",
+"explicacionAcierto": "El documento vincula el problema histórico de la incompatibilidad con la necesidad de estandarizar. Los componentes estandarizados permiten ajustes precisos, producción en serie, mantenimiento más ágil e intercambio de piezas. El ejemplo histórico sirve para mostrar por qué la uniformidad puede convertirse en una ventaja operativa.",
+"explicacionFallo": "La primera opción explica la relación causal presentada. La segunda y la tercera invierten el problema: la diversidad antieconómica de componentes era precisamente una dificultad. La cuarta también es falsa porque el documento señala que la estandarización facilita el comercio externo, no que lo obstaculice."
+},
+{
+"pregunta": "Una organización afirma que ISO 9001 y ISO 9000 son equivalentes porque ambas pertenecen a la misma familia. ¿Cuál sería la corrección más precisa según la matriz presentada?",
+"tema": "Familia ISO 9000",
+"opciones": [
+"ISO 9000 aporta fundamentos y vocabulario, mientras ISO 9001 establece requisitos para un SGC certificable",
+"ISO 9000 es la única norma certificable y ISO 9001 solo contiene vocabulario",
+"ISO 9001 se utiliza exclusivamente para control de productos no conformes",
+"ISO 9000 y ISO 9001 tienen exactamente el mismo propósito y contenido"
+],
+"respuestaCorrecta": "ISO 9000 aporta fundamentos y vocabulario, mientras ISO 9001 establece requisitos para un SGC certificable",
+"explicacionAcierto": "La matriz diferencia las funciones de las normas. ISO 9000 se presenta como la norma de fundamentos y vocabulario de la familia, mientras ISO 9001 proporciona el modelo de requisitos para los Sistemas de Gestión de la Calidad y es la única indicada como certificable en la matriz.",
+"explicacionFallo": "La primera opción distingue correctamente sus funciones. La segunda invierte los papeles y contradice la matriz. La tercera reduce ISO 9001 a un solo componente del sistema, cuando sus requisitos abarcan la operación global del SGC. La cuarta ignora la diferenciación explícita de propósito entre las normas."
+},
+{
+"pregunta": "Una empresa de servicios cree que la ISO 9001 no puede aplicarse porque no fabrica productos físicos. ¿Qué elemento de la evolución histórica cuestiona directamente esta conclusión?",
+"tema": "Evolución de ISO 9000",
+"opciones": [
+"La revisión del año 2000 amplió y simplificó la norma para aplicarla también a servicios y Administración Pública",
+"La versión de 1987 estaba diseñada específicamente para empresas de servicios",
+"La norma nació en 2015 exclusivamente para organizaciones públicas",
+"La ISO 9001 solo puede aplicarse cuando existen componentes físicos intercambiables"
+],
+"respuestaCorrecta": "La revisión del año 2000 amplió y simplificó la norma para aplicarla también a servicios y Administración Pública",
+"explicacionAcierto": "La evolución histórica presentada señala que el año 2000 supuso un salto universal: la norma se simplificó y pasó a ser aplicable a empresas de servicios y a la Administración Pública. Por tanto, la ausencia de fabricación física no impide su aplicación.",
+"explicacionFallo": "La primera opción coincide con la evolución descrita. La segunda es falsa porque el periodo 1987-1994 aparece asociado al paradigma industrial. La tercera es incorrecta porque 2015 se presenta como la versión vigente y estándar moderno de gestión, no como su nacimiento para el sector público. La cuarta confunde el origen histórico de la estandarización de componentes con el alcance actual de un SGC."
+},
+{
+"pregunta": "Una organización considera que obtener el certificado constituye el objetivo final y que después puede dejar de revisar su sistema. ¿Por qué esta interpretación contradice el documento?",
+"tema": "Después de la certificación",
+"opciones": [
+"Porque la certificación inicia una etapa que exige inspecciones periódicas, mejora continua y compromiso sostenido",
+"Porque el certificado solo tiene valor durante el día de la auditoría",
+"Porque después de certificarse la organización debe sustituir completamente su SGC",
+"Porque la certificación obliga a abandonar la estandarización para favorecer la innovación espontánea"
+],
+"respuestaCorrecta": "Porque la certificación inicia una etapa que exige inspecciones periódicas, mejora continua y compromiso sostenido",
+"explicacionAcierto": "El documento define explícitamente la certificación como el inicio de una operación de alto rendimiento, no como un trofeo estático. La vigencia requiere revisiones periódicas y el SGC debe mantenerse como un organismo vivo que se adapta y mejora continuamente, con apoyo permanente de la Dirección.",
+"explicacionFallo": "La primera opción integra los tres elementos posteriores a la certificación. La segunda es falsa porque se mencionan inspecciones anuales para mantener la vigencia. La tercera no corresponde al enfoque: el sistema debe mantenerse y mejorar, no reemplazarse completamente. La cuarta también es falsa porque la mejora se realiza dentro de un sistema estructurado, no abandonando la estandarización."
+},
+{
+"pregunta": "Si una empresa quiere demostrar mediante evidencias que sus procedimientos se están aplicando de manera consistente, ¿qué elemento de la columna vertebral documental cumple mejor esa función?",
+"tema": "Documentación del SGC",
+"opciones": [
+"Los registros de la calidad",
+"Las políticas de gestión y control",
+"La auditoría de certificación",
+"El análisis y alcance inicial"
+],
+"respuestaCorrecta": "Los registros de la calidad",
+"explicacionAcierto": "Los registros de la calidad se describen como evidencia palpable y como mecanismo de trazabilidad del uso constante del sistema. Por ello, son especialmente adecuados para demostrar que las actividades documentadas no permanecen solo como instrucciones, sino que generan evidencia de ejecución.",
+"explicacionFallo": "La primera opción es correcta por su función probatoria y de trazabilidad. Las políticas de gestión y control constituyen la directriz superior, pero no son principalmente la evidencia de cada ejecución. La auditoría de certificación evalúa la conformidad, pero no sustituye los registros generados por la organización. El análisis y alcance inicial define qué se certificará, no demuestra la ejecución cotidiana."
+},
+{
+"pregunta": "Una auditoría interna descubre que un problema se repite porque la organización solo corrige cada incidente cuando aparece, sin investigar su origen. ¿Qué elemento del sistema debería fortalecerse?",
+"tema": "Acciones correctivas y preventivas",
+"opciones": [
+"Las acciones correctivas y preventivas orientadas a solucionar problemas de raíz y anticipar fallas",
+"Los registros, únicamente para conservar una lista histórica de incidentes",
+"Las políticas, únicamente para aumentar su extensión documental",
+"La auditoría de certificación, para que la entidad externa resuelva directamente el problema"
+],
+"respuestaCorrecta": "Las acciones correctivas y preventivas orientadas a solucionar problemas de raíz y anticipar fallas",
+"explicacionAcierto": "El documento caracteriza estas acciones como mecanismos para solucionar problemas de raíz y anticipar fallas. Por ello, una respuesta que solo atiende cada incidente de manera aislada no alcanza el objetivo de eliminar las causas y prevenir recurrencias.",
+"explicacionFallo": "La primera opción aborda directamente la situación. Los registros pueden aportar evidencia, pero registrar un problema no equivale a eliminar su causa. Ampliar las políticas tampoco garantiza una solución operativa. Finalmente, la entidad certificadora verifica la conformidad; la organización debe adoptar las medidas correctivas necesarias."
+},
+{
+"pregunta": "¿Qué relación lógica existe entre el control del producto no conforme y la promesa de calidad al cliente?",
+"tema": "Control de producto no conforme",
+"opciones": [
+"Identificar y aislar errores antes de que lleguen al cliente protege la consistencia de la entrega",
+"Permitir que los productos no conformes lleguen al cliente facilita la mejora continua",
+"Eliminar los registros de productos defectuosos evita que la organización parezca inconsistente",
+"El control de productos no conformes solo sirve para cumplir requisitos internos sin relación con el cliente"
+],
+"respuestaCorrecta": "Identificar y aislar errores antes de que lleguen al cliente protege la consistencia de la entrega",
+"explicacionAcierto": "En la estructura documental, el control de producto no conforme aparece como la base y contempla protocolos escritos para identificar y aislar errores antes de que lleguen al cliente. Esto conecta el control interno con la promesa externa de entregar productos o servicios conforme a los requisitos.",
+"explicacionFallo": "La primera opción establece la conexión correcta entre prevención interna y satisfacción del cliente. La segunda es falsa porque entregar deliberadamente productos no conformes contradice el objetivo de calidad. La tercera elimina precisamente la trazabilidad que el sistema necesita. La cuarta es incorrecta porque el control tiene una consecuencia directa sobre lo que recibe el cliente."
+},
+{
+"pregunta": "Una empresa quiere diseñar un SGC idéntico al de otra organización porque considera que la ISO 9001 proporciona instrucciones detalladas sobre cómo realizar cada tarea. ¿Qué principio del documento debería corregir esa interpretación?",
+"tema": "Autonomía organizacional",
+"opciones": [
+"La norma define requisitos estructurados, pero cada empresa desarrolla el cómo adaptado a su propia realidad",
+"La norma obliga a todas las empresas a utilizar exactamente los mismos procedimientos operativos",
+"La norma sustituye la toma de decisiones interna por instrucciones de la entidad certificadora",
+"La norma determina únicamente los tiempos de entrega y no interviene en la estructura del SGC"
+],
+"respuestaCorrecta": "La norma define requisitos estructurados, pero cada empresa desarrolla el cómo adaptado a su propia realidad",
+"explicacionAcierto": "La sección sobre la frontera entre el qué y el cómo señala que la empresa desarrolla criterios específicos, construye su propio SGC y diseña cómo realizará sus tareas. La norma exige que la forma de operar esté estructurada, documentada y optimizada, pero no enseña a realizar el negocio de una única manera.",
+"explicacionFallo": "La primera opción refleja la autonomía que el documento atribuye a la organización. La segunda es falsa porque los requerimientos son genéricos precisamente para adaptarse a diferentes empresas. La tercera confunde evaluación externa con diseño interno. La cuarta reduce indebidamente la norma a un aspecto concreto como los tiempos de entrega."
+},
+{
+"pregunta": "Una compañía analiza el costo de implantar un SGC y observa que debe invertir en consultoría, documentación y tiempo del personal. ¿Qué interpretación ofrece el documento sobre esta inversión?",
+"tema": "Inversión y beneficios",
+"opciones": [
+"Esfuerzos iniciales de implantación pueden generar dividendos estructurales mediante estandarización, medición, satisfacción y mejora",
+"La inversión inicial demuestra que la ISO 9001 solo genera costos y no beneficios operativos",
+"Los costos desaparecen porque la certificación elimina la necesidad de personal dedicado al sistema",
+"La principal ventaja de la inversión consiste exclusivamente en obtener un certificado"
+],
+"respuestaCorrecta": "Esfuerzos iniciales de implantación pueden generar dividendos estructurales mediante estandarización, medición, satisfacción y mejora",
+"explicacionAcierto": "El documento contrapone la inversión inicial —esfuerzos documentales, consultoría, manuales y tiempo del personal— con beneficios estructurales. Entre ellos aparecen la estandarización, la mejora de la satisfacción del cliente, la inteligencia operativa mediante medición y la reducción de incidencias junto con la mejora continua.",
+"explicacionFallo": "La primera opción recoge la relación entre esfuerzo y beneficios presentada. La segunda ignora los dividendos estructurales. La tercera es falsa porque la implantación requiere participación y compromiso del personal. La cuarta reduce el valor del sistema a la certificación, contradiciendo la idea de que la certificación es el inicio de una operación de alto rendimiento."
+},
+{
+"pregunta": "Si una empresa desea disminuir la variabilidad de sus resultados, ¿qué beneficio de la estandarización resulta más directamente relacionado con ese objetivo?",
+"tema": "Estandarización",
+"opciones": [
+"Unificar actividades para que el trabajo se ejecute de manera consistente y reducir incidencias negativas",
+"Permitir que cada área cambie sus procedimientos diariamente sin criterios comunes",
+"Eliminar toda medición para evitar diferencias entre resultados",
+"Concentrar exclusivamente la calidad en la inspección final del producto"
+],
+"respuestaCorrecta": "Unificar actividades para que el trabajo se ejecute de manera consistente y reducir incidencias negativas",
+"explicacionAcierto": "La estandarización se presenta como un paso hacia la excelencia operativa porque unifica actividades y favorece servicios consistentes. Al reducir la variabilidad de la forma de trabajar, contribuye también a disminuir incidencias negativas y a sostener la mejora.",
+"explicacionFallo": "La primera opción conecta directamente estandarización, consistencia y reducción de incidencias. La segunda genera variabilidad, justo lo contrario. La tercera elimina la inteligencia operativa basada en medición y monitoreo. La cuarta limita la calidad a la inspección final, mientras el SGC busca estructurar los procesos de manera integral."
+},
+{
+"pregunta": "Un proveedor entrega insumos con una variabilidad elevada y la empresa compradora observa que esto genera fallos internos. ¿Qué principio de ISO 9000 explica mejor por qué debería gestionarse la relación con ese proveedor?",
+"tema": "Gestión de relaciones",
+"opciones": [
+"La calidad debe extenderse a la cadena de valor mediante relaciones estratégicas con proveedores",
+"La calidad comienza únicamente cuando los insumos entran físicamente a la empresa",
+"Los proveedores son externos y, por definición, quedan fuera de cualquier consideración del SGC",
+"La gestión de relaciones solo se refiere a las comunicaciones con los clientes finales"
+],
+"respuestaCorrecta": "La calidad debe extenderse a la cadena de valor mediante relaciones estratégicas con proveedores",
+"explicacionAcierto": "El documento explica el principio 7 mediante una reacción en cadena: proveedores con sistemas de calidad favorecen insumos estandarizados, que reducen fallos y variabilidad en la operación interna y ayudan a cumplir la promesa al cliente. Así, la calidad no se detiene en los límites físicos de la empresa.",
+"explicacionFallo": "La primera opción expresa exactamente la lógica del principio de gestión de relaciones. La segunda ignora que la calidad de los insumos afecta la operación. La tercera contradice explícitamente el documento, que destaca a los proveedores como parte del ecosistema. La cuarta es demasiado limitada: el principio abarca relaciones estratégicas con proveedores y otros integrantes de la cadena de valor."
+},
+{
+"pregunta": "Una empresa quiere mejorar su sistema, pero toma decisiones únicamente basándose en opiniones de sus directivos, aunque dispone de datos sobre desempeño. ¿Qué principio está aplicando de manera deficiente?",
+"tema": "Principios de gestión de la calidad",
+"opciones": [
+"Toma de decisiones basada en evidencia",
+"Liderazgo",
+"Gestión de las relaciones",
+"Compromiso de las personas"
+],
+"respuestaCorrecta": "Toma de decisiones basada en evidencia",
+"explicacionAcierto": "Entre los siete principios del documento se encuentra la toma de decisiones basada en evidencia, descrita como el análisis de datos frente a la intuición. Si existen datos relevantes y se decide ignorarlos para depender exclusivamente de opiniones, se está debilitando precisamente este principio.",
+"explicacionFallo": "La primera opción corresponde directamente al problema descrito. El liderazgo se refiere al direccionamiento estratégico desde la Alta Gerencia, no específicamente al método utilizado para sustentar decisiones. La gestión de relaciones trata de la integración con proveedores y otros actores. El compromiso de las personas implica involucramiento en todos los niveles, pero no sustituye el uso de evidencia."
+},
+{
+"pregunta": "Una organización diseña procesos aislados, de modo que optimizar uno de ellos perjudica a otros. ¿Qué principio de ISO 9000 debería orientar una solución más sistémica?",
+"tema": "Enfoque basado en procesos",
+"opciones": [
+"Gestionar las actividades como un sistema unificado y relacionado",
+"Delegar todos los procesos a la Alta Dirección",
+"Eliminar los procedimientos para permitir máxima flexibilidad",
+"Medir únicamente el resultado final sin analizar cómo se obtiene"
+],
+"respuestaCorrecta": "Gestionar las actividades como un sistema unificado y relacionado",
+"explicacionAcierto": "El principio de enfoque basado en procesos propone gestionar las actividades como un sistema unificado. Esto permite analizar las interacciones entre procesos y evitar que la optimización aislada de una actividad perjudique el desempeño global de la organización.",
+"explicacionFallo": "La primera opción representa el enfoque sistémico. La segunda contradice la idea de gestionar procesos interrelacionados mediante responsabilidades organizadas. La tercera elimina la estructura que el SGC pretende establecer. La cuarta es insuficiente porque el enfoque basado en procesos requiere comprender cómo las actividades se conectan, no limitarse al resultado final."
+},
+{
+"pregunta": "Una organización mantiene un SGC sin modificarlo durante años aunque cambien sus procesos, necesidades y condiciones operativas. ¿Qué principio y característica posterior a la certificación están siendo ignorados?",
+"tema": "Mejora continua",
+"opciones": [
+"El principio de mejora y la necesidad de que el SGC se adapte continuamente",
+"El liderazgo, entendido como centralización permanente de todas las actividades",
+"La gestión de relaciones, entendida exclusivamente como negociación comercial",
+"El control de producto no conforme, entendido como sustituto de toda mejora"
+],
+"respuestaCorrecta": "El principio de mejora y la necesidad de que el SGC se adapte continuamente",
+"explicacionAcierto": "La mejora aparece como uno de los siete principios y como el motor de la organización. Además, después de la certificación se indica que el SGC debe ser un organismo vivo que se adapta y mejora continuamente. Mantenerlo inalterado frente a cambios contradice ambos planteamientos.",
+"explicacionFallo": "La primera opción integra correctamente el principio y su aplicación posterior a la certificación. La segunda describe de manera incorrecta el liderazgo, que es direccionamiento estratégico, no centralización absoluta. La tercera reduce demasiado la gestión de relaciones. La cuarta convierte un mecanismo específico de control de no conformidades en sustituto de la mejora, algo que el documento no plantea."
+},
+{
+"pregunta": "Durante la preparación para la certificación, una organización descubre que no sabe con claridad qué procesos pretende incluir en el sistema. ¿En qué etapa debería resolver principalmente esta situación?",
+"tema": "Análisis y alcance",
+"opciones": [
+"En el análisis inicial y definición del alcance de los procesos a certificar",
+"Durante la auditoría de certificación, dejando que la entidad externa decida el alcance",
+"Después de obtener el certificado, como parte de las inspecciones anuales",
+"Únicamente durante la elaboración de los registros de calidad"
+],
+"respuestaCorrecta": "En el análisis inicial y definición del alcance de los procesos a certificar",
+"explicacionAcierto": "El primer paso del mapa de ruta consiste en analizar dónde está la organización, dónde debe llegar y definir el alcance de los procesos a certificar. Por tanto, la incertidumbre sobre qué procesos forman parte del sistema debe resolverse antes de construir y ejecutar el SGC.",
+"explicacionFallo": "La primera opción coincide con el primer paso del proyecto. La segunda es incorrecta porque la entidad certificadora evalúa la conformidad del sistema, no sustituye a la organización en la definición inicial de su alcance. La tercera ocurre después de la certificación y tiene otra finalidad. La cuarta confunde la definición del alcance con la generación de evidencia."
+},
+{
+"pregunta": "Una empresa quiere saber si su SGC funciona antes de presentarse a la entidad certificadora. ¿Por qué la auditoría interna ocupa un lugar estratégico en el mapa de ruta?",
+"tema": "Auditoría interna",
+"opciones": [
+"Permite evaluar internamente el desempeño del sistema y detectar incumplimientos que pueden corregirse antes de la certificación",
+"Sustituye definitivamente la auditoría de certificación externa",
+"Sirve principalmente para definir el alcance antes de construir el SGC",
+"Tiene como finalidad emitir el certificado de conformidad"
+],
+"respuestaCorrecta": "Permite evaluar internamente el desempeño del sistema y detectar incumplimientos que pueden corregirse antes de la certificación",
+"explicacionAcierto": "La tercera etapa del mapa consiste en utilizar realmente el SGC durante varios meses y auditar internamente su desempeño. Esto permite identificar áreas de incumplimiento y conduce a la etapa posterior de acciones correctivas, preparando a la organización para la auditoría de certificación.",
+"explicacionFallo": "La primera opción explica la función estratégica de la auditoría interna. La segunda es falsa porque la auditoría de certificación sigue siendo una etapa posterior y externa. La tercera corresponde al análisis y alcance inicial. La cuarta pertenece a la entidad de certificación, que es quien interviene para emitir el certificado de conformidad."
+},
+{
+"pregunta": "Si una empresa desea garantizar que sus acuerdos de nivel de servicio y plazos operativos se cumplan de forma consistente, ¿qué aspecto de ISO 9001:2015 señalado en el documento resulta especialmente pertinente?",
+"tema": "ISO 9001:2015",
+"opciones": [
+"El aseguramiento de los SLA y el monitoreo estricto de los tiempos de entrega",
+"La eliminación de la medición para favorecer la autonomía de cada departamento",
+"La aplicación exclusiva de controles sobre proveedores sin considerar al cliente",
+"La sustitución de todos los procesos por políticas generales sin indicadores operativos"
+],
+"respuestaCorrecta": "El aseguramiento de los SLA y el monitoreo estricto de los tiempos de entrega",
+"explicacionAcierto": "La radiografía de ISO 9001:2015 presentada incluye los niveles de servicio o SLA y el monitoreo de tiempos de entrega como elementos vinculados al funcionamiento cotidiano del sistema. Ambos permiten convertir compromisos con el cliente en aspectos observables y controlables.",
+"explicacionFallo": "La primera opción relaciona directamente los compromisos de servicio con su seguimiento. La segunda contradice el énfasis en medición y monitoreo. La tercera limita indebidamente el sistema a proveedores e ignora los requisitos y expectativas del cliente. La cuarta elimina la estructura operativa que precisamente busca regular el SGC."
+},
+{
+"pregunta": "Una organización sostiene que la ISO 9001 solo puede aplicarse a grandes empresas porque los sistemas de calidad requieren estructuras complejas. ¿Qué característica descrita en el documento contradice mejor esa afirmación?",
+"tema": "Universalidad de ISO 9001",
+"opciones": [
+"Los requisitos son genéricos intencionalmente para aplicarse a empresas de cualquier tamaño y actividad",
+"La norma exige que todas las organizaciones tengan departamentos idénticos",
+"La norma está diseñada exclusivamente para grandes fabricantes industriales",
+"La norma solo puede aplicarse cuando existe una cadena internacional de proveedores"
+],
+"respuestaCorrecta": "Los requisitos son genéricos intencionalmente para aplicarse a empresas de cualquier tamaño y actividad",
+"explicacionAcierto": "El documento destaca la universalidad de ISO 9001: sus requerimientos son genéricos de manera intencional para poder aplicarse independientemente del tamaño, actividad o planificación de la organización. Esto no significa que todas las empresas implementen el sistema de idéntica forma, sino que pueden adaptarlo a su realidad.",
+"explicacionFallo": "La primera opción refleja explícitamente la característica de universalidad. La segunda es falsa porque la norma no exige estructuras organizativas idénticas. La tercera reproduce una visión industrial que el documento presenta como propia de etapas anteriores. La cuarta inventa una condición que no aparece como requisito de aplicación."
+},
+{
+"pregunta": "Una empresa recibe la certificación y, seis meses después, la Alta Dirección deja de participar porque considera que la responsabilidad del sistema corresponde exclusivamente al departamento de calidad. ¿Qué principio queda más claramente debilitado?",
+"tema": "Liderazgo y compromiso",
+"opciones": [
+"Liderazgo y compromiso sostenido de la Alta Dirección",
+"Control de producto no conforme como única responsabilidad de producción",
+"Gestión de relaciones exclusivamente con proveedores",
+"Vocabulario y fundamentos de la familia ISO 9000"
+],
+"respuestaCorrecta": "Liderazgo y compromiso sostenido de la Alta Dirección",
+"explicacionAcierto": "El principio de liderazgo implica direccionamiento estratégico desde la Alta Gerencia. Además, el apartado posterior a la certificación exige que el apoyo de la Dirección continúe más allá del hito de certificación. Por tanto, retirarse después de obtener el certificado contradice directamente esa expectativa.",
+"explicacionFallo": "La primera opción conecta el liderazgo con el compromiso sostenido. La segunda se refiere a un mecanismo operativo específico y no a la dirección estratégica. La tercera corresponde al principio de gestión de relaciones, pero no explica la retirada de la Alta Dirección. La cuarta se refiere a fundamentos y vocabulario, no al comportamiento directivo."
+},
+{
+"pregunta": "Una empresa decide mejorar su satisfacción del cliente únicamente aumentando las inspecciones finales, sin revisar sus procesos ni la calidad de sus insumos. ¿Por qué este enfoque resulta incompleto frente al modelo descrito?",
+"tema": "Enfoque sistémico de la calidad",
+"opciones": [
+"La calidad se construye mediante procesos estructurados, insumos controlados, medición, relaciones y mejora, no solo mediante inspección final",
+"La inspección final siempre es suficiente porque elimina la necesidad de controlar procesos anteriores",
+"Los proveedores no influyen en la calidad porque la empresa puede corregir cualquier defecto al final",
+"La satisfacción del cliente depende exclusivamente de la existencia de un certificado"
+],
+"respuestaCorrecta": "La calidad se construye mediante procesos estructurados, insumos controlados, medición, relaciones y mejora, no solo mediante inspección final",
+"explicacionAcierto": "El documento presenta la calidad como un sistema integrado: la gestión de proveedores afecta los insumos, el enfoque basado en procesos organiza la operación, la evidencia permite decidir, la mejora mantiene vivo el sistema y el control de no conformidades busca evitar que los errores lleguen al cliente. Por ello, concentrarse únicamente en la inspección final es una visión demasiado limitada.",
+"explicacionFallo": "La primera opción integra los distintos elementos del modelo. La segunda es falsa porque detectar al final no sustituye la prevención y el control durante el proceso. La tercera contradice la reacción en cadena descrita para la gestión de relaciones. La cuarta confunde certificación con desempeño: el documento presenta la certificación como el inicio de una operación de alto rendimiento, no como garantía automática de satisfacción."
+},
+{
+"pregunta": "Una organización documenta cuidadosamente sus procesos, pero nunca mide su desempeño ni utiliza los datos para modificar el sistema. ¿Qué combinación de principios está siendo desaprovechada?",
+"tema": "Medición y mejora",
+"opciones": [
+"Toma de decisiones basada en evidencia y mejora continua",
+"Gestión de relaciones y liderazgo exclusivamente",
+"Compromiso de las personas y vocabulario de ISO 9000",
+"Control de producto no conforme y alcance, sin relación con la mejora"
+],
+"respuestaCorrecta": "Toma de decisiones basada en evidencia y mejora continua",
+"explicacionAcierto": "La documentación estructura la forma de operar, pero el documento también destaca la medición y monitoreo como parte de los beneficios del sistema. Sin utilizar datos para decidir, se desaprovecha el principio de toma de decisiones basada en evidencia; sin convertir esos aprendizajes en cambios, también se debilita la mejora continua.",
+"explicacionFallo": "La primera opción conecta correctamente medición, decisiones y mejora. La segunda no explica el problema central de ausencia de datos. La tercera mezcla un principio relativo a la participación de las personas con el vocabulario de una norma, que no constituye un mecanismo de mejora. La cuarta se centra en elementos específicos y no aborda la ausencia de análisis y aprendizaje."
+},
+{
+"pregunta": "Considerando en conjunto la evolución histórica, la estructura documental, los siete principios y el proceso de certificación, ¿cuál describe mejor la idea central de la ISO 9000 presentada en el documento?",
+"tema": "Integración conceptual",
+"opciones": [
+"Transformar la calidad en un sistema organizado, documentado, medible y orientado a la mejora continua, en lugar de depender de esfuerzos individuales",
+"Convertir la calidad en una actividad exclusivamente documental destinada a obtener un certificado",
+"Estandarizar únicamente componentes físicos para facilitar su intercambio durante la producción",
+"Transferir la responsabilidad de la calidad desde la empresa hacia la entidad certificadora"
+],
+"respuestaCorrecta": "Transformar la calidad en un sistema organizado, documentado, medible y orientado a la mejora continua, en lugar de depender de esfuerzos individuales",
+"explicacionAcierto": "Esta opción integra los principales hilos del documento: la evolución desde la estandarización, la construcción de un SGC, la documentación como soporte, los registros como evidencia, la medición, los siete principios, la gestión de relaciones, la auditoría y las acciones correctivas, y finalmente la continuidad de la mejora después de certificarse. El propósito no es simplemente conseguir un reconocimiento, sino establecer una forma de operar más robusta y predecible.",
+"explicacionFallo": "La primera opción es la única que integra el sentido global del documento. La segunda reduce el sistema a burocracia y certificación, ignorando operación y mejora. La tercera describe principalmente el problema histórico que impulsó la estandarización, pero no el alcance actual del SGC. La cuarta es falsa porque la responsabilidad del sistema permanece en la organización; la entidad certificadora evalúa la conformidad, pero no sustituye la gestión interna."
+}
+]
